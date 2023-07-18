@@ -119,3 +119,44 @@
     transition: 500ms ease;
     height: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+.slider-arrow-div {
+    background: linear-gradient(90deg, rgba(33, 33, 33, 0.90) 0%, rgba(38, 38, 38, 0.72) 39.26%, rgba(49, 49, 49, 0.56) 66.15%, rgba(102, 102, 102, 0.23) 100%);
+
+}
+
+
+.image-slider {
+    position: relative;
+
+}
+
+
+
+.image-slider .right-spandon-slider {
+    position: absolute;
+    bottom: 14px;
+    right: 15px;
+    cursor: pointer;
+    color: white;
+
+}
+
+.image-slider .left-spandon-slider {
+    position: absolute;
+    bottom: 14px;
+    left: 15px;
+    cursor: pointer;
+    color: white;
+
+}
