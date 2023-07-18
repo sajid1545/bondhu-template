@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="index.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+			integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<script src="https://kit.fontawesome.com/5458f6155f.js" crossorigin="anonymous"></script>
+		<title>Home Page</title>
+	</head>
+	<body>
+		<!-- Top Navbar -->
+		<div>
+			<div class="hidden md:flex items-center lg:gap-[100px]">
+				<div class="px-14">
+					<img src="./assets/logo.svg" alt="" class="lg:w-[250px] lg:h-[120px]" />
+				</div>
+				<div class="w-full clip-path px-10">
+					<div class="flex items-center justify-between w-[85%] mx-auto">
+						<div class="lg:w-[380px]">
+							<p class="text-justify py-4 text-white font-semibold text-[14px]">
+								The year 1996, Naz Foundation International, a UK based international charity and
+								community-based organization, led by Shivananda Khan identified some key community
+								representatives, commissioned a study on the sexual and reproductive health needs of
+								gender and sexual minority (GSM) communities in Bangladesh.
+							</p>
+						</div>
+
+						<div class="flex items-center relative lg:w-[250px]">
+							<input
+								type="text"
+								class="h-[36px] w-full focus:outline-0 focus:ring-0 focus:ring-transparent border-2 border-white bg-[#AF0101] focus:border-[#ffffff] text-white" />
+
+							<button
+								class="border h-8 w-8 border-r-0 bg-[#D9D9D9] absolute right-[2px] top-[63px]]">
+								<i class="fa-solid fa-magnifying-glass text-red-500"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block md:hidden px-14">
+				<img src="./assets/logo.svg" alt="" class="lg:w-[250px] lg:h-[120px] mx-auto my-2" />
+			</div>
+		</div>
+		<!-- Top navbar end here -->
+
+		<!-- Navbar -->
+		<nav class="bg-[#570000] h-[75px] relative w-full text-white flex items-center">
+			<div class="w-[95%] mx-auto">
+				<ul class="hidden space-x-8 lg:flex justify-around items-center font-bold">
+					<a class="active" href="./index.html">
+						<li class="">Home</li>
+					</a>
+					<a class="" href="./aboutBandhu.html">
+						<li class="">About Bandhu</li>
+					</a>
+					<a class="" href="./bandhuOnSRHR.html">
+						<li class="">Bandhu On SRHR</li>
+					</a>
+					<a class="" href="">
+						<li class="">Publications/Research</li>
+					</a>
+					<a class="" href="./spandon.html">
+						<li class="">Spandon</li>
+					</a>
+					<a class="" href="./spotlights.html">
+						<li class="">Spotlights</li>
+					</a>
+					<a class="" href="./mis.html">
+						<li class="">T-MIS</li>
+					</a>
+					<a class="" href="">
+						<li class="">E-Bulletin</li>
+					</a>
+					<a class="" href="">
+						<li class="">E-Bulletin</li>
+					</a>
+					<a class="" href="./contact-us.html">
+						<li class="">Contact Us</li>
+					</a>
+				</ul>
+				<div class="flex justify-end items-center lg:hidden px-10">
+					<div class="flex justify-end lg:hidden">
+						<i class="fa-solid fa-bars text-3xl text-white flex justify-end bars"></i>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="block lg:hidden">
+			<div class="mobile-menu bg-[#570000] text-white">
+				<div class="flex flex-col gap-5 text-2xl">
+					<div class="flex flex-col space-y-10 my-5 pl-10 font-bold mobile-links">
+						<a class="active" href="./index.html">
+							<li class="list-none">Home</li>
+						</a>
+						<a class="" href="./aboutBandhu.html">
+							<li class="list-none">About Bandhu</li>
+						</a>
+						<a class="" href="./bandhuOnSRHR.html">
+							<li class="list-none">Bandhu On SRHR</li>
+						</a>
+						<a class="" href="">
+							<li class="list-none">Publications/Research</li>
+						</a>
+						<a class="" href="./spandon.html">
+							<li class="list-none">Spandon</li>
+						</a>
+						<a class="" href="./spotlights.html">
+							<li class="list-none">Spotlights</li>
+						</a>
+						<a class="" href="./mis.html">
+							<li class="list-none">T-MIS</li>
+						</a>
+						<a class="" href="">
+							<li class="list-none">E-Bulletin</li>
+						</a>
+						<a class="" href="">
+							<li class="list-none">E-Bulletin</li>
+						</a>
+						<a class="" href="./contact-us.html">
+							<li class="list-none">Contact Us</li>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Navbar end here -->
+
+		<!-- Home Section Starts -->
+
+		<div class="px-5 lg:px-[58px]">
+			<!-- Gallery -->
+			<div class="flex lg:flex-row gap-10 my-10">
+				<div class="w-full lg:w-[90%] flex items-center">
+					<img src="./assets/gallery-1.svg" alt="" class="w-full h-fit" />
+				</div>
+				<div class="hidden w-0 md:block lg:w-[30%] space-y-5 h-full lg:mt-6">
+					<img src="./assets/gallery-2.svg" alt="" class="w-full h-fit" />
+					<img src="./assets/gallery-3.svg" alt="" class="w-full h-fit" />
+					<img src="./assets/gallery-4.svg" alt="" class="w-full h-fit" />
+				</div>
+			</div>
+			<!-- Gallery end here -->
+
+			<!-- Bar -->
+			<div class="md:h-9 bg-[#E9E9E9] my-20 flex items-center">
+				<div class="lg:w-[60px] flex items-center justify-center border-[#727272] border-r">
+					<img src="./assets/Information.svg" alt="" />
+				</div>
+
+				<div class="w-full h-full flex items-center justify-between">
+					<div class="px-2 md:px-10 flex flex-wrap">
+						<h1 class="mb-0">Bringing Change. Improving Life. Keeping Promises.</h1>
+					</div>
+
+					<div
+						class="lg:w-[60px] h-full flex items-center justify-center border-[#727272] border-l">
+						<img src="./assets/arrow.svg" alt="" />
+					</div>
+				</div>
+			</div>
+			<!-- Bar Ends here -->
+
+			<!-- Banner -->
+
+			<div class="flex lg:flex-row flex-col lg:gap-[150px] my-10">
+				<div class="lg:w-[50%]">
+					<img src="./assets/hero-image.svg" alt="" class="w-full" />
+				</div>
+				<div class="lg:w-[50%] md:p-10">
+					<div
+						class="text-[30px] lg:text-[40px] font-bold text-center lg:text-left leading-[36.05px] mb-20 mt-10 md:mt-0 space-y-5">
+						<h1>Bringing <span class="text-[#FF6600] custom-drop-shadow">Change.</span></h1>
+						<h1>Improving <span class="text-[#1B8271] custom-drop-shadow">Life.</span></h1>
+						<h1>Keeping <span class="text-[#3B86DD] custom-drop-shadow">Promises.</span></h1>
+					</div>
+
+					<div class="flex gap-10 mb-10 lg:mb-20 w-full">
+						<div>
+							<div class="w-[3px] h-full md:h-[150px] bg-[#FF6600] custom-line-shadow"></div>
+						</div>
+						<div>
+							<p class="text-sm text-justify leading-[25px]">
+								The year 1996, Naz Foundation International, a UK based international charity and
+								community-based organization, led by Shivananda Khan identified some key community
+								representatives, commissioned a study on the sexual and reproductive health needs of
+								gender and sexual minority (GSM) communities in Bangladesh. The study was conducted
+								in Dhaka during October 1996 – March 1997 with funding support by the Ford
+								Foundation.
+							</p>
+						</div>
+					</div>
+					<div>
+						<button
+							class="w-[140px] h-14 mb-10 md:mb-0 bg-[#FF6600] text-white font-bold rounded-[13px] shadow-[inset_0_2px_4px_#00000040] ml-10 md:ml-0">
+							Read More
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Banner section ends -->
+
+			<!-- Features Card -->
+
+			<div
+				class="my-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 gap-y-24 place-items-center md:place-items-stretch">
+				<!-- Card - 1 -->
+				<div class="group">
+					<div class="group-hover:hidden h-full">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tl-[70px] bg-[#E9E9E9] relative drop-shadow-lg">
+							<div class="feature-icon flex justify-center absolute right-[96px] top-[-40px]">
+								<img src="./assets/feature-icon.svg" alt="" class="w-[42px] rotate-45" />
+							</div>
+
+							<div class="p-5">
+								<h1 class="font-semibold text-base mt-5 mb-3 text-center">Knowledge Management</h1>
+								<div class="w-[88px] bg-[#FF5C00] h-1 mx-auto mb-5"></div>
+								<p class="pb-5 pt-4 text-[#57586D] text-sm px-2 text-center">
+									Knowledge Management is about capturing, creating, distilling, sharing and using
+									know-how.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="hidden group-hover:block transition-all">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tr-[110px] bg-[#E9E9E9] relative drop-shadow-lg group-hover:shadow-lg">
+							<div class="relative top-[-20px]">
+								<img src="./assets/blob.svg" alt="" class="w-full" />
+								<div class="feature-icon-2 flex justify-center absolute right-[96px] top-[30px]">
+									<img src="./assets/purple-users.svg" alt="" class="w-[42px] rotate-45" />
+								</div>
+							</div>
+
+							<div class="">
+								<h1 class="font-semibold text-[20px] mb-5 text-center mt-0">
+									Knowledge Management
+								</h1>
+								<p class="text-[#B21809] flex justify-center items-center gap-2 mb-0">
+									Learn More
+									<i class="fa-solid fa-angle-right"></i>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card - 2 -->
+				<div class="group">
+					<div class="group-hover:hidden h-full">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tl-[70px] bg-[#E9E9E9] relative drop-shadow-lg">
+							<div class="feature-icon flex justify-center absolute right-[96px] top-[-40px]">
+								<img src="./assets/feature-icon.svg" alt="" class="w-[42px] rotate-45" />
+							</div>
+
+							<div class="p-5">
+								<h1 class="font-semibold text-base mt-5 mb-3 text-center">Capacity Building</h1>
+								<div class="w-[88px] bg-[#FF5C00] h-1 mx-auto mb-5"></div>
+								<p class="pb-5 pt-4 text-[#57586D] text-sm px-2 text-center">
+									Possibility is a pioneering platform in Bangladesh, run by gender-diverse women
+									working for the women, girls, trans, and intersex communities.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="hidden group-hover:block transition-all">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tr-[110px] bg-[#E9E9E9] relative drop-shadow-lg group-hover:shadow-lg">
+							<div class="relative top-[-20px]">
+								<img src="./assets/blob.svg" alt="" class="w-full" />
+								<div class="feature-icon-2 flex justify-center absolute right-[96px] top-[30px]">
+									<img src="./assets/purple-users.svg" alt="" class="w-[42px] rotate-45" />
+								</div>
+							</div>
+
+							<div class="">
+								<h1 class="font-semibold text-[20px] mb-5 text-center mt-0">Capacity Building</h1>
+								<p class="text-[#B21809] flex justify-center items-center gap-2 mb-0">
+									Learn More
+									<i class="fa-solid fa-angle-right"></i>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card - 3 -->
+				<div class="group">
+					<div class="group-hover:hidden h-full">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tl-[70px] bg-[#E9E9E9] relative drop-shadow-lg">
+							<div class="feature-icon flex justify-center absolute right-[96px] top-[-40px]">
+								<img src="./assets/feature-icon.svg" alt="" class="w-[42px] rotate-45" />
+							</div>
+
+							<div class="p-5">
+								<h1 class="font-semibold text-base mt-5 mb-3 text-center">Policy Advocacy</h1>
+								<div class="w-[88px] bg-[#FF5C00] h-1 mx-auto mb-5"></div>
+								<p class="pb-5 pt-4 text-[#57586D] text-sm px-2 text-center">
+									Protecting Gender Based Violence (GBV) and SRHR service needs of Transgender and
+									Hijra Population
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="hidden group-hover:block transition-all">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tr-[110px] bg-[#E9E9E9] relative drop-shadow-lg group-hover:shadow-lg">
+							<div class="relative top-[-20px]">
+								<img src="./assets/blob.svg" alt="" class="w-full" />
+								<div class="feature-icon-2 flex justify-center absolute right-[96px] top-[30px]">
+									<img src="./assets/purple-users.svg" alt="" class="w-[42px] rotate-45" />
+								</div>
+							</div>
+
+							<div class="">
+								<h1 class="font-semibold text-[20px] mb-5 text-center mt-0">Policy Advocacy</h1>
+								<p class="text-[#B21809] flex justify-center items-center gap-2 mb-0">
+									Learn More
+									<i class="fa-solid fa-angle-right"></i>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card - 4 -->
+				<div class="group">
+					<div class="group-hover:hidden h-full">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tl-[70px] bg-[#E9E9E9] relative drop-shadow-lg">
+							<div class="feature-icon flex justify-center absolute right-[96px] top-[-40px]">
+								<img src="./assets/feature-icon.svg" alt="" class="w-[42px] rotate-45" />
+							</div>
+
+							<div class="p-5">
+								<h1 class="font-semibold text-base mt-5 mb-3 text-center">Press Release</h1>
+								<div class="w-[88px] bg-[#FF5C00] h-1 mx-auto mb-5"></div>
+								<p class="pb-5 pt-4 text-[#57586D] text-sm px-2 text-center">
+									On October 10, 2022, the World Mental Health Day is observed at the Bandhu Social
+									Welfare Society, Cox’s Bazar office.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="hidden group-hover:block transition-all">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tr-[110px] bg-[#E9E9E9] relative drop-shadow-lg group-hover:shadow-lg">
+							<div class="relative top-[-20px]">
+								<img src="./assets/blob.svg" alt="" class="w-full" />
+								<div class="feature-icon-2 flex justify-center absolute right-[96px] top-[30px]">
+									<img src="./assets/purple-users.svg" alt="" class="w-[42px] rotate-45" />
+								</div>
+							</div>
+
+							<div class="">
+								<h1 class="font-semibold text-[20px] mb-5 text-center mt-0">Press Release</h1>
+								<p class="text-[#B21809] flex justify-center items-center gap-2 mb-0">
+									Learn More
+									<i class="fa-solid fa-angle-right"></i>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card - 5 -->
+				<div class="group">
+					<div class="group-hover:hidden h-full">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tl-[70px] bg-[#E9E9E9] relative drop-shadow-lg">
+							<div class="feature-icon flex justify-center absolute right-[96px] top-[-40px]">
+								<img src="./assets/feature-icon.svg" alt="" class="w-[42px] rotate-45" />
+							</div>
+
+							<div class="p-5">
+								<h1 class="font-semibold text-base mt-5 mb-3 text-center">Event News</h1>
+								<div class="w-[88px] bg-[#FF5C00] h-1 mx-auto mb-5"></div>
+								<p class="pb-5 pt-4 text-[#57586D] text-sm px-2 text-center">
+									tate Minister for Cultural Affairs KM Khalid MP launched the Shomota project at
+									Hotel Amari in the capital.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="hidden group-hover:block transition-all">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tr-[110px] bg-[#E9E9E9] relative drop-shadow-lg group-hover:shadow-lg">
+							<div class="relative top-[-20px]">
+								<img src="./assets/blob.svg" alt="" class="w-full" />
+								<div class="feature-icon-2 flex justify-center absolute right-[96px] top-[30px]">
+									<img src="./assets/purple-users.svg" alt="" class="w-[42px] rotate-45" />
+								</div>
+							</div>
+
+							<div class="">
+								<h1 class="font-semibold text-[20px] mb-5 text-center mt-0">Event News</h1>
+								<p class="text-[#B21809] flex justify-center items-center gap-2 mb-0">
+									Learn More
+									<i class="fa-solid fa-angle-right"></i>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card - 6 -->
+				<div class="group">
+					<div class="group-hover:hidden h-full">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tl-[70px] bg-[#E9E9E9] relative drop-shadow-lg">
+							<div class="feature-icon flex justify-center absolute right-[96px] top-[-40px]">
+								<img src="./assets/feature-icon.svg" alt="" class="w-[42px] rotate-45" />
+							</div>
+
+							<div class="p-5">
+								<h1 class="font-semibold text-base mt-5 mb-3 text-center">COVID-19</h1>
+								<div class="w-[88px] bg-[#FF5C00] h-1 mx-auto mb-5"></div>
+								<p class="pb-5 pt-4 text-[#57586D] text-sm px-2 text-center">
+									The COVID-19 pandemic is a crisis of a completely different magnitude.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="hidden group-hover:block transition-all">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tr-[110px] bg-[#E9E9E9] relative drop-shadow-lg group-hover:shadow-lg">
+							<div class="relative top-[-20px]">
+								<img src="./assets/blob.svg" alt="" class="w-full" />
+								<div class="feature-icon-2 flex justify-center absolute right-[96px] top-[30px]">
+									<img src="./assets/purple-users.svg" alt="" class="w-[42px] rotate-45" />
+								</div>
+							</div>
+
+							<div class="">
+								<h1 class="font-semibold text-[20px] mb-5 text-center mt-0">COVID-19</h1>
+								<p class="text-[#B21809] flex justify-center items-center gap-2 mb-0">
+									Learn More
+									<i class="fa-solid fa-angle-right"></i>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card - 7 -->
+				<div class="group">
+					<div class="group-hover:hidden h-full">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tl-[70px] bg-[#E9E9E9] relative drop-shadow-lg">
+							<div class="feature-icon flex justify-center absolute right-[96px] top-[-40px]">
+								<img src="./assets/feature-icon.svg" alt="" class="w-[42px] rotate-45" />
+							</div>
+
+							<div class="p-5">
+								<h1 class="font-semibold text-base mt-5 mb-3 text-center">Purchase</h1>
+								<div class="w-[88px] bg-[#FF5C00] h-1 mx-auto mb-5"></div>
+								<p class="pb-5 pt-4 text-[#57586D] text-sm px-2 text-center">
+									Bandhu Social Welfare Society (Bandhu) has been working with Gender Diverse
+									Population (GDP) to ensure their SRHR service, HIV prevention and upholding human
+									rights in Bangladesh since 1996.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="hidden group-hover:block transition-all">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tr-[110px] bg-[#E9E9E9] relative drop-shadow-lg group-hover:shadow-lg">
+							<div class="relative top-[-20px]">
+								<img src="./assets/blob.svg" alt="" class="w-full" />
+								<div class="feature-icon-2 flex justify-center absolute right-[96px] top-[30px]">
+									<img src="./assets/purple-users.svg" alt="" class="w-[42px] rotate-45" />
+								</div>
+							</div>
+
+							<div class="">
+								<h1 class="font-semibold text-[20px] mb-5 text-center mt-0">Purchase</h1>
+								<p class="text-[#B21809] flex justify-center items-center gap-2 mb-0">
+									Learn More
+									<i class="fa-solid fa-angle-right"></i>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Card - 8 -->
+				<div class="group">
+					<div class="group-hover:hidden h-full">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tl-[70px] bg-[#E9E9E9] relative drop-shadow-lg">
+							<div class="feature-icon flex justify-center absolute right-[96px] top-[-40px]">
+								<img src="./assets/feature-icon.svg" alt="" class="w-[42px] rotate-45" />
+							</div>
+
+							<div class="p-5">
+								<h1 class="font-semibold text-base mt-5 mb-3 text-center">Career</h1>
+								<div class="w-[88px] bg-[#FF5C00] h-1 mx-auto mb-5"></div>
+								<p class="pb-5 pt-4 text-[#57586D] text-sm px-2 text-center">
+									Job Responsibilities Provide high-quality STI, HTC, and GH services to Female Sex
+									Workers and Gender Diverse individuals at service centers and sub-service centers.
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="hidden group-hover:block transition-all">
+						<div
+							class="w-[270px] h-[314px] rounded-lg py-5 rounded-tr-[110px] bg-[#E9E9E9] relative drop-shadow-lg group-hover:shadow-lg">
+							<div class="relative top-[-20px]">
+								<img src="./assets/blob.svg" alt="" class="w-full" />
+								<div class="feature-icon-2 flex justify-center absolute right-[96px] top-[30px]">
+									<img src="./assets/purple-users.svg" alt="" class="w-[42px] rotate-45" />
+								</div>
+							</div>
+
+							<div class="">
+								<h1 class="font-semibold text-[20px] mb-5 text-center mt-0">Career</h1>
+								<p class="text-[#B21809] flex justify-center items-center gap-2 mb-0">
+									Learn More
+									<i class="fa-solid fa-angle-right"></i>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Features section end here -->
+
+			<!-- Blogs Section -->
+
+			<div class="flex gap-5 flex-col lg:flex-row h-full lg:h-[1023px]">
+				<div class="lg:w-[25%] h-full">
+					<div class="bg-[#E9E9E9] blog-event-card-shadow p-4 mb-10 lg:mb-[74px] rounded-md">
+						<h1 class="font-bold text-[#00019C] text-lg mb-3">Recent Event</h1>
+
+						<div class="bg-white p-2">
+							<a
+								class="text-[#1475F7] text-sm font-bold underline mb-2"
+								rel="noreferrer"
+								target="_blank"
+								href="https://www.bandhu-bd.org/world-refugee-day-observance-by-bandhu-social-welfare-society-at-coxs-bazar/">
+								World Refugee Day Observance by Bandhu Social Welfare Society at Cox’s Bazar
+							</a>
+							<p class="text-[#444] mb-3">
+								On June 20, 2023, Bandhu Social Welfare Society (BANDHU) commemorated World Refugee
+								Day with great enthusiasm and inclusivity in Cox’s Bazar. The event took place at
+								service centers located...
+							</p>
+
+							<div class="flex gap-4">
+								<img src="./assets/location.svg" alt="" />
+								<p class="text-[#212529] text-[10px] font-medium leading-[18px] mb-0">
+									The Spanish Kitchen Cienega Boulevard Los Angeles United States
+								</p>
+							</div>
+							<div class="flex gap-4 mb-5">
+								<img src="./assets/clock.svg" alt="" />
+								<p class="text-[#212529] text-[10px] font-medium leading-[18px] mb-0">
+									08:00 AM - 05:00 PM
+								</p>
+							</div>
+
+							<div class="flex items-center gap-2">
+								<p class="text-[#570000] text-[11px] font-bold leading-[13px] mb-0">View All</p>
+								<i class="fa-solid fa-right-long"></i>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-[#E9E9E9] blog-event-card-shadow p-4 mb-12 rounded-md">
+						<h1 class="text-[#6F16EF] text-[20px] font-bold">Publications/Research</h1>
+
+						<div class="bg-white p-4 py-10 text-[12px] space-y-3 rounded-md mt-[4px]">
+							<li>A Tale Of Two Decades</li>
+							<li>Annual Report 2021 Of Bandhu</li>
+							<li>Annual Report Of Bandhu</li>
+							<li>Covid-19: Quick Survey For Community Response For TG And Hijra</li>
+							<li>Hijra And Religion</li>
+							<li>Humanitarian Award Giving Ceremony</li>
+							<li>Others Report (MSA Project)</li>
+							<li>Policy Brief Of GBV_2021</li>
+							<li>Report On Reincarnate II</li>
+							<li>Research And Assessment</li>
+							<li>Research-Suppliment Issue</li>
+							<li>RGDP Project Brief</li>
+							<li>Rights Violation Report 2022 Of GDP</li>
+						</div>
+					</div>
+				</div>
+
+				<div
+					class="lg:w-[50%] p-5 bg-[#E9E9E9] mb-12 rounded-md blog-event-card-shadow order-first md:order-none">
+					<div
+						class="flex gap-5 lg:gap-14 text-[#666] font-medium mb-5 border-b-2 border-[#E2E2E2]">
+						<button
+							class="bg-white p-3 rounded-t-md border-b-4 font-bold border-[#AF0101] text-[#570000]">
+							News Feed
+						</button>
+						<button>Videos</button>
+						<button>Gallery</button>
+					</div>
+					<div class="">
+						<div>
+							<img src="./assets/featured-news.svg" alt="" class="w-full" />
+						</div>
+
+						<div class="p-5">
+							<div class="space-y-10">
+								<div class="flex flex-col md:flex-row gap-3 mt-10">
+									<div>
+										<img src="./assets/blog-1.svg" alt="" class="w-full" />
+									</div>
+									<div>
+										<h1 class="text-[#570000] text-sm font-semibold leading-[19.2px] mb-2">
+											Working Transgender and Hijra child would be asset for parents: Prime Minister
+										</h1>
+
+										<div class="flex gap-5 mb-[10px]">
+											<div class="flex gap-2">
+												<img src="./assets/user.svg" alt="" />
+												<p class="text-[#212529] text-xs mb-0">Posted by:</p>
+											</div>
+											<div class="flex gap-2">
+												<img src="./assets/calender.svg" alt="" />
+												<p class="text-[#212529] text-xs mb-0">April 3, 2020</p>
+											</div>
+										</div>
+
+										<p class="text-[#444] text-xs mb-[4px]">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+										</p>
+
+										<div class="flex items-center gap-2">
+											<p class="text-[#570000] font-bold text-xs mb-0">Read More</p>
+											<img src="./assets/right-arrow.svg" alt="" />
+										</div>
+									</div>
+								</div>
+
+								<div class="flex gap-3 flex-col md:flex-row">
+									<div>
+										<img src="./assets/blog-2.svg" alt="" class="w-full" />
+									</div>
+									<div>
+										<h1 class="text-[#570000] text-sm font-semibold leading-[19.2px] mb-2">
+											Working Transgender and Hijra child would be asset for parents: Prime Minister
+										</h1>
+
+										<div class="flex gap-5 mb-[10px]">
+											<div class="flex gap-2">
+												<img src="./assets/user.svg" alt="" />
+												<p class="text-[#212529] text-xs mb-0">Posted by:</p>
+											</div>
+											<div class="flex gap-2">
+												<img src="./assets/calender.svg" alt="" />
+												<p class="text-[#212529] text-xs mb-0">April 3, 2020</p>
+											</div>
+										</div>
+
+										<p class="text-[#444] text-xs mb-[4px]">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+										</p>
+
+										<div class="flex items-center gap-2">
+											<p class="text-[#570000] font-bold text-xs mb-0">Read More</p>
+											<img src="./assets/right-arrow.svg" alt="" />
+										</div>
+									</div>
+								</div>
+
+								<div class="flex gap-3 flex-col md:flex-row">
+									<div>
+										<img src="./assets/blog-3.svg" alt="" class="w-full" />
+									</div>
+									<div>
+										<h1 class="text-[#570000] text-sm font-semibold leading-[19.2px] mb-2">
+											Working Transgender and Hijra child would be asset for parents: Prime Minister
+										</h1>
+
+										<div class="flex gap-5 mb-[10px]">
+											<div class="flex gap-2">
+												<img src="'./assets/user.svg" alt="" />
+												<p class="text-[#212529] text-xs mb-0">Posted by:</p>
+											</div>
+											<div class="flex gap-2">
+												<img src="'./assets/calender.svg" alt="" />
+												<p class="text-[#212529] text-xs mb-0">April 3, 2020</p>
+											</div>
+										</div>
+
+										<p class="text-[#444] text-xs mb-[4px]">
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+										</p>
+
+										<div class="flex items-center gap-2">
+											<p class="text-[#570000] font-bold text-xs mb-0">Read More</p>
+											<img src="'./assets/right-arrow.svg" alt="" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="lg:w-[25%]">
+					<div class="bg-[#E9E9E9] blog-event-card-shadow p-5 mb-10 rounded-md">
+						<h1 class="text-[#AF0101] font-bold mb-2">
+							Let’s stand beside Transgender and Hijra Community in Bangladesh.
+						</h1>
+
+						<div class="w-full h-[2px] bg-[#E2E2E2] mb-2"></div>
+
+						<p class="text-xs mb-2 text-[#000]">
+							The COVID-19 outbreak has been quickly escalating around the world in the past weeks
+							and things are rapidly changing and governments around the world have been placing
+							various measures to curb the hike in infection.
+						</p>
+
+						<div class="h-[14px] w-full mb-2 bg-red-100 rounded-tl-md rounded-bl-md">
+							<div class="h-[14px] bg-red-500 w-[45%] rounded-tl-md rounded-bl-md"></div>
+						</div>
+
+						<div class="mb-2">
+							<h1 class="text-[#666666] font-bold">
+								Now : <span class="text-[#570000]">7500৳</span>
+							</h1>
+							<h1 class="text-[#666666] font-bold">
+								Target : <span class="text-[#570000]">25000৳</span>
+							</h1>
+						</div>
+						<button
+							class="w-full bg-[#AF0101] rounded-[4px] text-white font-bold text-center h-[42px]">
+							Donate Now
+						</button>
+					</div>
+
+					<div class="bg-[#E9E9E9] blog-event-card-shadow p-7 rounded-md mb-[25px]">
+						<div class="flex gap-10 text-[#666] mb-5">
+							<button>Blogs</button>
+							<button>Tweets</button>
+						</div>
+
+						<div class="space-y-5">
+							<div>
+								<div class="bg-white rounded px-2 flex gap-2 p-3">
+									<div>
+										<img src="./assets/blog-small-1.svg" alt="" />
+									</div>
+									<div class="font-bold">
+										<h1 class="text-[#570000] text-xs mb-3">Give your love to</h1>
+										<h1 class="text-[#444444] text-xs">April 3, 2020, 0 Comments</h1>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="bg-white rounded px-2 flex gap-2 p-3">
+									<div>
+										<img src="./assets/blog-small-2.svg" alt="" />
+									</div>
+									<div class="font-bold">
+										<h1 class="text-[#570000] text-xs mb-3">No one has ever</h1>
+										<h1 class="text-[#444444] text-xs">April 3, 2020, 0 Comments</h1>
+									</div>
+								</div>
+							</div>
+							<div>
+								<div class="bg-white rounded px-2 flex gap-2 p-3">
+									<div>
+										<img src="./assets/blog-small-3.svg" alt="" />
+									</div>
+									<div class="font-bold">
+										<h1 class="text-[#570000] text-xs mb-3">Disability is not the</h1>
+										<h1 class="text-[#444444] text-xs">April 3, 2020, 0 Comments</h1>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="bg-[#E9E9E9] blog-event-card-shadow rounded-[4px] p-4 py-8 mb-10">
+						<img src="./assets/qr-code.svg" alt="" class="mx-auto" />
+						<h1 class="#000 text-center font-bold">Qr-code</h1>
+						<button
+							class="w-full bg-[#AF0101] rounded-[4px] underline text-white font-bold text-center h-[42px]">
+							Download Now
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- Blogs section ends here -->
+
+			<!-- Customers section -->
+
+			<div class="mt-10 mb-[70px] bg-[#E9E9E9] blog-event-card-shadow rounded-[5px] p-5">
+				<h1 class="text-[#570000] font-bold text-lg border-b-2 border-[#E2E2E2] mb-2">
+					Our Sponsors
+				</h1>
+				<hr />
+
+				<div class="flex flex-wrap justify-evenly gap-5">
+					<img src="./assets/customer-1.svg" alt="" />
+					<img src="./assets/customer-2.svg" alt="" />
+					<img src="./assets/customer-3.svg" alt="" />
+					<img src="./assets/customer-4.svg" alt="" />
+					<img src="./assets/customer-1.svg" alt="" />
+					<img src="./assets/customer-2.svg" alt="" />
+				</div>
+			</div>
+
+			<!-- Customers section ends here -->
+		</div>
+
+		<!-- Footer  -->
+
+		<footer class="w-full text-slate-500">
+			<div class="border-t border-slate-200 bg-[#570500] text-white pt-16 pb-12 text-sm">
+				<div class="container mx-auto px-6">
+					<div class="grid grid-cols-4 gap-10 md:grid-cols-8 lg:grid-cols-12">
+						<div class="col-span-4 md:col-span-8 lg:col-span-3" aria-labelledby="footer-header">
+							<img src="./assets/small-logo.svg" alt="" class="mb-5" />
+							<p class="mb-5">
+								Bandhu Social Welfare Society (Bandhu) has been working with Gender Diverse
+								Population (GDP) to ensure their SRHR service, HIV prevention and upholding human
+								rights in Bangladesh since 1996.
+							</p>
+							<button class="bg-white py-2 px-5 text-[#570500] underline font-bold rounded">
+								Donate Now
+							</button>
+						</div>
+
+						<nav
+							class="col-span-2 md:col-span-4 lg:col-span-3"
+							aria-labelledby="footer-docs-5-logo">
+							<h3 class="mb-6 text-lg font-bold" id="footer-docs-5-logo">Follow Us On</h3>
+							<div
+								class="flex gap-2 items-center flex-initial justify-center lg:justify-start my-5 flex-wrap">
+								<div
+									class="p-[5px] w-[25px] h-[25px] flex justify-center items-center cursor-pointer border border-white">
+									<i class="fa-brands mx-auto fa-facebook-f"></i>
+								</div>
+								<div
+									class="p-[5px] w-[25px] h-[25px] flex justify-center items-center cursor-pointer border border-white">
+									<i class="fa-brands mx-auto fa-google-plus-g"></i>
+								</div>
+								<div
+									class="p-[5px] w-[25px] h-[25px] flex justify-center items-center cursor-pointer border border-white">
+									<i class="fa-brands mx-auto fa-instagram"></i>
+								</div>
+								<div
+									class="p-[5px] w-[25px] h-[25px] flex justify-center items-center cursor-pointer border border-white">
+									<i class="fa-brands mx-auto fa-twitter"></i>
+								</div>
+
+								<div
+									class="p-[5px] w-[25px] h-[25px] flex justify-center items-center cursor-pointer border border-white">
+									<i class="fa-brands mx-auto fa-linkedin-in"></i>
+								</div>
+								<div
+									class="p-[5px] w-[25px] h-[25px] flex justify-center items-center cursor-pointer border border-white">
+									<i class="fa-brands mx-auto fa-pinterest-p"></i>
+								</div>
+							</div>
+						</nav>
+
+						<nav
+							class="col-span-2 md:col-span-4 lg:col-span-3"
+							aria-labelledby="footer-docs-5-logo">
+							<h3 class="mb-6 text-lg font-bold" id="footer-docs-5-logo">Contact Us</h3>
+							<div class="space-y-3">
+								<p>99 Kakrail, (2nd & 3rd Floor),</p>
+								<p>Dhaka-1000 , Bangladesh.</p>
+								<p>+88 02 222229898, 22 222 2868, 58316041</p>
+								<p>Email- info@extracoding.com</p>
+							</div>
+						</nav>
+
+						<nav
+							class="col-span-4 md:col-span-4 lg:col-span-3"
+							aria-labelledby="footer-docs-5-logo">
+							<h3 class="mb-6 text-lg font-bold" id="footer-docs-5-logo">Newsletter</h3>
+
+							<p class="mb-5">
+								Join our subscribers list to get the latest news and updates delivered directly in
+								your inbox.
+							</p>
+							<div class="flex items-center relative lg:w-[250px]">
+								<input
+									type="text"
+									placeholder="Enter your email address"
+									class="h-10 w-full focus:outline-0 focus:ring-0 focus:ring-transparent border-2 border-white bg-[#570500] focus:border-[#ffffff] text-white" />
+
+								<button
+									class="border h-10 w-[75px] rounded-tr rounded-br border-r-0 bg-white text-[#570500]">
+									Sign Up
+								</button>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+
+			<div class="h-14 bg-[#470000] flex items-center justify-center">
+				<h1 class="text-[#FFFFFF80] text-center text-[13.074px]">
+					Bandhu Social Welfare Society Website - © 2023 by Ekopii ltd.
+				</h1>
+			</div>
+		</footer>
+
+		<!-- Footer ends here -->
+		<script>
+			// Grab HTML Elements
+			const bars = document.querySelector(".bars");
+			const menu = document.querySelector(".mobile-menu");
+
+			// Add Event Listeners
+			bars.addEventListener("click", () => {
+				menu.classList.toggle("menu-inactive");
+			});
+		</script>
+	</body>
+</html>

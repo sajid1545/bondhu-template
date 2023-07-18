@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="index.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+			integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<script src="https://kit.fontawesome.com/5458f6155f.js" crossorigin="anonymous"></script>
+		<title>About Bandhu</title>
+	</head>
+	<body>
+		<!-- Top Navbar -->
+		<div>
+			<div class="hidden md:flex items-center lg:gap-[100px]">
+				<div class="px-14">
+					<img src="./assets/logo.svg" alt="" class="lg:w-[250px] lg:h-[120px]" />
+				</div>
+				<div class="w-full clip-path px-10">
+					<div class="flex items-center justify-between w-[85%] mx-auto">
+						<div class="lg:w-[380px]">
+							<p class="text-justify py-4 text-white font-semibold text-[14px]">
+								The year 1996, Naz Foundation International, a UK based international charity and
+								community-based organization, led by Shivananda Khan identified some key community
+								representatives, commissioned a study on the sexual and reproductive health needs of
+								gender and sexual minority (GSM) communities in Bangladesh.
+							</p>
+						</div>
+
+						<div class="flex items-center relative lg:w-[250px]">
+							<input
+								type="text"
+								class="h-[36px] w-full focus:outline-0 focus:ring-0 focus:ring-transparent border-2 border-white bg-[#AF0101] focus:border-[#ffffff] text-white" />
+
+							<button
+								class="border h-8 w-8 border-r-0 bg-[#D9D9D9] absolute right-[2px] top-[63px]]">
+								<i class="fa-solid fa-magnifying-glass text-red-500"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block md:hidden px-14">
+				<img src="./assets/logo.svg" alt="" class="lg:w-[250px] lg:h-[120px] mx-auto my-2" />
+			</div>
+		</div>
+		<!-- Top navbar end here -->
+
+		<!-- Navbar -->
+		<nav class="bg-[#570000] h-[75px] relative w-full text-white flex items-center">
+			<div class="w-[95%] mx-auto">
+				<ul class="hidden space-x-8 lg:flex justify-around items-center font-bold">
+					<a class="#" href="./index.html">
+						<li class="">Home</li>
+					</a>
+					<a class="active" href="./aboutBandhu.html">
+						<li class="">About Bandhu</li>
+					</a>
+					<a class="" href="./bandhuOnSRHR.html">
+						<li class="">Bandhu On SRHR</li>
+					</a>
+					<a class="" href="">
+						<li class="">Publications/Research</li>
+					</a>
+					<a class="" href="./spandon.html">
+						<li class="">Spandon</li>
+					</a>
+					<a class="" href="./spotlights.html">
+						<li class="">Spotlights</li>
+					</a>
+					<a class="" href="./mis.html">
+						<li class="">T-MIS</li>
+					</a>
+					<a class="" href="">
+						<li class="">E-Bulletin</li>
+					</a>
+					<a class="" href="">
+						<li class="">E-Bulletin</li>
+					</a>
+					<a class="" href="./contact-us.html">
+						<li class="">Contact Us</li>
+					</a>
+				</ul>
+				<div class="flex justify-end items-center lg:hidden px-10">
+					<div class="flex justify-end lg:hidden">
+						<i class="fa-solid fa-bars text-3xl text-white flex justify-end bars"></i>
+						<!-- {isMenuOpen ? (
+						<AiOutlineClose class="text-3xl text-white" />
+						) : (
+						<FaBars class="text-3xl text-white" />
+						)} -->
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div class="block lg:hidden">
+			<div class="mobile-menu bg-[#570000] text-white">
+				<div class="flex flex-col gap-5 text-2xl">
+					<div class="flex flex-col space-y-10 my-5 pl-10 font-bold mobile-links">
+						<a class="" href="">
+							<li class="list-none">Home</li>
+						</a>
+						<a class="active" href="./aboutBandhu.html">
+							<li class="list-none">About Bandhu</li>
+						</a>
+						<a class="" href="./bandhuOnSRHR.html">
+							<li class="list-none">Bandhu On SRHR</li>
+						</a>
+						<a class="" href="">
+							<li class="list-none">Publications/Research</li>
+						</a>
+						<a class="" href="./spandon.html">
+							<li class="list-none">Spandon</li>
+						</a>
+						<a class="" href="./spotlights.html">
+							<li class="list-none">Spotlights</li>
+						</a>
+						<a class="" href="./mis.html">
+							<li class="list-none">T-MIS</li>
+						</a>
+						<a class="" href="">
+							<li class="list-none">E-Bulletin</li>
+						</a>
+						<a class="" href="">
+							<li class="list-none">E-Bulletin</li>
+						</a>
+						<a class="" href="./contact-us.html">
+							<li class="list-none">Contact Us</li>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Navbar end here -->
+
+		<!-- About section -->
+
+		<div class="w-full px-5 lg:px-[58px]">
+			<div class="flex justify-center mb-16">
+				<img src="./assets/about-us-banner.svg" alt="" class="w-full" />
+			</div>
+
+			<!-- Bar -->
+			<div class="md:h-9 bg-[#E9E9E9] my-20 flex items-center">
+				<div class="lg:w-[60px] flex items-center justify-center border-[#727272] border-r">
+					<img src="./assets/Information.svg" alt="" />
+				</div>
+
+				<div class="w-full h-full flex items-center justify-between">
+					<div class="px-2 md:px-10 flex flex-wrap">
+						<h1 class="mb-0">Bringing Change. Improving Life. Keeping Promises.</h1>
+					</div>
+
+					<div
+						class="lg:w-[60px] h-full flex items-center justify-center border-[#727272] border-l">
+						<img src="./assets/arrow.svg" alt="" />
+					</div>
+				</div>
+			</div>
+			<!-- Bar Ends here -->
+
+			<!-- Bandhu Profile Starts -->
+			<div class="">
+				<h1 class="font-bold text-4xl leading-[53px] text-[#000] text-center lg:mb-[69px]">
+					Bandhu Profile
+				</h1>
+
+				<div class="w-full flex justify-center flex-col-reverse md:flex-row gap-[68px] mb-[100px]">
+					<div class="lg:w-[50%] text-justify space-y-5">
+						<p class="text-[#000] text-xs font-normal leading-6 capitalize">
+							The year 1996, Naz Foundation International, a UK based international charity and
+							community-based organization, led by Shivananda Khan identified some key community
+							representatives, commissioned a study on the sexual and reproductive health needs of
+							gender and sexual minority (GSM) communities in Bangladesh. The study was conducted in
+							Dhaka during October 1996 – March 1997 with funding support by the Ford Foundation.
+						</p>
+						<p class="text-[#000] text-xs font-normal leading-6 capitalize">
+							The findings of this study indicated social exclusion, marginalization, and
+							stigmatization among the GSM communities along with a range of high-risk practices for
+							STI/HIV infection.As Bangladesh society is non-tolerant towards gender diversity and
+							practices, the vulnerability of these population was well perceived and internalized
+							by a group of friends.
+						</p>
+						<p class="text-[#000] text-xs font-normal leading-6 capitalize">
+							From their philanthropic notions and commitments,{' '}
+							<span class="text-[#FF6600]">Bandhu Social Welfare Society (Bandhu) </span>
+							came into existence in 1996 to address these important but unattended issues through a
+							concerted effort. This was the first of its kind initiative in the country to stand
+							for the health and human rights issues of the GSM communities. This was an effort for
+							the community, led by the community with no formal training in management of NGOs.
+							Thus, began the journey of learning and changing lives. <br />
+							<span class="text-[#FF6600]"> Bandhu Social Welfare Society (Bandhu) </span>
+							is formally registered with Ministry of Social welfare and NGO Affairs Bureau since
+							July 1997. All activities of the organization are in line with the guidance provided
+							by the Ministry of Health and Family Welfare (MOHFW) and Ministry of Social Welfare
+							(MOSW) of the Government of Bangladesh.
+						</p>
+						<p class="text-[#000] text-xs font-normal leading-6 capitalize">
+							Bandhu implements essential Sexual Heath and Reproductive Health and Rights (SRHR)
+							activities including HIV intervention, legal support, capacity building and policy
+							advocacy with an aim to bring positive changes in the lives of thousands of community
+							members by addressing the social, religious, cultural and legal impediments in terms
+							of their rights and freedom.
+						</p>
+					</div>
+
+					<div class="">
+						<img src="./assets/profile.svg" alt="" class="lg:h-[480px] mx-auto my-10 lg:my-0" />
+					</div>
+				</div>
+			</div>
+			<!-- Bandhu Profile Ends -->
+
+			<!-- Mission -->
+			<div class="flex flex-col lg:flex-row gap-8">
+				<div
+					class="bg-[#FE5804A1] py-20 lg:py-[123px] px-5 lg:px-10 md:px-[76px] rounded-md mb-[70px] lg:w-[80%]">
+					<div class="flex flex-col lg:flex-row mission-vision-shadow lg:my-5">
+						<div class="lg:w-[70%]">
+							<img src="./assets/mission.svg" alt="" class="h-full w-full" />
+						</div>
+						<div class="py-[70px] px-[27px] bg-white space-y-10">
+							<div class="md:mt-10">
+								<h1 class="text-[#FF6600] text-2xl leading-7">Mission:</h1>
+								<p>
+									Bandhu works towards ensuring a dignified living for sexual minorities through
+									protecting human rights, quality health including sexual and reproductive health,
+									access to social security and justice.
+								</p>
+							</div>
+							<div>
+								<h1 class="text-[#FF6600] text-2xl leading-7">Vision:</h1>
+								<p>
+									Bandhu Social Welfare Society envisions a society where every person leads a
+									quality life irrespective of gender and sexuality.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="px-3 md:px-0">
+					<div class="bg-[#E9E9E9] blog-event-card-shadow rounded-md p-3 pr-10 mb-20 md:mb-10">
+						<h1 class="text-[#FF5C00] text-lg font-[800] mb-2 p-2 border-b border-[#e9e3e3]">
+							Spandon
+						</h1>
+						<div class="px-5 space-y-1">
+							<li class="underline text-xs font-medium leading-5">July To September 2021</li>
+							<li class="underline text-xs font-medium leading-5">April To June 2021</li>
+							<li class="underline text-xs font-medium leading-5">January To March 2021</li>
+							<li class="underline text-xs font-medium leading-5">October To December 2020</li>
+							<li class="underline text-xs font-medium leading-5">July To September 2020</li>
+							<li class="underline text-xs font-medium leading-5">July To September 2020</li>
+							<li class="underline text-xs font-medium leading-5">April To June 2020</li>
+							<li class="underline text-xs font-medium leading-5">January to March 2020</li>
+							<li class="underline text-xs font-medium leading-5">October to December 2019</li>
+							<li class="underline text-xs font-medium leading-5">October to December 2019</li>
+							<li class="underline text-xs font-medium leading-5">July to September 2019</li>
+							<li class="underline text-xs font-medium leading-5">April to June 2019</li>
+							<li class="underline text-xs font-medium leading-5">July to September 2018</li>
+							<li class="underline text-xs font-medium leading-5">January to March 2018</li>
+							<li class="underline text-xs font-medium leading-5">October to December 2017</li>
+							<li class="underline text-xs font-medium leading-5">July to September 2017</li>
+							<li class="underline text-xs font-medium leading-5">April to June 2017</li>
+							<li class="underline text-xs font-medium leading-5">January to March 2017</li>
+						</div>
+					</div>
+
+					<div class="bg-[#E9E9E9] blog-event-card-shadow rounded-md p-3 pr-10 mb-20 md:mb-10">
+						<h1 class="text-[#570000] text-lg font-[800] mb-2 border-b border-[#e9e3e3] p-2">
+							Blog Archive
+						</h1>
+
+						<div class="space-y-3">
+							<h1
+								class="text-[#4D4D4D] text-[14px] font-medium leading-5 border-b-2 border-[#E2E2E2]">
+								April 2020
+							</h1>
+							<h1
+								class="text-[#4D4D4D] text-[14px] font-medium leading-5 border-b-2 border-[#E2E2E2]">
+								March 2020
+							</h1>
+							<h1
+								class="text-[#4D4D4D] text-[14px] font-medium leading-5 border-b-2 border-[#E2E2E2]">
+								January 2020
+							</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- About Section Ends -->
+
+		<!-- Footer  -->
+
+		<footer class="w-full text-slate-500">
+			<div class="border-t border-slate-200 bg-[#570500] text-white pt-16 pb-12 text-sm">
+				<div class="container mx-auto px-6">
+					<div class="grid grid-cols-4 gap-10 md:grid-cols-8 lg:grid-cols-12">
+						<div class="col-span-4 md:col-span-8 lg:col-span-3" aria-labelledby="footer-header">
+							<img src="./assets/small-logo.svg" alt="" class="mb-5" />
+							<p class="mb-5">
+								Bandhu Social Welfare Society (Bandhu) has been working with Gender Diverse
+								Population (GDP) to ensure their SRHR service, HIV prevention and upholding human
+								rights in Bangladesh since 1996.
+							</p>
+							<button class="bg-white py-2 px-5 text-[#570500] underline font-bold rounded">
+								Donate Now
+							</button>
+						</div>
+
+						<nav
+							class="col-span-2 md:col-span-4 lg:col-span-3"
+							aria-labelledby="footer-docs-5-logo">
+							<h3 class="mb-6 text-lg font-bold" id="footer-docs-5-logo">Follow Us On</h3>
+							<div
+								class="flex gap-2 items-center flex-initial justify-center lg:justify-start my-5 flex-wrap">
+								<div
+									class="p-[5px] w-[25px] h-[25px] flex justify-center items-center cursor-pointer border border-white">
+									<i class="fa-brands mx-auto fa-facebook-f"></i>
+								</div>
+								<div
+									class="p-[5px] w-[25px] h-[25px] flex justify-center items-center cursor-pointer border border-white">
+									<i class="fa-brands mx-auto fa-google-plus-g"></i>
+								</div>
+								<div
+									class="p-[5px] w-[25px] h-[25px] flex justify-center items-center cursor-pointer border border-white">
+									<i class="fa-brands mx-auto fa-instagram"></i>
+								</div>
+								<div
+									class="p-[5px] w-[25px] h-[25px] flex justify-center items-center cursor-pointer border border-white">
+									<i class="fa-brands mx-auto fa-twitter"></i>
+								</div>
+
+								<div
+									class="p-[5px] w-[25px] h-[25px] flex justify-center items-center cursor-pointer border border-white">
+									<i class="fa-brands mx-auto fa-linkedin-in"></i>
+								</div>
+								<div
+									class="p-[5px] w-[25px] h-[25px] flex justify-center items-center cursor-pointer border border-white">
+									<i class="fa-brands mx-auto fa-pinterest-p"></i>
+								</div>
+							</div>
+						</nav>
+
+						<nav
+							class="col-span-2 md:col-span-4 lg:col-span-3"
+							aria-labelledby="footer-docs-5-logo">
+							<h3 class="mb-6 text-lg font-bold" id="footer-docs-5-logo">Contact Us</h3>
+							<div class="space-y-3">
+								<p>99 Kakrail, (2nd & 3rd Floor),</p>
+								<p>Dhaka-1000 , Bangladesh.</p>
+								<p>+88 02 222229898, 22 222 2868, 58316041</p>
+								<p>Email- info@extracoding.com</p>
+							</div>
+						</nav>
+
+						<nav
+							class="col-span-4 md:col-span-4 lg:col-span-3"
+							aria-labelledby="footer-docs-5-logo">
+							<h3 class="mb-6 text-lg font-bold" id="footer-docs-5-logo">Newsletter</h3>
+
+							<p class="mb-5">
+								Join our subscribers list to get the latest news and updates delivered directly in
+								your inbox.
+							</p>
+							<div class="flex items-center relative lg:w-[250px]">
+								<input
+									type="text"
+									placeholder="Enter your email address"
+									class="h-10 w-full focus:outline-0 focus:ring-0 focus:ring-transparent border-2 border-white bg-[#570500] focus:border-[#ffffff] text-white" />
+
+								<button
+									class="border h-10 w-[75px] rounded-tr rounded-br border-r-0 bg-white text-[#570500]">
+									Sign Up
+								</button>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+
+			<div class="h-14 bg-[#470000] flex items-center justify-center">
+				<h1 class="text-[#FFFFFF80] text-center text-[13.074px]">
+					Bandhu Social Welfare Society Website - © 2023 by Ekopii ltd.
+				</h1>
+			</div>
+		</footer>
+
+		<!-- Footer ends here -->
+
+		<script>
+			// Grab HTML Elements
+			const bars = document.querySelector(".bars");
+			const menu = document.querySelector(".mobile-menu");
+
+			// Add Event Listeners
+			bars.addEventListener("click", () => {
+				menu.classList.toggle("menu-inactive");
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="stylesheet" href="index.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+			integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<script src="https://kit.fontawesome.com/5458f6155f.js" crossorigin="anonymous"></script>
+		<title>Job Apply Form</title>
+	</head>
+	<body>
+		<div class="flex justify-center items-center h-screen">
+			<form class="bg-[#D9D9D9] p-10 w-[800px]">
+				<div class="flex flex-col md:flex-row justify-between gap-5">
+					<div class="mb-4 lg:mb-5 w-full space-y-1">
+						<label htmlFor="firstName"> First Name <span class="text-red-600">*</span> </label>
+
+						<input
+							type="text"
+							name="firstName"
+							id="firstName"
+							placeholder="First Name"
+							class="w-full focus:outline-0 focus:ring-0 focus:ring-transparent placeholder:text-[#495057] border-[#000] bg-white focus:border-[#000] p-2" />
+					</div>
+
+					<div class="mb-4 lg:mb-5 w-full space-y-1">
+						<label htmlFor="lastName">Last Name</label>
+						<input
+							type="text"
+							name="lastName"
+							id="lastName"
+							placeholder="Last Name"
+							class="w-full focus:outline-0 focus:ring-0 focus:ring-transparent placeholder:text-[#495057] border-[#000] bg-white focus:border-[#000] p-2" />
+					</div>
+				</div>
+
+				<div class="flex flex-col md:flex-row justify-between gap-5">
+					<div class="lg:mb-5 w-full space-y-1">
+						<label htmlFor="email"> Email <span class="text-red-600">*</span> </label>
+
+						<input
+							type="email"
+							name="email"
+							id="email"
+							placeholder="Email"
+							class="w-full focus:outline-0 focus:ring-0 focus:ring-transparent placeholder:text-[#495057] border-[#000] bg-white focus:border-[#000] p-2" />
+					</div>
+
+					<div class="mb-5 lg:mb-5 w-full space-y-1">
+						<label htmlFor="phoneNumber"> Phone Number <span class="text-red-600">*</span> </label>
+
+						<input
+							type="number"
+							name="phoneNumber"
+							id="phoneNumber"
+							placeholder="Phone Number"
+							class="p-2 w-full focus:outline-0 focus:ring-0 focus:ring-transparent placeholder:text-[#495057] border-[#000] bg-white focus:border-[#000]" />
+					</div>
+				</div>
+
+				<div class="flex flex-col md:flex-row justify-between gap-5 mb-2">
+					<div class="lg:mb-5 w-full space-y-1">
+						<label htmlFor="experience">Year of Experience on Respective Position</label>
+
+						<select
+							type="experience"
+							name="experience"
+							id="experience"
+							placeholder="experience"
+							class="p-2 w-full focus:outline-0 focus:ring-0 focus:ring-transparent placeholder:text-[#495057] border-[#000] bg-white focus:border-[#000]">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+					</div>
+
+					<div class="mb-5 w-full space-y-1">
+						<label htmlFor="phoneNumber">Educational Qualification mach</label>
+
+						<div class="flex items-center gap-10">
+							<div class="w-[80px] h-[30px] bg-white flex items-center justify-center mt-1">
+								<input type="radio" name="qualification" id="yes" class="mr-4" value="yes" />
+								<label class="text-xs text-[#000]" htmlFor="yes"> Yes </label>
+							</div>
+							<div class="w-[80px] h-[30px] bg-white flex items-center justify-center mt-1">
+								<input type="radio" name="qualification" id="no" class="mr-4" value="no" />
+								<label class="text-xs text-[#000]" htmlFor="yes"> No </label>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="flex flex-col md:flex-row justify-between gap-5 mb-2">
+					<div class="lg:mb-5 w-full space-y-1">
+						<label htmlFor="coverLetter" class="text-[#000]"> Cover Letter </label>
+
+						<textarea
+							rows="{5}"
+							type="text"
+							name="coverLetter"
+							id="coverLetter"
+							class="p-2 w-full focus:outline-0 focus:ring-0 focus:ring-transparent placeholder:text-[#495057] border-[#000] bg-white focus:border-[#000]">
+						</textarea>
+					</div>
+				</div>
+
+				<div class="flex flex-col md:flex-row justify-between gap-5">
+					<div class="lg:mb-5 w-full space-y-2">
+						<label htmlFor="coverLetter" class="text-[#000] mb-2">
+							Upload Resume <span class="text-red-600">*</span>
+						</label>
+						<div class="custom-upload lg:w-[350px]">
+							<div
+								class="w-[300px] h-[65px] upload-button flex flex-col justify-center items-center p-10">
+								<input type="file" name="" id="" class="upload-btn" />
+								<p class="ant-upload-text">Upload A File</p>
+								<p class="ant-upload-hint">Drag and drop files here</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="flex justify-center mt-5">
+					<button type="submit" class="job-apply-btn w-[140px] h-[39px] bg-[#AF0101]">
+						Apply Now
+					</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

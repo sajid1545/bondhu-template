@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.clip-path {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 10% 100%);
+    background-color: #AF0101;
+}
+
+.active {
+    display: inline;
+    border-bottom: 3px solid #ffffff;
+    /* proposing line height + padding */
+    line-height: 40px;
+    padding: 5px;
+}
+
+.purple-text-shadow {
+    text-shadow: 5px 5px 7px 0px rgba(0, 0, 0, 0.25);
+}
+
+.custom-drop-shadow {
+    filter: drop-shadow(5px 7px 2px rgba(0, 0, 0, 0.25));
+
+}
+
+.custom-line-shadow {
+    filter: drop-shadow(5px 4px 2px rgba(0, 0, 0, 0.25));
+}
+
+.feature-icon {
+    background: linear-gradient(121.12deg, #FF5C00 0%, #FF0F00 101.51%);
+    transform: rotate(-45deg);
+    width: 76px;
+    height: 76px;
+    border-radius: 25px;
+
+}
+
+.feature-icon-2 {
+    transform: rotate(-45deg);
+    width: 76px;
+    height: 76px;
+    border-radius: 25px;
+    background: #FFF;
+    box-shadow: 0px 6px 6px 0px rgba(0, 108, 255, 0.30);
+
+}
+
+.blog-event-card-shadow {
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.mission-vision-shadow {
+    box-shadow: 0px 10px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.job-read-more-btn {
+    border-radius: 5px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.job-apply-btn {
+    border-radius: 5px;
+    background: #AF0101;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.upload-button {
+    border-radius: 20px;
+    border: 0.5px dashed #000;
+    background: #FFF;
+}
+
+.upload-btn {
+    visibility: hidden;
+}
+
+.capacity-building-read-more-btn {
+    border-radius: 5.23px;
+    background: #AF0101;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.dotted-line {
+    box-shadow: 5px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-top: 3px dotted #F60;
+    height: 3px;
+
+
+}
+
+
+.menu-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: 500ms ease;
+}
+
+.menu-inactive {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0%);
+    transition: 500ms ease;
+    height: 0;
+}
