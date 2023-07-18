@@ -210,23 +210,14 @@
 								<i class="fa-solid fa-chevron-right"></i>
 							</button>
 						</div>
-						<div class="mySlides">
-							<img
-								src="https://s3.tproger.ru/uploads/2020/07/field.jpg"
-								class="image image rounded-[30px] border-[3px] border-[#FE5804] h-[278px] w-full" />
+						<div class="mySlides image rounded-[30px]">
+							<img src="./assets/spandon-image-1.svg" class="w-full h-[309px] rounded-[30px]" />
 						</div>
-
-						<div class="mySlides">
+						<!-- <div class="mySlides image rounded-[30px]">
 							<img
-								src="https://s3.tproger.ru/uploads/2020/07/rose.jpg"
-								class="image image rounded-[30px] border-[3px] border-[#FE5804] h-[278px] w-full" />
-						</div>
-
-						<div class="mySlides">
-							<img
-								src="https://s3.tproger.ru/uploads/2020/07/leaf.jpg"
-								class="image image rounded-[30px] border-[3px] border-[#FE5804] h-[278px] w-full" />
-						</div>
+								src="./assets/blog-3.svg"
+								class="w-full h-[309px] rounded-[30px] border-[3px] border-[#FE5804]" />
+						</div> -->
 					</div>
 				</div>
 
@@ -385,7 +376,7 @@
 
 			// function showSlides(n) {
 			// 	let i;
-			// 	let slides = document.getElementsByClassName("item");
+			// 	let slides = document.getElementsByClassName("mySlides");
 
 			// 	if (n > slides.length) {
 			// 		slideIndex = 1;
@@ -398,18 +389,22 @@
 			// 		slide.style.display = "none";
 			// 	}
 			// 	slides[slideIndex - 1].style.display = "block";
-			// 	// const autoPlaySlide = () => {
-			// 	// 	if (slideIndex === slides.length - 1) slideIndex = -1;
-			// 	// 	slideIndex++;
-			// 	// };
 
-			// 	// window.onload = () => {
-			// 	// 	setInterval(autoPlaySlide, 200);
-			// 	// };
+			// 	setTimeout(showSlides(slideIndex), 200);
 			// }
-			// setTimeout(showSlides, 200);
-			let slideIndex = 0;
-			showSlides();
+
+			// ======================== Method - 2 ========================
+
+			let slideIndex = 1;
+			showSlides(slideIndex);
+
+			function nextSlide() {
+				showSlides((slideIndex += 1));
+			}
+
+			function previousSlide() {
+				showSlides((slideIndex -= 1));
+			}
 
 			function showSlides() {
 				let i;
