@@ -660,6 +660,10 @@ video {
   bottom: -10px;
 }
 
+.top-\[-50px\] {
+  top: -50px;
+}
+
 .z-50 {
   z-index: 50;
 }
