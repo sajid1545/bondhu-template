@@ -160,7 +160,7 @@
 				</div>
 			</div>
 		</nav>
-		<div class="block lg:hidden sticky top-[-10px] z-50">
+		<div class="block lg:hidden z-50">
 			<div class="mobile-menu bg-[#570000] text-white">
 				<div class="flex flex-col gap-5 text-2xl">
 					<div class="flex flex-col space-y-10 my-5 pl-10 font-bold mobile-links">
@@ -971,12 +971,43 @@
 				<hr />
 
 				<div class="flex flex-wrap justify-evenly gap-5">
-					<img src="./assets/customer-1.svg" alt="" />
+					<div class="swiper customers-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="./assets/customer-1.svg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/customer-2.svg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/customer-3.svg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/customer-4.svg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/customer-1.svg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/customer-2.svg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/customer-3.svg" alt="" />
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/customer-4.svg" alt="" />
+							</div>
+						</div>
+						<div class="swiper-button-next"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-pagination"></div>
+					</div>
+					<!-- <img src="./assets/customer-1.svg" alt="" />
 					<img src="./assets/customer-2.svg" alt="" />
 					<img src="./assets/customer-3.svg" alt="" />
 					<img src="./assets/customer-4.svg" alt="" />
 					<img src="./assets/customer-1.svg" alt="" />
-					<img src="./assets/customer-2.svg" alt="" />
+					<img src="./assets/customer-2.svg" alt="" /> -->
 				</div>
 			</div>
 
@@ -1095,14 +1126,45 @@
 			var swiper = new Swiper(".mySwiper", {
 				spaceBetween: 30,
 				centeredSlides: true,
-				// autoplay: {
-				// 	delay: 2500,
-				// 	disableOnInteraction: false,
-				// },
+				autoplay: {
+					delay: 2000,
+					disableOnInteraction: false,
+				},
+				loop: true,
 
 				navigation: {
 					nextEl: ".swiper-button-next",
 					prevEl: ".swiper-button-prev",
+				},
+			});
+			var swiper = new Swiper(".customers-swiper", {
+				spaceBetween: 30,
+				autoplay: {
+					delay: 2000,
+					disableOnInteraction: false,
+				},
+
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				loop: true,
+				breakpoints: {
+					// when window width is >= 320px
+					320: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					// when window width is >= 480px
+					480: {
+						slidesPerView: 4,
+						spaceBetween: 30,
+					},
+					// when window width is >= 640px
+					640: {
+						slidesPerView: 5,
+						spaceBetween: 40,
+					},
 				},
 			});
 		</script>

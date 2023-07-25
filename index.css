@@ -218,7 +218,15 @@
 
 } */
 
-.banner-swiper .swiper-button-next::after .swiper-button-prev::after {
+
+
+/* home page gallery swiper custom styles */
+
+.banner-swiper .swiper-button-next {
+    color: white;
+}
+
+.banner-swiper .swiper-button-prev {
     color: white;
 }
 
@@ -252,6 +260,21 @@
     .banner-swiper .swiper-button-prev {
         width: 93%;
     }
+
+    .customers-swiper .swiper-button-next {
+        width: 98%;
+        left: -10px;
+        top: 10px;
+    }
+
+    .customers-swiper .swiper-button-prev {
+        width: 98%;
+        left: -25px;
+        top: 10px;
+    }
+
+
+
 }
 
 @media only screen and (max-width: 425px) {
@@ -260,11 +283,65 @@
     .banner-swiper .swiper-button-prev {
         width: 85%;
     }
+
+    .customers-swiper .swiper-button-next {
+        width: 98%;
+        left: -10px;
+        top: 10px;
+    }
+
+    .customers-swiper .swiper-button-prev {
+        width: 98%;
+        left: -50px;
+        top: 10px;
+    }
+
+
+
 }
 
+/* home page gallery swiper custom styles  ends here */
 
 
-/* .swiper-button-next,
-.swiper-button-prev {
-    color: white !important;
+
+
+
+/*********** home page customer swiper custom styles ***********/
+
+/* .customers-swiper .swiper-button-next {
+    color: white;
+}
+
+.customers-swiper .swiper-button-prev {
+    color: white;
 } */
+
+.customers-swiper .swiper-button-next {
+    display: flex !important;
+    justify-content: flex-end !important;
+
+}
+
+.customers-swiper .swiper-button-prev {
+    display: flex !important;
+    justify-content: flex-end !important;
+    width: 95%;
+
+}
+
+.customers-swiper .swiper-button-next::after {
+
+    position: relative;
+    bottom: -32px;
+    right: -9px;
+    font-size: 35px;
+
+}
+
+.customers-swiper .swiper-button-prev::after {
+    position: relative;
+    bottom: -32px;
+    right: -30px;
+    font-size: 35px;
+
+}
