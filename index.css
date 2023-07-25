@@ -230,6 +230,26 @@
     left: 1020px;
 }
 
+@media only screen and (max-width: 1693px) {
+
+    /*Big smartphones [426px -> 600px]*/
+    .banner-swiper .swiper-button-prev::after {
+
+        left: 0px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    /*Small smartphones [325px -> 425px]*/
+    .banner-swiper .swiper-button-prev::after {
+
+        left: 0px;
+    }
+}
+
+
+
 /* .swiper-button-next,
 .swiper-button-prev {
     color: white !important;
