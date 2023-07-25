@@ -206,3 +206,31 @@
     transition: all 0.5s;
 
 }
+
+.mySwiper {
+    position: relative;
+}
+
+
+
+/* .swiper-button-next::after {
+    position: relative;
+
+} */
+
+
+.banner-swiper .swiper-button-next::after {
+    position: relative;
+    top: 235px;
+}
+
+.banner-swiper .swiper-button-prev::after {
+    position: relative;
+    top: 235px;
+    left: 1020px;
+}
+
+/* .swiper-button-next,
+.swiper-button-prev {
+    color: white !important;
+} */
