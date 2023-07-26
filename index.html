@@ -311,18 +311,17 @@
 
 			<!-- Bar -->
 			<div class="md:h-9 bg-[#E9E9E9] my-20 flex items-center">
-				<div class="lg:w-[60px] flex items-center justify-center border-[#727272] border-r">
+				<div class="min-w-[60px] flex items-center justify-center border-[#727272] border-r h-9">
 					<img src="./assets/Information.svg" alt="" />
 				</div>
 
 				<div class="w-full h-full flex items-center justify-between">
-					<div class="px-2 md:px-10 flex flex-wrap">
+					<div class="px-2 md:px-10 flex flex-wrap text-center md:text-start">
 						<h1 class="mb-0">Bringing Change. Improving Life. Keeping Promises.</h1>
 					</div>
 
-					<div
-						class="lg:w-[60px] h-full flex items-center justify-center border-[#727272] border-l">
-						<img src="./assets/arrow.svg" alt="" />
+					<div class="min-w-[60px] h-9 flex items-center justify-center border-[#727272] border-l">
+						<img src="./assets/arrow.svg" alt="" class="" />
 					</div>
 				</div>
 			</div>
@@ -702,7 +701,7 @@
 			<div class="flex gap-5 flex-col lg:flex-row h-full lg:min-h-[1023px] mb-[100px]">
 				<!-- Recent event and publications -->
 				<div class="lg:w-[25%] flex flex-col justify-between">
-					<div class="bg-[#E9E9E9] blog-event-card-shadow p-4 mb-10 rounded-md">
+					<div class="bg-[#E9E9E9] blog-event-card-shadow p-4 py-10 mb-10 rounded-md min-h-[400px]">
 						<h1 class="font-bold text-[#00019C] text-lg mb-3">Recent Event</h1>
 
 						<div class="bg-white p-2">
@@ -762,17 +761,16 @@
 
 				<!-- News -->
 				<div
-					class="lg:w-[50%] p-5 bg-[#E9E9E9] rounded-md blog-event-card-shadow order-first md:order-none min-h-[61rem]">
+					class="lg:w-[50%] p-5 bg-[#E9E9E9] rounded-md blog-event-card-shadow order-first md:order-none min-h-[61rem] wrapper">
 					<div
-						class="flex gap-5 lg:gap-14 text-[#666] font-medium mb-5 border-b-2 border-[#E2E2E2]">
-						<button
-							class="bg-white p-3 rounded-t-md border-b-4 font-bold border-[#AF0101] text-[#570000]">
-							News Feed
-						</button>
-						<button>Videos</button>
-						<button>Gallery</button>
+						class="flex gap-5 lg:gap-14 text-[#666] font-medium mb-5 border-b-2 border-[#E2E2E2] buttonWrapper">
+						<button data-id="News Feed" class="tab-button tab-active">News Feed</button>
+						<button data-id="Videos" class="tab-button">Videos</button>
+						<button data-id="Gallery" class="tab-button">Gallery</button>
 					</div>
-					<div class="">
+
+					<!-- News Feed -->
+					<div id="News Feed" class="content tab-active">
 						<div>
 							<img src="./assets/featured-news.svg" alt="" class="w-full" />
 						</div>
@@ -874,6 +872,43 @@
 							</div>
 						</div>
 					</div>
+					<!-- News Feed Ends -->
+
+					<!-- videos -->
+					<div id="Videos" class="content">
+						<div>
+							<img src="./assets/large-video-1.svg" alt="" class="w-full" />
+						</div>
+						<div class="px-5 bg-white mt-5 rounded-md">
+							<img src="./assets/videos.svg" alt="" class="py-10 pb-[116px]" />
+						</div>
+					</div>
+					<!-- videos ends here -->
+
+					<!-- Gallery -->
+					<div id="Gallery" class="content">
+						<div>
+							<img src="./assets/gallery-images/gallery-image.svg" alt="" class="w-full mb-2" />
+						</div>
+						<div class="p-1 space-y-3 h-full">
+							<div class="bg-white flex flex-col md:flex-row gap-2 justify-around rounded-md p-2">
+								<img src="./assets/gallery-images/g-1.svg" alt="" class="w-full" />
+								<img src="./assets/gallery-images/g-2.svg" alt="" class="w-full" />
+								<img src="./assets/gallery-images/g-3.svg" alt="" class="w-full" />
+							</div>
+							<div class="bg-white flex gap-2 rounded-md p-2 flex-col md:flex-row justify-around">
+								<img src="./assets/gallery-images/g-4.svg" alt="" class="w-full" />
+								<img src="./assets/gallery-images/g-5.svg" alt="" class="w-full" />
+								<img src="./assets/gallery-images/g-6.svg" alt="" class="w-full" />
+							</div>
+							<div class="bg-white flex gap-2 rounded-md p-2 flex-col md:flex-row justify-around">
+								<img src="./assets/gallery-images/g-1.svg" alt="" class="w-full" />
+								<img src="./assets/gallery-images/g-7.svg" alt="" class="w-full" />
+								<img src="./assets/gallery-images/g-3.svg" alt="" class="w-full" />
+							</div>
+						</div>
+					</div>
+					<!-- Gallery ends -->
 				</div>
 
 				<!-- Donation section -->
@@ -909,13 +944,16 @@
 						</button>
 					</div>
 
-					<div class="bg-[#E9E9E9] blog-event-card-shadow p-7 rounded-md mb-[15px]">
+					<div
+						class="bg-[#E9E9E9] blog-event-card-shadow p-7 rounded-md mb-[15px] donation-wrapper">
 						<div class="flex gap-10 text-[#666] mb-5">
-							<button>Blogs</button>
-							<button>Tweets</button>
+							<button data-id="Donation Blogs" class="donation-tab-button donation-tab-active">
+								Blogs
+							</button>
+							<button data-id="Donation Tweets" class="donation-tab-button">Tweets</button>
 						</div>
 
-						<div class="space-y-5">
+						<div id="Donation Blogs" class="space-y-5 donation-content donation-tab-active">
 							<div>
 								<div class="bg-white rounded px-2 flex gap-2 p-3">
 									<div>
@@ -949,6 +987,10 @@
 									</div>
 								</div>
 							</div>
+						</div>
+
+						<div id="Donation Tweets" class="donation-content">
+							<h1 class="text-center text-5xl">Under construction</h1>
 						</div>
 					</div>
 
@@ -1167,6 +1209,46 @@
 					},
 				},
 			});
+
+			const tabs = document.querySelector(".wrapper");
+			const tabButton = document.querySelectorAll(".tab-button");
+			const contents = document.querySelectorAll(".content");
+
+			tabs.onclick = (e) => {
+				const id = e.target.dataset.id;
+				if (id) {
+					tabButton.forEach((btn) => {
+						btn.classList.remove("tab-active");
+					});
+					e.target.classList.add("tab-active");
+
+					contents.forEach((content) => {
+						content.classList.remove("tab-active");
+					});
+					const element = document.getElementById(id);
+					element.classList.add("tab-active");
+				}
+			};
+
+			const donationTabs = document.querySelector(".donation-wrapper");
+			const donationTabButton = document.querySelectorAll(".donation-tab-button");
+			const donationContents = document.querySelectorAll(".donation-content");
+
+			donationTabs.onclick = (e) => {
+				const id = e.target.dataset.id;
+				if (id) {
+					donationTabButton.forEach((btn) => {
+						btn.classList.remove("donation-tab-active");
+					});
+					e.target.classList.add("donation-tab-active");
+
+					donationContents.forEach((content) => {
+						content.classList.remove("donation-tab-active");
+					});
+					const element = document.getElementById(id);
+					element.classList.add("donation-tab-active");
+				}
+			};
 		</script>
 	</body>
 </html>
