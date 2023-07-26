@@ -346,14 +346,57 @@
 
 }
 
+/*         --------------------------------------Press release swiper--------------------------------------                  */
 
-/* Style the tab content */
+
+.press-release-swiper .swiper-button-next {
+    color: #FF5C00;
+    cursor: pointer;
+}
+
+.press-release-swiper .swiper-button-prev {
+    color: #FF5C00;
+    cursor: pointer;
+}
+
+
+
+.press-release-swiper .swiper-button-next::after {
+
+    position: relative;
+    bottom: -197px;
+    right: 240px;
+    font-size: 25px;
+
+}
+
+.press-release-swiper .swiper-button-prev::after {
+    position: relative;
+    bottom: -197px;
+    right: -240px;
+    font-size: 25px;
+
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #FF5C00 !important;
+}
+
+.swiper-pagination-bullet {
+    background-color: #FF5C00 !important;
+}
+
+
+
+
+
+/*         -----------------------------------------------------------------------------------------                  */
+
+/* blog section tab */
 .content {
     display: none;
 
 }
-
-
 
 button.tab-active {
     background-color: white;
@@ -365,10 +408,11 @@ button.tab-active {
     color: #570000;
 }
 
-
 .content.tab-active {
     display: block;
 }
+
+/*         -----------------------------------------------------------------------------------------                  */
 
 
 
