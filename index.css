@@ -308,13 +308,16 @@
 
 /*********** home page customer swiper custom styles ***********/
 
-/* .customers-swiper .swiper-button-next {
-    color: white;
+.customers-swiper .swiper-button-next {
+    color: #666666;
+    font-weight: bolder;
+
 }
 
 .customers-swiper .swiper-button-prev {
-    color: white;
-} */
+    color: #666666;
+    font-weight: bolder;
+}
 
 .customers-swiper .swiper-button-next {
     display: flex !important;
@@ -352,11 +355,13 @@
 .press-release-swiper .swiper-button-next {
     color: #FF5C00;
     cursor: pointer;
+    font-weight: bolder;
 }
 
 .press-release-swiper .swiper-button-prev {
     color: #FF5C00;
     cursor: pointer;
+    font-weight: bolder;
 }
 
 
