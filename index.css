@@ -391,6 +391,48 @@
     background-color: #FF5C00 !important;
 }
 
+/* 
+@media only screen and (max-width: 1385px) {
+
+
+    .press-release-swiper .swiper-button-prev {
+        width: 93%;
+    }
+
+    .press-release-swiper .swiper-button-next {
+        right: -45px;
+        font-size: 25px;
+    }
+
+    .press-release-swiper .swiper-button-prev {
+        left: 125px;
+        font-size: 25px;
+    }
+
+
+
+} */
+
+@media only screen and (max-width: 425px) {
+
+
+    .press-release-swiper .swiper-button-next {
+        top: 171px;
+        right: -126px;
+        font-size: 25px;
+    }
+
+    .press-release-swiper .swiper-button-prev {
+        font-size: 25px;
+        top: 171px;
+        left: -128px;
+
+    }
+
+
+
+}
+
 
 
 

@@ -487,5 +487,16 @@
 		</footer>
 
 		<!-- Footer ends here -->
+
+		<script>
+			// Grab HTML Elements
+			const bars = document.querySelector(".bars");
+			const menu = document.querySelector(".mobile-menu");
+
+			// Add Event Listeners
+			bars.addEventListener("click", () => {
+				menu.classList.toggle("menu-inactive");
+			});
+		</script>
 	</body>
 </html>
