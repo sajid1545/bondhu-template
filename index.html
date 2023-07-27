@@ -302,9 +302,24 @@
 					</div>
 				</div>
 				<div class="hidden w-0 md:flex flex-col justify-between lg:w-[30%]">
-					<img src="./assets/gallery-2.svg" alt="" class="w-full" />
-					<img src="./assets/gallery-3.svg" alt="" class="w-full" />
-					<img src="./assets/gallery-4.svg" alt="" class="w-full" />
+					<img
+						onclick="handleActiveGallery2()"
+						id="gallery-2"
+						src="./assets/gallery-2.svg"
+						alt=""
+						class="w-full" />
+					<img
+						onclick="handleActiveGallery3()"
+						id="gallery-3"
+						src="./assets/gallery-3.svg"
+						alt=""
+						class="w-full" />
+					<img
+						onclick="handleActiveGallery4()"
+						id="gallery-4"
+						src="./assets/gallery-4.svg"
+						alt=""
+						class="w-full" />
 				</div>
 			</div>
 			<!-- Gallery end here -->
@@ -1247,6 +1262,28 @@
 					const element = document.getElementById(id);
 					element.classList.add("donation-tab-active");
 				}
+			};
+
+			const gallery2 = document.getElementById("gallery-2");
+			const gallery3 = document.getElementById("gallery-3");
+			const gallery4 = document.getElementById("gallery-4");
+
+			const handleActiveGallery2 = () => {
+				gallery2.classList.add("gallery-image-active");
+				gallery3.classList.remove("gallery-image-active");
+				gallery4.classList.remove("gallery-image-active");
+			};
+
+			const handleActiveGallery3 = () => {
+				gallery2.classList.remove("gallery-image-active");
+				gallery3.classList.add("gallery-image-active");
+				gallery4.classList.remove("gallery-image-active");
+			};
+
+			const handleActiveGallery4 = () => {
+				gallery2.classList.remove("gallery-image-active");
+				gallery3.classList.remove("gallery-image-active");
+				gallery4.classList.add("gallery-image-active");
 			};
 		</script>
 	</body>
