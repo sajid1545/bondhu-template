@@ -18,8 +18,8 @@
     display: inline;
     border-bottom: 3px solid #ffffff;
     /* proposing line height + padding */
-    line-height: 40px;
-    padding: 5px;
+    line-height: 30px;
+    padding: 3px;
 }
 
 /* .purple-text-shadow {
