@@ -179,6 +179,8 @@
 }
 
 
+
+
 /*         --------------------------------------Drop down styles--------------------------------------             */
 
 .dropdown {
@@ -282,7 +284,7 @@
 
     /*Small smartphones [325px -> 425px]*/
     .banner-swiper .swiper-button-prev {
-        width: 85%;
+        width: 83%;
     }
 
     .customers-swiper .swiper-button-next {
@@ -483,5 +485,5 @@ button.donation-tab-active {
 
 
 .gallery-image-active {
-    border: 4px solid orangered;
+    border: 4px solid #FF5C00;
 }
