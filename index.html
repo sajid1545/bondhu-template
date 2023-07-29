@@ -270,8 +270,8 @@
 				<div class="w-full lg:w-[70%] flex items-center h-full">
 					<!-- Swiper -->
 					<div class="swiper mySwiper banner-swiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
+						<div id="swipe-wrap" class="swiper-wrapper">
+							<div id="slider-1" class="swiper-slide">
 								<div class="large-gallery-pic">
 									<!-- <img src="./assets/gallery-1.svg" alt="" class="w-full" /> -->
 									<div class="text-white absolute bottom-3 px-10 lg:px-20 font-medium text-justify">
@@ -286,13 +286,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="swiper-slide">
+							<div id="slider-2" class="swiper-slide">
 								<img src="./assets/gallery-banner-small-1.png" alt="" class="w-full h-[531px]" />
 							</div>
-							<div class="swiper-slide">
+							<div id="slider-3" class="swiper-slide">
 								<img src="./assets/gallery-banner-small-2.png" alt="" class="w-full h-[531px]" />
 							</div>
-							<div class="swiper-slide">
+							<div id="slider-4" class="swiper-slide">
 								<img src="./assets/gallery-banner-small-3.png" alt="" class="w-full h-[531px]" />
 							</div>
 						</div>
@@ -1186,7 +1186,7 @@
 				spaceBetween: 30,
 				centeredSlides: true,
 				autoplay: {
-					delay: 2000,
+					delay: 4000,
 					disableOnInteraction: false,
 				},
 				loop: true,
@@ -1272,22 +1272,108 @@
 			const gallery3 = document.getElementById("gallery-3");
 			const gallery4 = document.getElementById("gallery-4");
 
+			const slider1 = document.getElementById("slider-1");
+			const slider2 = document.getElementById("slider-2");
+			const slider3 = document.getElementById("slider-3");
+			const slider4 = document.getElementById("slider-4");
+
+			const swipeWrap = document.getElementById("swipe-wrap");
+
+			const dynamicImage1 = document.getElementById("dynamic-image-1");
+			const dynamicImage2 = document.getElementById("dynamic-image-2");
+			const dynamicImage3 = document.getElementById("dynamic-image-3");
+
 			const handleActiveGallery2 = () => {
 				gallery2.classList.add("gallery-image-active");
 				gallery3.classList.remove("gallery-image-active");
 				gallery4.classList.remove("gallery-image-active");
+
+				slider1.classList.add("hidden");
+				slider2.classList.add("hidden");
+				slider3.classList.add("hidden");
+				slider4.classList.add("hidden");
+
+				const newElement = document.createElement("div");
+				newElement.classList.add("swiper-slide");
+				newElement.id = "dynamic-image-1";
+
+				const dynamicImage2 = document.getElementById("dynamic-image-2");
+				const dynamicImage3 = document.getElementById("dynamic-image-3");
+				if (dynamicImage2) {
+					dynamicImage2.remove();
+				}
+				if (dynamicImage3) {
+					dynamicImage3.remove();
+				}
+
+				const img = document.createElement("img");
+				img.src = "./assets/gallery-banner-small-1.png";
+				img.style.width = "100%";
+				img.style.height = "531px";
+
+				newElement.appendChild(img);
+				swipeWrap.appendChild(newElement);
 			};
 
 			const handleActiveGallery3 = () => {
 				gallery2.classList.remove("gallery-image-active");
 				gallery3.classList.add("gallery-image-active");
 				gallery4.classList.remove("gallery-image-active");
+
+				slider1.classList.add("hidden");
+				slider2.classList.add("hidden");
+				slider3.classList.add("hidden");
+				slider4.classList.add("hidden");
+
+				const newElement = document.createElement("div");
+				newElement.classList.add("swiper-slide");
+				newElement.id = "dynamic-image-2";
+
+				const img = document.createElement("img");
+				img.src = "./assets/gallery-banner-small-2.png";
+				img.style.width = "100%";
+				img.style.height = "531px";
+				newElement.appendChild(img);
+				swipeWrap.appendChild(newElement);
+
+				const dynamicImage1 = document.getElementById("dynamic-image-1");
+				const dynamicImage3 = document.getElementById("dynamic-image-3");
+				if (dynamicImage1) {
+					dynamicImage1.remove();
+				}
+				if (dynamicImage3) {
+					dynamicImage3.remove();
+				}
 			};
 
 			const handleActiveGallery4 = () => {
 				gallery2.classList.remove("gallery-image-active");
 				gallery3.classList.remove("gallery-image-active");
 				gallery4.classList.add("gallery-image-active");
+
+				slider1.classList.add("hidden");
+				slider2.classList.add("hidden");
+				slider3.classList.add("hidden");
+				slider4.classList.add("hidden");
+
+				const newElement = document.createElement("div");
+				newElement.classList.add("swiper-slide");
+				newElement.id = "dynamic-image-3";
+				const img = document.createElement("img");
+				img.src = "./assets/gallery-banner-small-3.png";
+				img.style.width = "100%";
+				img.style.height = "531px";
+				newElement.appendChild(img);
+				swipeWrap.appendChild(newElement);
+
+				const dynamicImage1 = document.getElementById("dynamic-image-1");
+				const dynamicImage2 = document.getElementById("dynamic-image-2");
+				if (dynamicImage1) {
+					dynamicImage1.remove();
+				}
+				if (dynamicImage2) {
+					dynamicImage2.remove();
+				}
 			};
 		</script>
 	</body>
