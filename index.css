@@ -338,7 +338,7 @@
 .customers-swiper .swiper-button-next::after {
 
     position: relative;
-    bottom: -32px;
+    bottom: -20px;
     right: -9px;
     font-size: 35px;
 
@@ -346,7 +346,7 @@
 
 .customers-swiper .swiper-button-prev::after {
     position: relative;
-    bottom: -32px;
+    bottom: -20px;
     right: -30px;
     font-size: 35px;
 
