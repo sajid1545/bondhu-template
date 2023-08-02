@@ -947,7 +947,7 @@
 					<!-- videos -->
 					<div id="Videos" class="content">
 						<div>
-							<video class="w-full" src="./assets/large-video-1.svg" controls></video>
+							<video class="w-full" src="" controls></video>
 							<!-- <img src="./assets/large-video-1.svg" alt="" class="w-full" /> -->
 						</div>
 						<div class="px-5 bg-white mt-5 rounded-md">
@@ -1136,31 +1136,49 @@
 				<hr />
 
 				<div class="flex flex-wrap justify-evenly gap-5">
-					<div class="swiper customers-swiper w-full">
+					<div class="swiper customers-swiper w-full h-full">
 						<div class="swiper-wrapper">
 							<div class="swiper-slide">
-								<img src="./assets/customer-1.svg" alt="" />
+								<img src="./assets/sponsors/customer-1.jpg" alt="" class="lg:w-[210px] h-[110px]" />
 							</div>
 							<div class="swiper-slide">
-								<img src="./assets/customer-2.svg" alt="" />
+								<img src="./assets/sponsors/customer-2.jpg" alt="" class="lg:w-[210px] h-[110px]" />
 							</div>
 							<div class="swiper-slide">
-								<img src="./assets/customer-3.svg" alt="" />
+								<img src="./assets/sponsors/customer-3.jpg" alt="" class="lg:w-[210px] h-[110px]" />
 							</div>
 							<div class="swiper-slide">
-								<img src="./assets/customer-4.svg" alt="" />
+								<img src="./assets/sponsors/customer-4.jpg" alt="" class="lg:w-[210px] h-[110px]" />
 							</div>
 							<div class="swiper-slide">
-								<img src="./assets/customer-1.svg" alt="" />
+								<img src="./assets/sponsors/customer-1.jpg" alt="" class="lg:w-[210px] h-[110px]" />
 							</div>
 							<div class="swiper-slide">
-								<img src="./assets/customer-2.svg" alt="" />
+								<img src="./assets/sponsors/customer-2.jpg" alt="" class="lg:w-[210px] h-[110px]" />
 							</div>
 							<div class="swiper-slide">
-								<img src="./assets/customer-3.svg" alt="" />
+								<img src="./assets/sponsors/customer-3.jpg" alt="" class="lg:w-[210px] h-[110px]" />
 							</div>
 							<div class="swiper-slide">
-								<img src="./assets/customer-4.svg" alt="" />
+								<img src="./assets/sponsors/customer-4.jpg" alt="" class="lg:w-[210px] h-[110px]" />
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/sponsors/customer-2.jpg" alt="" class="lg:w-[210px] h-[110px]" />
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/sponsors/customer-3.jpg" alt="" class="lg:w-[210px] h-[110px]" />
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/sponsors/customer-1.jpg" alt="" class="lg:w-[210px] h-[110px]" />
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/sponsors/customer-4.jpg" alt="" class="lg:w-[210px] h-[110px]" />
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/sponsors/customer-2.jpg" alt="" class="lg:w-[210px] h-[110px]" />
+							</div>
+							<div class="swiper-slide">
+								<img src="./assets/sponsors/customer-1.jpg" alt="" class="lg:w-[210px] h-[110px]" />
 							</div>
 						</div>
 						<div class="swiper-button-next"></div>
@@ -1297,9 +1315,15 @@
 					prevEl: ".swiper-button-prev",
 				},
 			});
+
 			var swiper = new Swiper(".customers-swiper", {
 				spaceBetween: 30,
+				slidesPerView: 6,
+				freeMode: true,
 				centeredSlides: true,
+				grabCursor: true,
+				loop: true,
+				loopFillGroupWithBlank: false,
 				autoplay: {
 					delay: 4000,
 					disableOnInteraction: false,
@@ -1309,7 +1333,6 @@
 					nextEl: ".swiper-button-next",
 					prevEl: ".swiper-button-prev",
 				},
-				loop: true,
 				breakpoints: {
 					// when window width is >= 320px
 					320: {
@@ -1324,7 +1347,6 @@
 					// when window width is >= 640px
 					640: {
 						slidesPerView: 6,
-						spaceBetween: 10,
 					},
 				},
 			});
