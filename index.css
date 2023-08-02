@@ -154,6 +154,7 @@
 
 }
 
+
 .large-gallery-pic {
     position: relative;
 
@@ -168,6 +169,81 @@
 .large-gallery-pic::before {
     content: "";
     background-image: url('./assets/gallery-1.svg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+
+}
+
+/* Gallery pic 1 */
+.large-gallery-pic-1 {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 531px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 0.01%, #000000 87.5%);
+
+}
+
+.large-gallery-pic-1::before {
+    content: "";
+    background-image: url('./assets/gallery-banner-small-1.png');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+
+}
+
+/* Gallery pic 2 */
+.large-gallery-pic-2 {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 531px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 0.01%, #000000 87.5%);
+
+}
+
+.large-gallery-pic-2::before {
+    content: "";
+    background-image: url('./assets/gallery-banner-small-2.png');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.75;
+
+}
+
+/* Gallery pic 3 */
+.large-gallery-pic-3 {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 531px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 0.01%, #000000 87.5%);
+
+}
+
+.large-gallery-pic-3::before {
+    content: "";
+    background-image: url('./assets/gallery-banner-small-3.png');
     background-size: cover;
     position: absolute;
     top: 0px;
