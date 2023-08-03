@@ -16,6 +16,7 @@
 		<!-- Link Swiper's CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 		<title>Home Page</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 	</head>
 	<body>
 		<!-- Top Navbar -->
@@ -947,7 +948,73 @@
 					<!-- videos -->
 					<div id="Videos" class="content">
 						<div>
-							<video class="w-full" src="" controls></video>
+							<!-- <video class="w-full" src="" controls></video> -->
+							<video
+								id="videoarea"
+								controlsList="nodownload"
+								oncontextmenu="return false;"
+								controls="controls"
+								poster=""
+								src=""
+								class="w-full"></video>
+
+							<ul class="mt-10 bg-white p-5 rounded-md" id="playlist">
+								<!-- moviesposter="http://html5videoformatconverter.com/data/images/screen.jpg" -->
+
+								<li class="mb-5 cursor-pointer font-medium" movieurl="./assets/videos/wagon.mp4">
+									<div class="flex gap-2">
+										<img
+											src="./assets/videos/wagon-img.jpeg"
+											alt=""
+											class="h-[100px] w-[170px] rounded-lg" />
+										<div>
+											<p>G Wagon</p>
+											<p class="text-xs">Bandhu Welfare society</p>
+											<p></p>
+										</div>
+									</div>
+								</li>
+								<li class="mb-5 cursor-pointer font-medium" movieurl="./assets/videos/messi-1.mp4">
+									<div class="flex gap-2">
+										<img
+											src="./assets/videos/mess-1-img.jpeg"
+											alt=""
+											class="h-[100px] w-[170px] rounded-lg" />
+										<div>
+											<p>Mesii</p>
+											<p class="text-xs">Bandhu Welfare society</p>
+											<p></p>
+										</div>
+									</div>
+								</li>
+								<li class="mb-5 cursor-pointer font-medium" movieurl="./assets/videos/blinders.mp4">
+									<div class="flex gap-2">
+										<img
+											src="./assets/videos/peaky-image.jpeg"
+											alt=""
+											class="h-[100px] w-[170px] rounded-lg" />
+										<div>
+											<p>Peaky Blinders</p>
+											<p class="text-xs">Bandhu Welfare society</p>
+											<p></p>
+										</div>
+									</div>
+								</li>
+
+								<li class="mb-5 cursor-pointer font-medium" movieurl="./assets/videos/messi-2.mp4">
+									<div class="flex gap-2">
+										<img
+											src="./assets/videos/messi-2-image.jpeg"
+											alt=""
+											class="h-[100px] w-[170px] rounded-lg" />
+										<div>
+											<p>G Wagon</p>
+											<p class="text-xs">Bandhu Welfare society</p>
+											<p></p>
+										</div>
+									</div>
+								</li>
+							</ul>
 						</div>
 						<div class="px-5 bg-white mt-5 rounded-md">
 							<img src="./assets/videos.svg" alt="" class="py-10 pb-[116px]" />
@@ -1291,6 +1358,19 @@
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
 		<script>
+			$(function () {
+				$("#playlist li").on("click", function () {
+					$("#videoarea").attr({
+						src: $(this).attr("movieurl"),
+						poster: "",
+						autoplay: "autoplay",
+					});
+				});
+				$("#videoarea").attr({
+					src: $("#playlist li").eq(0).attr("movieurl"),
+					poster: $("#playlist li").eq(0).attr("moviesposter"),
+				});
+			});
 			// Grab HTML Elements
 			const bars = document.querySelector(".bars");
 			const menu = document.querySelector(".mobile-menu");
