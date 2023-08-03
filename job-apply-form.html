@@ -82,7 +82,7 @@
 						</select>
 					</div>
 
-					<div class="mb-5 w-full space-y-1">
+					<!-- <div class="mb-5 w-full space-y-1">
 						<label htmlFor="phoneNumber">Educational Qualification mach</label>
 
 						<div class="flex items-center gap-10">
@@ -95,6 +95,23 @@
 								<label class="text-xs text-[#000]" htmlFor="yes"> No </label>
 							</div>
 						</div>
+					</div> -->
+					<div class="flex flex-col md:flex-row justify-between gap-5">
+						<div class="lg:mb-5 w-full space-y-2">
+							<label htmlFor="coverLetter" class="text-[#000] mb-2">
+								Upload Resume <span class="text-red-600">*</span>
+							</label>
+							<div class="custom-upload lg:w-[350px]">
+								<label
+									for="avatar"
+									class="w-[300px] h-[65px] upload-button flex flex-col justify-center items-center p-10">
+									<p class=""></p>
+									<label for="avatar">Upload A File </label>
+									<input type="file" id="avatar" name="avatar" />
+									<p class="">Drag and drop files here</p>
+								</label>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -103,29 +120,24 @@
 						<label htmlFor="coverLetter" class="text-[#000]"> Cover Letter </label>
 
 						<textarea
-							rows="{5}"
+							rows="5"
 							type="text"
 							name="coverLetter"
-							id="coverLetter"
+							id="cover"
 							class="p-2 w-full focus:outline-0 focus:ring-0 focus:ring-transparent placeholder:text-[#495057] border-[#000] bg-white focus:border-[#000]">
 						</textarea>
 					</div>
 				</div>
 
-				<div class="flex flex-col md:flex-row justify-between gap-5">
-					<div class="lg:mb-5 w-full space-y-2">
-						<label htmlFor="coverLetter" class="text-[#000] mb-2">
-							Upload Resume <span class="text-red-600">*</span>
-						</label>
-						<div class="custom-upload lg:w-[350px]">
-							<div
-								class="w-[300px] h-[65px] upload-button flex flex-col justify-center items-center p-10">
-								<input type="file" name="" id="" class="upload-btn" />
-								<p class="ant-upload-text">Upload A File</p>
-								<p class="ant-upload-hint">Drag and drop files here</p>
-							</div>
-						</div>
-					</div>
+				<div class="flex items-center mb-4">
+					<input
+						id="default-checkbox"
+						type="checkbox"
+						value=""
+						class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:outline-none" />
+					<label for="default-checkbox" class="ml-2 text-sm font-medium text-gray-900"
+						>Accept terms and conditions</label
+					>
 				</div>
 
 				<div class="flex justify-center mt-5">
