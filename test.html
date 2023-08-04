@@ -161,109 +161,11 @@
 				</div>
 			</div>
 		</nav>
-		<div class="block lg:hidden z-50">
-			<div class="mobile-menu bg-[#570000] text-white">
-				<div class="flex flex-col gap-5 text-2xl">
-					<div class="flex flex-col space-y-10 my-5 pl-10 font-bold mobile-links">
-						<a class="#" href="./index.html">
-							<li class="list-none">Home</li>
-						</a>
 
-						<div class="dropdown">
-							<a href="./aboutBandhu.html" class="dropbtn flex items-center gap-2"
-								>About Bandhu
-								<span>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke-width="1.5"
-										stroke="currentColor"
-										class="h-5 w-5">
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-									</svg> </span
-							></a>
-							<div class="dropdown-content">
-								<a href="#AboutBandhu-1">Link 1</a>
-								<a href="#AboutBandhu-2">Link 2</a>
-								<a href="#AboutBandhu-3">Link 3</a>
-							</div>
-						</div>
-
-						<a class="" href="./bandhuOnSRHR.html">
-							<li class="list-none">Bandhu On SRHR</li>
-						</a>
-						<div class="dropdown">
-							<a href="#Publications/Research" class="dropbtn flex items-center gap-2"
-								>Publications/Research
-								<span>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke-width="1.5"
-										stroke="currentColor"
-										class="h-5 w-5">
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-									</svg> </span
-							></a>
-							<div class="dropdown-content">
-								<a href="#publications-1">Link 1</a>
-								<a href="#publications-2">Link 2</a>
-								<a href="#publications-3">Link 3</a>
-							</div>
-						</div>
-
-						<div class="dropdown">
-							<a href="./spandon.html" class="dropbtn flex items-center gap-2"
-								>Spandon
-								<span>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke-width="1.5"
-										stroke="currentColor"
-										class="h-5 w-5">
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-									</svg> </span
-							></a>
-							<div class="dropdown-content">
-								<a href="#1">Link 1</a>
-								<a href="#2">Link 2</a>
-								<a href="#3">Link 3</a>
-							</div>
-						</div>
-						<a class="" href="./spotlights.html">
-							<li class="list-none">Spotlights</li>
-						</a>
-						<a class="" href="./mis.html">
-							<li class="list-none">T-MIS</li>
-						</a>
-						<a class="" href="">
-							<li class="list-none">E-Bulletin</li>
-						</a>
-
-						<a class="" href="./contact-us.html">
-							<li class="list-none">Contact Us</li>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
 		<!-- Navbar end here -->
 
 		<!-- Gallery -->
-		<div id="Gallery" class="">
+		<div id="Gallery" class="w-[60%] mx-auto">
 			<div id="primary-gallery-container">
 				<img
 					id="primary-gallery-image"
@@ -271,11 +173,74 @@
 					alt=""
 					class="w-full mb-2" />
 			</div>
-			<div id="small-gallery-container" class="p-1"></div>
+			<div id="small-gallery-container" class="p-1 grid grid-cols-3 gap-3"></div>
 		</div>
 		<!-- Gallery ends -->
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-		<script></script>
+		<script>
+			const images = [
+				{ image: "./assets/videos/mess-1-img.jpeg" },
+				{ image: "./assets/videos/messi-2-image.jpeg" },
+				{ image: "./assets/videos/peaky-image.jpeg" },
+				{ image: "./assets/videos/wagon-img.jpeg" },
+			];
+			const primaryGalleryContainer = document.getElementById("primary-gallery-container");
+			const primaryGalleryImage = document.getElementById("primary-gallery-image");
+			const smallGalleryContainer = document.getElementById("small-gallery-container");
+
+			images.forEach((image, index) => {
+				const primaryContainerArray = [];
+
+				const imageElement = document.createElement("img");
+				imageElement.id = `dynamic-image-${index}`;
+				imageElement.src = image.image;
+				imageElement.classList.add("gallery-image");
+				imageElement.style.cursor = "pointer";
+				smallGalleryContainer.append(imageElement);
+
+				imageElement.onclick = function () {
+					const clickedImage = document.getElementById(`dynamic-image-${index}`);
+
+					primaryGalleryImage.style.display = "none";
+					primaryContainerArray.push(imageElement.id);
+					const newElement = document.createElement("img");
+					newElement.src = imageElement.src;
+					console.log(primaryContainerArray);
+					primaryGalleryContainer.append(newElement);
+					imageElement.classList.add("active-gallery-image");
+
+					const allGalleryImages = document.querySelectorAll(".gallery-image");
+					const allGalleryImagesArray = [...allGalleryImages];
+					const ids = allGalleryImagesArray.map((i) => {
+						return i.id;
+					});
+					const restIds = ids.filter((id) => id !== primaryContainerArray[0]);
+					console.log(restIds);
+
+					restIds.forEach((id) => {
+						const imageElement = document.getElementById(id);
+						imageElement.classList.remove("active-gallery-image");
+					});
+
+					// const newImage = document.createElement("img");
+					// newImage.src = clickedImage.src;
+					// primaryGalleryContainer.append(newImage);
+
+					// const imageIdInPrimaryArray = primaryContainerArray[0];
+					// const imageOfPrimaryArray = document.getElementById(imageIdInPrimaryArray);
+					// const allGalleryImages = document.querySelectorAll(".gallery-image");
+					// const allGalleryImagesArray = [...allGalleryImages];
+					// const ids = allGalleryImagesArray.map((i) => {
+					// 	return i.id;
+					// });
+					// if (ids.includes(imageElement.id)) {
+					// 	imageElement.classList.add("active-gallery-image");
+					// } else {
+					// 	imageElement.classList.remove("active-gallery-image");
+					// }
+				};
+			});
+		</script>
 	</body>
 </html>
