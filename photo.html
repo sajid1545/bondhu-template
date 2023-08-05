@@ -294,7 +294,7 @@
 				Photo
 			</h1>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[52px] mb-[78px]">
+			<!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[52px] mb-[78px]">
 				<img src="./assets/photo-gallery/photo-1.svg" alt="" class="w-full" />
 				<img src="./assets/photo-gallery/photo-2.svg" alt="" class="w-full" />
 				<img src="./assets/photo-gallery/photo-3.svg" alt="" class="w-full" />
@@ -304,9 +304,130 @@
 				<img src="./assets/photo-gallery/photo-7.svg" alt="" class="w-full" />
 				<img src="./assets/photo-gallery/photo-8.svg" alt="" class="w-full" />
 				<img src="./assets/photo-gallery/photo-9.svg" alt="" class="w-full" />
+			</div> -->
+
+			<div
+				id="images-container"
+				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-5">
+				<div class="column">
+					<img
+						src="./assets/photo-gallery/photo-1.svg"
+						style="width: 100%"
+						onclick="openModal();currentSlide(1)"
+						class="hover-shadow cursor" />
+				</div>
+				<div class="column">
+					<img
+						src="./assets/photo-gallery/photo-2.svg"
+						style="width: 100%"
+						onclick="openModal();currentSlide(2)"
+						class="hover-shadow cursor" />
+				</div>
+				<div class="column">
+					<img
+						src="./assets/photo-gallery/photo-3.svg"
+						style="width: 100%"
+						onclick="openModal();currentSlide(3)"
+						class="hover-shadow cursor" />
+				</div>
+				<div class="column">
+					<img
+						src="./assets/photo-gallery/photo-4.svg"
+						style="width: 100%"
+						onclick="openModal();currentSlide(4)"
+						class="hover-shadow cursor" />
+				</div>
+				<div class="column">
+					<img
+						src="./assets/photo-gallery/photo-5.svg"
+						style="width: 100%"
+						onclick="openModal();currentSlide(5)"
+						class="hover-shadow cursor" />
+				</div>
+				<div class="column">
+					<img
+						src="./assets/photo-gallery/photo-6.svg"
+						style="width: 100%"
+						onclick="openModal();currentSlide(6)"
+						class="hover-shadow cursor" />
+				</div>
 			</div>
 
-			<div class="mb-10 flex justify-center gap-3">
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div id="modal-content" class="modal-content">
+					<div class="mySlides">
+						<img src="./assets/photo-gallery/photo-1.svg" style="width: 100%" />
+					</div>
+
+					<div class="mySlides">
+						<img src="./assets/photo-gallery/photo-2.svg" style="width: 100%" />
+					</div>
+
+					<div class="mySlides">
+						<img src="./assets/photo-gallery/photo-3.svg" style="width: 100%" />
+					</div>
+
+					<div class="mySlides">
+						<img src="./assets/photo-gallery/photo-4.svg" style="width: 100%" />
+					</div>
+					<div class="mySlides">
+						<img src="./assets/photo-gallery/photo-5.svg" style="width: 100%" />
+					</div>
+					<div class="mySlides">
+						<img src="./assets/photo-gallery/photo-6.svg" style="width: 100%" />
+					</div>
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<div class="grid grid-cols-3 gap-5">
+						<div class="column">
+							<img
+								class="demo cursor"
+								src="./assets/photo-gallery/photo-1.svg"
+								onclick="currentSlide(1)"
+								alt="Nature and sunrise" />
+						</div>
+						<div class="column">
+							<img
+								class="demo cursor"
+								src="./assets/photo-gallery/photo-2.svg"
+								onclick="currentSlide(2)"
+								alt="Snow" />
+						</div>
+						<div class="column">
+							<img
+								class="demo cursor"
+								src="./assets/photo-gallery/photo-3.svg"
+								onclick="currentSlide(3)"
+								alt="Mountains and fjords" />
+						</div>
+						<div class="column">
+							<img
+								class="demo cursor"
+								src="./assets/photo-gallery/photo-4.svg"
+								onclick="currentSlide(4)"
+								alt="Northern Lights" />
+						</div>
+						<div class="column">
+							<img
+								class="demo cursor"
+								src="./assets/photo-gallery/photo-5.svg"
+								onclick="currentSlide(5)"
+								alt="Northern Lights" />
+						</div>
+						<div class="column">
+							<img
+								class="demo cursor"
+								src="./assets/photo-gallery/photo-6.svg"
+								onclick="currentSlide(6)"
+								alt="Northern Lights" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mb-10 mt-10 flex justify-center gap-3">
 				<div
 					class="w-[41px] h-[22px] bg-[#D9D9D9] rounded-[5px] text-[#000] text-justify flex items-center justify-center text-xs font-medium">
 					<button>Prv</button>
@@ -438,6 +559,83 @@
 			bars.addEventListener("click", () => {
 				menu.classList.toggle("menu-inactive");
 			});
+
+			// const imagesContainer = document.getElementById("images-container");
+			// const modalContent = document.getElementById("modal-content");
+
+			// const images = [
+			// 	{ image: "./assets/photo-gallery/photo-1.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-2.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-3.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-4.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-5.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-6.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-7.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-8.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-9.svg" },
+			// ];
+
+			// images.forEach((image, index) => {
+			// 	const imageElement = document.createElement("img");
+			// 	imageElement.id = `dynamic-gallery-image-${index}`;
+			// 	imageElement.src = image.image;
+			// 	imageElement.style.width = "100%";
+			// 	const divElement = document.createElement("div");
+			// 	divElement.appendChild(imageElement);
+			// 	imagesContainer.appendChild(divElement);
+
+			// 	imageElement.addEventListener("click", function () {
+			// 		console.log(index);
+			// 		openModal();
+			// 		currentSlide(index);
+			// 		// const mySlidesDiv = document.createElement("div");
+			// 		// mySlidesDiv.classList.add("mySlides");
+			// 		// const imageElementModal = document.createElement("img");
+			// 		// mySlidesDiv.appendChild(imageElementModal);
+			// 		// modalContent.appendChild(mySlidesDiv);
+			// 	});
+			// });
+
+			function openModal() {
+				document.getElementById("myModal").style.display = "block";
+			}
+
+			function closeModal() {
+				document.getElementById("myModal").style.display = "none";
+			}
+
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+				showSlides((slideIndex += n));
+			}
+
+			function currentSlide(n) {
+				showSlides((slideIndex = n));
+			}
+
+			function showSlides(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("demo");
+				// var captionText = document.getElementById("caption");
+				if (n > slides.length) {
+					slideIndex = 1;
+				}
+				if (n < 1) {
+					slideIndex = slides.length;
+				}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none";
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex - 1].style.display = "block";
+				dots[slideIndex - 1].className += " active";
+				// captionText.innerHTML = dots[slideIndex - 1].alt;
+			}
 		</script>
 	</body>
 </html>

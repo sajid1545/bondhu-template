@@ -1254,17 +1254,19 @@
 								Join our subscribers list to get the latest news and updates delivered directly in
 								your inbox.
 							</p>
-							<div class="flex items-center relative lg:w-[250px]">
-								<input
-									type="text"
-									placeholder="Enter your email address"
-									class="h-10 w-full focus:outline-0 focus:ring-0 focus:ring-transparent border-2 border-white bg-[#570500] focus:border-[#ffffff] text-white" />
+							<form action="">
+								<div class="flex items-center relative lg:w-[265px]">
+									<input
+										type="text"
+										placeholder="Enter your email address"
+										class="h-10 w-full focus:outline-0 focus:ring-0 focus:ring-transparent border-2 border-white bg-[#570500] focus:border-[#ffffff] text-white px-2" />
 
-								<button
-									class="border h-10 w-[75px] rounded-tr rounded-br border-r-0 bg-white text-[#570500]">
-									Sign Up
-								</button>
-							</div>
+									<button
+										class="border h-10 px-1 w-[85px] rounded-tr rounded-br border-r-0 bg-white text-[#570500]">
+										Subscribe
+									</button>
+								</div>
+							</form>
 						</nav>
 					</div>
 				</div>
@@ -1536,6 +1538,7 @@
 				smallGalleryContainer.append(imageElement);
 
 				imageElement.onclick = function () {
+					primaryGalleryContainer.scrollIntoView();
 					primaryGalleryContainer.innerHTML = "";
 					const clickedImage = document.getElementById(`dynamic-image-${index}`);
 
