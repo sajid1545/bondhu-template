@@ -697,3 +697,15 @@ button.donation-tab-active {
 .demo:hover {
     opacity: 1;
 }
+
+
+
+/* Banner swiper active class */
+.gallery-thumbs .swiper-slide-active,
+.gallery-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+    border: 4px solid #fe5c01;
+}

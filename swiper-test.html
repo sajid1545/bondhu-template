@@ -17,6 +17,7 @@
 		<!-- Link Swiper's CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 		<title>Swiper Test</title>
+		<style></style>
 	</head>
 	<body>
 		<div class="px-16">
@@ -82,7 +83,7 @@
 					<div class="swiper-button-next"></div>
 					<div class="swiper-button-prev"></div>
 				</div>
-				<div thumbsSlider="" class="swiper mySwiper1 lg:w-[30%] h-full">
+				<div thumbsSlider="" class="swiper mySwiper1 lg:w-[30%] h-full gallery-thumbs">
 					<div class="swiper-wrapper flex flex-col justify-between gap-3">
 						<div class="swiper-slide h-full w-full">
 							<img src="./assets/thumbnail-1.jpg" class="w-full h-full" />
@@ -105,8 +106,10 @@
 		<script>
 			var swiper = new Swiper(".mySwiper1", {
 				freeMode: true,
-
 				loop: true,
+
+				watchSlidesVisibility: true,
+				watchSlidesProgress: true,
 			});
 			var swiper2 = new Swiper(".mySwiper2", {
 				spaceBetween: 10,
