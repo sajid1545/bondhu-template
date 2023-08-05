@@ -1333,6 +1333,7 @@
 				{ image: "./assets/thumbnail-3.jpg" },
 			];
 
+			// For main gallery slider
 			sliderImages.forEach((image, index) => {
 				const primarySliderContainerArray = [];
 				const primarySliderImageArray = [];
@@ -1345,16 +1346,15 @@
 				thumbnailContainer.appendChild(imageElement);
 
 				imageElement.onclick = function () {
+					slider1.remove();
+					slider2.remove();
+					slider3.remove();
+					slider4.remove();
 					sliderContainer.innerHTML = "";
 					primarySliderContainerArray.push(imageElement.id);
 					imageElement.classList.add("active-slider-image");
 
 					const clickedImage = document.getElementById(`slider-image-${index}`);
-
-					slider1.remove();
-					slider2.remove();
-					slider3.remove();
-					slider4.remove();
 
 					if (!primarySliderImageArray.length) {
 						primarySliderImageArray.push(imageElement.src);
@@ -1509,6 +1509,7 @@
 			// 	swipeWrap.appendChild(newElement);
 			// };
 
+			// for gallery inside blog section
 			const images = [
 				{ image: "./assets/gallery-images/g-1.svg" },
 				{ image: "./assets/gallery-images/g-2.svg" },
