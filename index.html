@@ -1328,9 +1328,9 @@
 			const slider4 = document.getElementById("slider-4");
 
 			const sliderImages = [
-				{ image: "./assets/gallery-2.svg" },
-				{ image: "./assets/gallery-3.svg" },
-				{ image: "./assets/gallery-4.svg" },
+				{ image: "./assets/thumbnail-1.jpg" },
+				{ image: "./assets/thumbnail-2.jpg" },
+				{ image: "./assets/thumbnail-3.jpg" },
 			];
 
 			sliderImages.forEach((image, index) => {
@@ -1345,29 +1345,34 @@
 				thumbnailContainer.appendChild(imageElement);
 
 				imageElement.onclick = function () {
-					// sliderContainer.innerHTML = "";
+					sliderContainer.innerHTML = "";
 					primarySliderContainerArray.push(imageElement.id);
 					imageElement.classList.add("active-slider-image");
 
-					// const clickedImage = document.getElementById(`slider-image-${index}`);
+					const clickedImage = document.getElementById(`slider-image-${index}`);
 
-					// slider1.remove();
-					// slider2.remove();
-					// slider3.remove();
-					// slider4.remove();
+					slider1.remove();
+					slider2.remove();
+					slider3.remove();
+					slider4.remove();
 
 					if (!primarySliderImageArray.length) {
 						primarySliderImageArray.push(imageElement.src);
 					}
 
-					// // for inserting image in primary gallery container
-					// primarySliderImageArray.map((i) => {
-					// 	const newElement = document.createElement("img");
-					// 	newElement.src = i;
-					// 	newElement.style.width = "100%";
-					// 	sliderContainer.appendChild(newElement);
-					// 	imageElement.classList.add("active-slider-image");
-					// });
+					// for inserting image in primary gallery container
+					primarySliderImageArray.map((i) => {
+						const newElement = document.createElement("img");
+						newElement.src = i;
+						newElement.style.width = "100%";
+						newElement.style.height = "531px";
+						const newDiv = document.createElement("div");
+						newDiv.classList.add("swiper-slide");
+						newDiv.appendChild(newElement);
+						sliderContainer.appendChild(newDiv);
+
+						imageElement.classList.add("active-slider-image");
+					});
 
 					// For active class
 					const allSliderImages = document.querySelectorAll(".slider-image");
@@ -1458,51 +1463,51 @@
 				}
 			};
 
-			const gallery2 = document.getElementById("gallery-2");
-			const gallery3 = document.getElementById("gallery-3");
-			const gallery4 = document.getElementById("gallery-4");
+			// const gallery2 = document.getElementById("gallery-2");
+			// const gallery3 = document.getElementById("gallery-3");
+			// const gallery4 = document.getElementById("gallery-4");
 
-			const swipeWrap = document.getElementById("swipe-wrap");
+			// const swipeWrap = document.getElementById("swipe-wrap");
 
-			const dynamicImage1 = document.getElementById("dynamic-image-1");
-			const dynamicImage2 = document.getElementById("dynamic-image-2");
-			const dynamicImage3 = document.getElementById("dynamic-image-3");
+			// const dynamicImage1 = document.getElementById("dynamic-image-1");
+			// const dynamicImage2 = document.getElementById("dynamic-image-2");
+			// const dynamicImage3 = document.getElementById("dynamic-image-3");
 
-			const handleActiveGallery2 = () => {
-				const dynamicImage1 = document.getElementById("dynamic-image-1");
-				if (dynamicImage1) {
-					return;
-				}
-				gallery2.classList.add("gallery-image-active");
-				gallery3.classList.remove("gallery-image-active");
-				gallery4.classList.remove("gallery-image-active");
+			// const handleActiveGallery2 = () => {
+			// 	const dynamicImage1 = document.getElementById("dynamic-image-1");
+			// 	if (dynamicImage1) {
+			// 		return;
+			// 	}
+			// 	gallery2.classList.add("gallery-image-active");
+			// 	gallery3.classList.remove("gallery-image-active");
+			// 	gallery4.classList.remove("gallery-image-active");
 
-				slider1.classList.add("hidden");
-				slider2.classList.add("hidden");
-				slider3.classList.add("hidden");
-				slider4.classList.add("hidden");
+			// 	slider1.classList.add("hidden");
+			// 	slider2.classList.add("hidden");
+			// 	slider3.classList.add("hidden");
+			// 	slider4.classList.add("hidden");
 
-				const newElement = document.createElement("div");
-				newElement.classList.add("swiper-slide");
-				newElement.id = "dynamic-image-1";
+			// 	const newElement = document.createElement("div");
+			// 	newElement.classList.add("swiper-slide");
+			// 	newElement.id = "dynamic-image-1";
 
-				const dynamicImage2 = document.getElementById("dynamic-image-2");
-				const dynamicImage3 = document.getElementById("dynamic-image-3");
-				if (dynamicImage2) {
-					dynamicImage2.remove();
-				}
-				if (dynamicImage3) {
-					dynamicImage3.remove();
-				}
+			// 	const dynamicImage2 = document.getElementById("dynamic-image-2");
+			// 	const dynamicImage3 = document.getElementById("dynamic-image-3");
+			// 	if (dynamicImage2) {
+			// 		dynamicImage2.remove();
+			// 	}
+			// 	if (dynamicImage3) {
+			// 		dynamicImage3.remove();
+			// 	}
 
-				const img = document.createElement("img");
-				img.src = "./assets/gallery-banner-small-1.png";
-				img.style.width = "100%";
-				img.style.height = "531px";
+			// 	const img = document.createElement("img");
+			// 	img.src = "./assets/gallery-banner-small-1.png";
+			// 	img.style.width = "100%";
+			// 	img.style.height = "531px";
 
-				newElement.appendChild(img);
-				swipeWrap.appendChild(newElement);
-			};
+			// 	newElement.appendChild(img);
+			// 	swipeWrap.appendChild(newElement);
+			// };
 
 			const images = [
 				{ image: "./assets/gallery-images/g-1.svg" },
