@@ -381,50 +381,7 @@
 					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 					<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-					<div class="grid grid-cols-3 gap-5">
-						<div class="column">
-							<img
-								class="demo cursor"
-								src="./assets/photo-gallery/photo-1.svg"
-								onclick="currentSlide(1)"
-								alt="Nature and sunrise" />
-						</div>
-						<div class="column">
-							<img
-								class="demo cursor"
-								src="./assets/photo-gallery/photo-2.svg"
-								onclick="currentSlide(2)"
-								alt="Snow" />
-						</div>
-						<div class="column">
-							<img
-								class="demo cursor"
-								src="./assets/photo-gallery/photo-3.svg"
-								onclick="currentSlide(3)"
-								alt="Mountains and fjords" />
-						</div>
-						<div class="column">
-							<img
-								class="demo cursor"
-								src="./assets/photo-gallery/photo-4.svg"
-								onclick="currentSlide(4)"
-								alt="Northern Lights" />
-						</div>
-						<div class="column">
-							<img
-								class="demo cursor"
-								src="./assets/photo-gallery/photo-5.svg"
-								onclick="currentSlide(5)"
-								alt="Northern Lights" />
-						</div>
-						<div class="column">
-							<img
-								class="demo cursor"
-								src="./assets/photo-gallery/photo-6.svg"
-								onclick="currentSlide(6)"
-								alt="Northern Lights" />
-						</div>
-					</div>
+					<div id="preview-image" class="grid grid-cols-3 gap-10 my-10"></div>
 				</div>
 			</div>
 
@@ -563,6 +520,7 @@
 
 			const imagesContainer = document.getElementById("images-container");
 			const modalContent = document.getElementById("modal-content");
+			const previewImageContainer = document.getElementById("preview-image");
 
 			const images = [
 				{ image: "./assets/photo-gallery/photo-1.svg" },
@@ -582,6 +540,7 @@
 				imageElement.id = `dynamic-gallery-image-${index}`;
 				imageElement.src = image.image;
 				imageElement.style.width = "100%";
+				imageElement.style.cursor = "pointer";
 				const divElement = document.createElement("div");
 				divElement.appendChild(imageElement);
 				imagesContainer.appendChild(divElement);
@@ -592,8 +551,24 @@
 				const imageElementModal = document.createElement("img");
 				imageElementModal.src = image.image;
 				imageElementModal.style.width = "100%";
+				imageElementModal.style.cursor = "pointer";
 				mySlidesDiv.appendChild(imageElementModal);
 				modalContent.appendChild(mySlidesDiv);
+
+				// Preview Image
+				const previewDiv = document.createElement("div");
+				const previewImage = document.createElement("img");
+				previewImage.src = image.image;
+				previewImage.classList.add("preview-image");
+				previewImage.style.width = "100%";
+				previewImage.style.cursor = "pointer";
+				previewDiv.appendChild(previewImage);
+				previewImageContainer.append(previewDiv);
+
+				previewImage.addEventListener("click", function () {
+					modalContent.scrollIntoView();
+					currentSlide(index + 1);
+				});
 
 				imageElement.addEventListener("click", function () {
 					openModal();
