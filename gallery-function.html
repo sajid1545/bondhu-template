@@ -15,7 +15,7 @@
 		<script src="https://kit.fontawesome.com/5458f6155f.js" crossorigin="anonymous"></script>
 		<!-- Link Swiper's CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-		<title>Test Page 2</title>
+		<title>Test Page</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 	</head>
 	<body>
@@ -177,7 +177,6 @@
 		</div>
 		<!-- Gallery ends -->
 
-		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 		<script>
 			const images = [
 				{ image: "./assets/videos/mess-1-img.jpeg" },
@@ -191,6 +190,7 @@
 
 			images.forEach((image, index) => {
 				const primaryContainerArray = [];
+				const primaryGalleryImageArray = [];
 
 				const imageElement = document.createElement("img");
 				imageElement.id = `dynamic-image-${index}`;
@@ -200,24 +200,31 @@
 				smallGalleryContainer.append(imageElement);
 
 				imageElement.onclick = function () {
+					primaryGalleryContainer.innerHTML = "";
 					const clickedImage = document.getElementById(`dynamic-image-${index}`);
 
-					primaryGalleryImage.style.display = "none";
+					primaryGalleryImage.remove();
 					primaryContainerArray.push(imageElement.id);
-					const newElement = document.createElement("img");
-					newElement.src = imageElement.src;
-					console.log(primaryContainerArray);
-					primaryGalleryContainer.append(newElement);
-					imageElement.classList.add("active-gallery-image");
 
+					if (!primaryGalleryImageArray.length) {
+						primaryGalleryImageArray.push(imageElement.src);
+					}
+
+					// for inserting image in primary gallery container
+					primaryGalleryImageArray.map((i) => {
+						const newElement = document.createElement("img");
+						newElement.src = i;
+						primaryGalleryContainer.appendChild(newElement);
+						imageElement.classList.add("active-gallery-image");
+					});
+
+					// For active class
 					const allGalleryImages = document.querySelectorAll(".gallery-image");
 					const allGalleryImagesArray = [...allGalleryImages];
 					const ids = allGalleryImagesArray.map((i) => {
 						return i.id;
 					});
 					const restIds = ids.filter((id) => id !== primaryContainerArray[0]);
-					console.log(restIds);
-
 					restIds.forEach((id) => {
 						const imageElement = document.getElementById(id);
 						imageElement.classList.remove("active-gallery-image");
