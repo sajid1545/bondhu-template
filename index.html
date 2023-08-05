@@ -1031,68 +1031,9 @@
 								alt=""
 								class="w-full mb-2" />
 						</div>
-						<div id="small-gallery-container" class="p-1">
-							<div class="bg-white flex flex-col md:flex-row gap-2 justify-around rounded-md p-2">
-								<img
-									onclick="handleGalleryImage1()"
-									id="gallery-image-1"
-									src="./assets/gallery-images/g-1.svg"
-									alt=""
-									class="w-full" />
-								<img
-									onclick="handleGalleryImage2()"
-									id="gallery-image-2"
-									src="./assets/gallery-images/g-2.svg"
-									alt=""
-									class="w-full" />
-								<img
-									onclick="handleGalleryImage3()"
-									id="gallery-image-3"
-									src="./assets/gallery-images/g-3.svg"
-									alt=""
-									class="w-full" />
-							</div>
-							<div class="bg-white flex gap-2 rounded-md p-2 flex-col md:flex-row justify-around">
-								<img
-									onclick="handleGalleryImage4()"
-									id="gallery-image-4"
-									src="./assets/gallery-images/g-4.svg"
-									alt=""
-									class="w-full" />
-								<img
-									onclick="handleGalleryImage5()"
-									id="gallery-image-5"
-									src="./assets/gallery-images/g-5.svg"
-									alt=""
-									class="w-full" />
-								<img
-									onclick="handleGalleryImage6()"
-									id="gallery-image-6"
-									src="./assets/gallery-images/g-6.svg"
-									alt=""
-									class="w-full" />
-							</div>
-							<div class="bg-white flex gap-2 rounded-md p-2 flex-col md:flex-row justify-around">
-								<img
-									onclick="handleGalleryImage7()"
-									id="gallery-image-7"
-									src="./assets/gallery-images/g-1.svg"
-									alt=""
-									class="w-full" />
-								<img
-									onclick="handleGalleryImage8()"
-									id="gallery-image-8"
-									src="./assets/gallery-images/g-7.svg"
-									alt=""
-									class="w-full" />
-								<img
-									onclick="handleGalleryImage9()"
-									id="gallery-image-9"
-									src="./assets/gallery-images/g-3.svg"
-									alt=""
-									class="w-full" />
-							</div>
-						</div>
+						<div
+							id="small-gallery-container"
+							class="p-4 grid grid-cols-3 gap-3 bg-white mt-5 rounded-md"></div>
 					</div>
 					<!-- Gallery ends -->
 				</div>
@@ -1590,531 +1531,65 @@
 				}
 			};
 
+			const images = [
+				{ image: "./assets/gallery-images/g-1.svg" },
+				{ image: "./assets/gallery-images/g-2.svg" },
+				{ image: "./assets/gallery-images/g-3.svg" },
+				{ image: "./assets/gallery-images/g-4.svg" },
+				{ image: "./assets/gallery-images/g-5.svg" },
+				{ image: "./assets/gallery-images/g-6.svg" },
+				{ image: "./assets/gallery-images/g-7.svg" },
+			];
 			const primaryGalleryContainer = document.getElementById("primary-gallery-container");
 			const primaryGalleryImage = document.getElementById("primary-gallery-image");
-			const galleryImage1 = document.getElementById("gallery-image-1");
-			const galleryImage2 = document.getElementById("gallery-image-2");
-			const galleryImage3 = document.getElementById("gallery-image-3");
-			const galleryImage4 = document.getElementById("gallery-image-4");
-			const galleryImage5 = document.getElementById("gallery-image-5");
-			const galleryImage6 = document.getElementById("gallery-image-6");
-			const galleryImage7 = document.getElementById("gallery-image-7");
-			const galleryImage8 = document.getElementById("gallery-image-8");
-			const galleryImage9 = document.getElementById("gallery-image-9");
+			const smallGalleryContainer = document.getElementById("small-gallery-container");
 
-			const handleGalleryImage1 = () => {
-				const dynamicImage1 = document.getElementById("dynamic-gallery-image-1");
-				if (dynamicImage1) {
-					return;
-				}
-				primaryGalleryImage.classList.add("hidden");
-				const image = document.createElement("img");
-				image.src = "./assets/gallery-images/g-1.svg";
-				image.classList.add("w-full");
-				image.classList.add("mb-5");
-				image.classList.add("h-[350px]");
-				image.id = "dynamic-gallery-image-1";
-				image.style.pointerEvents = "none";
-				galleryImage1.style.border = "3px solid #FF5C00";
+			images.forEach((image, index) => {
+				const primaryContainerArray = [];
+				const primaryGalleryImageArray = [];
 
-				primaryGalleryContainer.append(image);
+				const imageElement = document.createElement("img");
+				imageElement.id = `dynamic-image-${index}`;
+				imageElement.src = image.image;
+				imageElement.style.width = "100%";
+				imageElement.classList.add("gallery-image");
+				imageElement.style.cursor = "pointer";
+				smallGalleryContainer.append(imageElement);
 
-				const dynamicImage2 = document.getElementById("dynamic-gallery-image-2");
-				if (dynamicImage2) {
-					dynamicImage2.remove();
-					galleryImage2.style.border = "none";
-				}
-				const dynamicImage3 = document.getElementById("dynamic-gallery-image-3");
-				if (dynamicImage3) {
-					dynamicImage3.remove();
-					galleryImage3.style.border = "none";
-				}
-				const dynamicImage4 = document.getElementById("dynamic-gallery-image-4");
-				if (dynamicImage4) {
-					dynamicImage4.remove();
-					galleryImage4.style.border = "none";
-				}
-				const dynamicImage5 = document.getElementById("dynamic-gallery-image-5");
-				if (dynamicImage5) {
-					dynamicImage5.remove();
-					galleryImage5.style.border = "none";
-				}
-				const dynamicImage6 = document.getElementById("dynamic-gallery-image-6");
-				if (dynamicImage6) {
-					dynamicImage6.remove();
-					galleryImage6.style.border = "none";
-				}
-				const dynamicImage7 = document.getElementById("dynamic-gallery-image-7");
-				if (dynamicImage7) {
-					dynamicImage7.remove();
-					galleryImage7.style.border = "none";
-				}
-				const dynamicImage8 = document.getElementById("dynamic-gallery-image-8");
-				if (dynamicImage8) {
-					dynamicImage8.remove();
-					galleryImage8.style.border = "none";
-				}
-				const dynamicImage9 = document.getElementById("dynamic-gallery-image-9");
-				if (dynamicImage9) {
-					dynamicImage9.remove();
-					galleryImage9.style.border = "none";
-				}
-			};
-			const handleGalleryImage2 = () => {
-				const dynamicImage2 = document.getElementById("dynamic-gallery-image-2");
-				if (dynamicImage2) {
-					return;
-				}
+				imageElement.onclick = function () {
+					primaryGalleryContainer.innerHTML = "";
+					const clickedImage = document.getElementById(`dynamic-image-${index}`);
 
-				const dynamicImage1 = document.getElementById("dynamic-gallery-image-1");
-				if (dynamicImage1) {
-					dynamicImage1.remove();
-					galleryImage1.style.border = "none";
-				}
-				const dynamicImage3 = document.getElementById("dynamic-gallery-image-3");
-				if (dynamicImage3) {
-					dynamicImage3.remove();
-					galleryImage3.style.border = "none";
-				}
-				const dynamicImage4 = document.getElementById("dynamic-gallery-image-4");
-				if (dynamicImage4) {
-					dynamicImage4.remove();
-					galleryImage4.style.border = "none";
-				}
-				const dynamicImage5 = document.getElementById("dynamic-gallery-image-5");
-				if (dynamicImage5) {
-					dynamicImage5.remove();
-					galleryImage5.style.border = "none";
-				}
-				const dynamicImage6 = document.getElementById("dynamic-gallery-image-6");
-				if (dynamicImage6) {
-					dynamicImage6.remove();
-					galleryImage6.style.border = "none";
-				}
-				const dynamicImage7 = document.getElementById("dynamic-gallery-image-7");
-				if (dynamicImage7) {
-					dynamicImage7.remove();
-					galleryImage7.style.border = "none";
-				}
-				const dynamicImage8 = document.getElementById("dynamic-gallery-image-8");
-				if (dynamicImage8) {
-					dynamicImage8.remove();
-					galleryImage8.style.border = "none";
-				}
-				const dynamicImage9 = document.getElementById("dynamic-gallery-image-9");
-				if (dynamicImage9) {
-					dynamicImage9.remove();
-					galleryImage9.style.border = "none";
-				}
+					primaryGalleryImage.remove();
+					primaryContainerArray.push(imageElement.id);
 
-				primaryGalleryImage.classList.add("hidden");
-				const image = document.createElement("img");
-				image.src = "./assets/gallery-images/g-2.svg";
-				image.classList.add("w-full");
-				image.classList.add("mb-5");
-				image.classList.add("h-[350px]");
-				image.id = "dynamic-gallery-image-2";
-				primaryGalleryContainer.append(image);
-				galleryImage2.style.border = "3px solid #FF5C00";
-			};
-			const handleGalleryImage3 = () => {
-				const dynamicImage3 = document.getElementById("dynamic-gallery-image-3");
-				if (dynamicImage3) {
-					return;
-				}
+					if (!primaryGalleryImageArray.length) {
+						primaryGalleryImageArray.push(imageElement.src);
+					}
 
-				const dynamicImage1 = document.getElementById("dynamic-gallery-image-1");
-				if (dynamicImage1) {
-					dynamicImage1.remove();
-					galleryImage1.style.border = "none";
-				}
-				const dynamicImage2 = document.getElementById("dynamic-gallery-image-2");
-				if (dynamicImage2) {
-					dynamicImage2.remove();
-					galleryImage2.style.border = "none";
-				}
-				const dynamicImage4 = document.getElementById("dynamic-gallery-image-4");
-				if (dynamicImage4) {
-					dynamicImage4.remove();
-					galleryImage4.style.border = "none";
-				}
-				const dynamicImage5 = document.getElementById("dynamic-gallery-image-5");
-				if (dynamicImage5) {
-					dynamicImage5.remove();
-					galleryImage5.style.border = "none";
-				}
-				const dynamicImage6 = document.getElementById("dynamic-gallery-image-6");
-				if (dynamicImage6) {
-					dynamicImage6.remove();
-					galleryImage6.style.border = "none";
-				}
-				const dynamicImage7 = document.getElementById("dynamic-gallery-image-7");
-				if (dynamicImage7) {
-					dynamicImage7.remove();
-					galleryImage7.style.border = "none";
-				}
-				const dynamicImage8 = document.getElementById("dynamic-gallery-image-8");
-				if (dynamicImage8) {
-					dynamicImage8.remove();
-					galleryImage8.style.border = "none";
-				}
-				const dynamicImage9 = document.getElementById("dynamic-gallery-image-9");
-				if (dynamicImage9) {
-					dynamicImage9.remove();
-					galleryImage9.style.border = "none";
-				}
+					// for inserting image in primary gallery container
+					primaryGalleryImageArray.map((i) => {
+						const newElement = document.createElement("img");
+						newElement.src = i;
+						newElement.style.height = "474px";
+						newElement.style.width = "100%";
+						primaryGalleryContainer.appendChild(newElement);
+						imageElement.classList.add("active-gallery-image");
+					});
 
-				primaryGalleryImage.classList.add("hidden");
-				const image = document.createElement("img");
-				image.src = "./assets/gallery-images/g-3.svg";
-				image.classList.add("w-full");
-				image.classList.add("mb-5");
-				image.classList.add("h-[350px]");
-				image.id = "dynamic-gallery-image-3";
-				primaryGalleryContainer.append(image);
-				galleryImage3.style.border = "3px solid #FF5C00";
-			};
-			const handleGalleryImage4 = () => {
-				const dynamicImage4 = document.getElementById("dynamic-gallery-image-4");
-				if (dynamicImage4) {
-					return;
-				}
-
-				const dynamicImage1 = document.getElementById("dynamic-gallery-image-1");
-				if (dynamicImage1) {
-					dynamicImage1.remove();
-					galleryImage1.style.border = "none";
-				}
-				const dynamicImage2 = document.getElementById("dynamic-gallery-image-2");
-				if (dynamicImage2) {
-					dynamicImage2.remove();
-					galleryImage2.style.border = "none";
-				}
-				const dynamicImage3 = document.getElementById("dynamic-gallery-image-3");
-				if (dynamicImage3) {
-					dynamicImage3.remove();
-					galleryImage3.style.border = "none";
-				}
-				const dynamicImage5 = document.getElementById("dynamic-gallery-image-5");
-				if (dynamicImage5) {
-					dynamicImage5.remove();
-					galleryImage5.style.border = "none";
-				}
-				const dynamicImage6 = document.getElementById("dynamic-gallery-image-6");
-				if (dynamicImage6) {
-					dynamicImage6.remove();
-					galleryImage6.style.border = "none";
-				}
-				const dynamicImage7 = document.getElementById("dynamic-gallery-image-7");
-				if (dynamicImage7) {
-					dynamicImage7.remove();
-					galleryImage7.style.border = "none";
-				}
-				const dynamicImage8 = document.getElementById("dynamic-gallery-image-8");
-				if (dynamicImage8) {
-					dynamicImage8.remove();
-					galleryImage8.style.border = "none";
-				}
-				const dynamicImage9 = document.getElementById("dynamic-gallery-image-9");
-				if (dynamicImage9) {
-					dynamicImage9.remove();
-					galleryImage9.style.border = "none";
-				}
-
-				primaryGalleryImage.classList.add("hidden");
-				const image = document.createElement("img");
-				image.src = "./assets/gallery-images/g-4.svg";
-				image.classList.add("w-full");
-				image.classList.add("mb-5");
-				image.classList.add("h-[350px]");
-				image.id = "dynamic-gallery-image-4";
-				primaryGalleryContainer.append(image);
-				galleryImage4.style.border = "3px solid #FF5C00";
-			};
-			const handleGalleryImage5 = () => {
-				const dynamicImage5 = document.getElementById("dynamic-gallery-image-5");
-				if (dynamicImage5) {
-					return;
-				}
-
-				const dynamicImage1 = document.getElementById("dynamic-gallery-image-1");
-				if (dynamicImage1) {
-					dynamicImage1.remove();
-					galleryImage1.style.border = "none";
-				}
-				const dynamicImage2 = document.getElementById("dynamic-gallery-image-2");
-				if (dynamicImage2) {
-					dynamicImage2.remove();
-					galleryImage2.style.border = "none";
-				}
-				const dynamicImage3 = document.getElementById("dynamic-gallery-image-3");
-				if (dynamicImage3) {
-					dynamicImage3.remove();
-					galleryImage3.style.border = "none";
-				}
-				const dynamicImage4 = document.getElementById("dynamic-gallery-image-4");
-				if (dynamicImage4) {
-					dynamicImage4.remove();
-					galleryImage4.style.border = "none";
-				}
-				const dynamicImage6 = document.getElementById("dynamic-gallery-image-6");
-				if (dynamicImage6) {
-					dynamicImage6.remove();
-					galleryImage6.style.border = "none";
-				}
-				const dynamicImage7 = document.getElementById("dynamic-gallery-image-7");
-				if (dynamicImage7) {
-					dynamicImage7.remove();
-					galleryImage7.style.border = "none";
-				}
-				const dynamicImage8 = document.getElementById("dynamic-gallery-image-8");
-				if (dynamicImage8) {
-					dynamicImage8.remove();
-					galleryImage8.style.border = "none";
-				}
-				const dynamicImage9 = document.getElementById("dynamic-gallery-image-9");
-				if (dynamicImage9) {
-					dynamicImage9.remove();
-					galleryImage9.style.border = "none";
-				}
-
-				primaryGalleryImage.classList.add("hidden");
-				const image = document.createElement("img");
-				image.src = "./assets/gallery-images/g-5.svg";
-				image.classList.add("w-full");
-				image.classList.add("mb-5");
-				image.classList.add("h-[350px]");
-				image.id = "dynamic-gallery-image-5";
-				primaryGalleryContainer.append(image);
-				galleryImage5.style.border = "3px solid #FF5C00";
-			};
-			const handleGalleryImage6 = () => {
-				const dynamicImage6 = document.getElementById("dynamic-gallery-image-6");
-				if (dynamicImage6) {
-					return;
-				}
-				const dynamicImage1 = document.getElementById("dynamic-gallery-image-1");
-				if (dynamicImage1) {
-					dynamicImage1.remove();
-					galleryImage1.style.border = "none";
-				}
-				const dynamicImage2 = document.getElementById("dynamic-gallery-image-2");
-				if (dynamicImage2) {
-					dynamicImage2.remove();
-					galleryImage2.style.border = "none";
-				}
-				const dynamicImage3 = document.getElementById("dynamic-gallery-image-3");
-				if (dynamicImage3) {
-					dynamicImage3.remove();
-					galleryImage3.style.border = "none";
-				}
-				const dynamicImage4 = document.getElementById("dynamic-gallery-image-4");
-				if (dynamicImage4) {
-					dynamicImage4.remove();
-					galleryImage4.style.border = "none";
-				}
-				const dynamicImage5 = document.getElementById("dynamic-gallery-image-5");
-				if (dynamicImage5) {
-					dynamicImage5.remove();
-					galleryImage5.style.border = "none";
-				}
-				const dynamicImage7 = document.getElementById("dynamic-gallery-image-7");
-				if (dynamicImage7) {
-					dynamicImage7.remove();
-					galleryImage7.style.border = "none";
-				}
-				const dynamicImage8 = document.getElementById("dynamic-gallery-image-8");
-				if (dynamicImage8) {
-					dynamicImage8.remove();
-					galleryImage8.style.border = "none";
-				}
-				const dynamicImage9 = document.getElementById("dynamic-gallery-image-9");
-				if (dynamicImage9) {
-					dynamicImage9.remove();
-					galleryImage9.style.border = "none";
-				}
-
-				primaryGalleryImage.classList.add("hidden");
-				const image = document.createElement("img");
-				image.src = "./assets/gallery-images/g-6.svg";
-				image.classList.add("w-full");
-				image.classList.add("mb-5");
-				image.classList.add("h-[350px]");
-				image.id = "dynamic-gallery-image-6";
-				primaryGalleryContainer.append(image);
-				galleryImage6.style.border = "3px solid #FF5C00";
-			};
-			const handleGalleryImage7 = () => {
-				const dynamicImage7 = document.getElementById("dynamic-gallery-image-7");
-				if (dynamicImage7) {
-					return;
-				}
-
-				const dynamicImage1 = document.getElementById("dynamic-gallery-image-1");
-				if (dynamicImage1) {
-					dynamicImage1.remove();
-					galleryImage1.style.border = "none";
-				}
-				const dynamicImage2 = document.getElementById("dynamic-gallery-image-2");
-				if (dynamicImage2) {
-					dynamicImage2.remove();
-					galleryImage2.style.border = "none";
-				}
-				const dynamicImage3 = document.getElementById("dynamic-gallery-image-3");
-				if (dynamicImage3) {
-					dynamicImage3.remove();
-					galleryImage3.style.border = "none";
-				}
-				const dynamicImage4 = document.getElementById("dynamic-gallery-image-4");
-				if (dynamicImage4) {
-					dynamicImage4.remove();
-					galleryImage4.style.border = "none";
-				}
-				const dynamicImage5 = document.getElementById("dynamic-gallery-image-5");
-				if (dynamicImage5) {
-					dynamicImage5.remove();
-					galleryImage5.style.border = "none";
-				}
-				const dynamicImage6 = document.getElementById("dynamic-gallery-image-6");
-				if (dynamicImage6) {
-					dynamicImage6.remove();
-					galleryImage6.style.border = "none";
-				}
-				const dynamicImage8 = document.getElementById("dynamic-gallery-image-8");
-				if (dynamicImage8) {
-					dynamicImage8.remove();
-					galleryImage8.style.border = "none";
-				}
-
-				const dynamicImage9 = document.getElementById("dynamic-gallery-image-9");
-				if (dynamicImage9) {
-					dynamicImage9.remove();
-					galleryImage9.style.border = "none";
-				}
-				primaryGalleryImage.classList.add("hidden");
-				const image = document.createElement("img");
-				image.src = "./assets/gallery-images/g-1.svg";
-				image.classList.add("w-full");
-				image.classList.add("mb-5");
-				image.classList.add("h-[350px]");
-				image.id = "dynamic-gallery-image-7";
-				primaryGalleryContainer.append(image);
-				galleryImage7.style.border = "3px solid #FF5C00";
-			};
-			const handleGalleryImage8 = () => {
-				const dynamicImage8 = document.getElementById("dynamic-gallery-image-8");
-				if (dynamicImage8) {
-					return;
-				}
-
-				const dynamicImage1 = document.getElementById("dynamic-gallery-image-1");
-				if (dynamicImage1) {
-					dynamicImage1.remove();
-					galleryImage1.style.border = "none";
-				}
-				const dynamicImage2 = document.getElementById("dynamic-gallery-image-2");
-				if (dynamicImage2) {
-					dynamicImage2.remove();
-					galleryImage2.style.border = "none";
-				}
-				const dynamicImage3 = document.getElementById("dynamic-gallery-image-3");
-				if (dynamicImage3) {
-					dynamicImage3.remove();
-					galleryImage3.style.border = "none";
-				}
-				const dynamicImage4 = document.getElementById("dynamic-gallery-image-4");
-				if (dynamicImage4) {
-					dynamicImage4.remove();
-					galleryImage4.style.border = "none";
-				}
-				const dynamicImage5 = document.getElementById("dynamic-gallery-image-5");
-				if (dynamicImage5) {
-					dynamicImage5.remove();
-					galleryImage5.style.border = "none";
-				}
-				const dynamicImage6 = document.getElementById("dynamic-gallery-image-6");
-				if (dynamicImage6) {
-					dynamicImage6.remove();
-					galleryImage6.style.border = "none";
-				}
-				const dynamicImage7 = document.getElementById("dynamic-gallery-image-7");
-				if (dynamicImage7) {
-					dynamicImage7.remove();
-					galleryImage7.style.border = "none";
-				}
-				const dynamicImage9 = document.getElementById("dynamic-gallery-image-9");
-				if (dynamicImage9) {
-					dynamicImage9.remove();
-					galleryImage9.style.border = "none";
-				}
-
-				primaryGalleryImage.classList.add("hidden");
-				const image = document.createElement("img");
-				image.src = "./assets/gallery-images/g-7.svg";
-				image.classList.add("w-full");
-				image.classList.add("mb-5");
-				image.classList.add("h-[350px]");
-				image.id = "dynamic-gallery-image-8";
-				primaryGalleryContainer.append(image);
-				galleryImage8.style.border = "3px solid #FF5C00";
-			};
-			const handleGalleryImage9 = () => {
-				const dynamicImage9 = document.getElementById("dynamic-gallery-image-9");
-				if (dynamicImage9) {
-					return;
-				}
-
-				const dynamicImage1 = document.getElementById("dynamic-gallery-image-1");
-				if (dynamicImage1) {
-					dynamicImage1.remove();
-					galleryImage1.style.border = "none";
-				}
-				const dynamicImage2 = document.getElementById("dynamic-gallery-image-2");
-				if (dynamicImage2) {
-					dynamicImage2.remove();
-					galleryImage2.style.border = "none";
-				}
-				const dynamicImage3 = document.getElementById("dynamic-gallery-image-3");
-				if (dynamicImage3) {
-					dynamicImage3.remove();
-					galleryImage3.style.border = "none";
-				}
-				const dynamicImage4 = document.getElementById("dynamic-gallery-image-4");
-				if (dynamicImage4) {
-					dynamicImage4.remove();
-					galleryImage4.style.border = "none";
-				}
-				const dynamicImage5 = document.getElementById("dynamic-gallery-image-5");
-				if (dynamicImage5) {
-					dynamicImage5.remove();
-					galleryImage5.style.border = "none";
-				}
-				const dynamicImage6 = document.getElementById("dynamic-gallery-image-6");
-				if (dynamicImage6) {
-					dynamicImage6.remove();
-					galleryImage6.style.border = "none";
-				}
-				const dynamicImage7 = document.getElementById("dynamic-gallery-image-7");
-				if (dynamicImage7) {
-					dynamicImage7.remove();
-					galleryImage7.style.border = "none";
-				}
-				const dynamicImage8 = document.getElementById("dynamic-gallery-image-8");
-				if (dynamicImage8) {
-					dynamicImage8.remove();
-					galleryImage8.style.border = "none";
-				}
-
-				primaryGalleryImage.classList.add("hidden");
-				const image = document.createElement("img");
-				image.src = "./assets/gallery-images/g-3.svg";
-				image.classList.add("w-full");
-				image.classList.add("mb-5");
-				image.classList.add("h-[350px]");
-				image.id = "dynamic-gallery-image-9";
-				primaryGalleryContainer.append(image);
-				galleryImage9.style.border = "3px solid #FF5C00";
-			};
+					// For active class
+					const allGalleryImages = document.querySelectorAll(".gallery-image");
+					const allGalleryImagesArray = [...allGalleryImages];
+					const ids = allGalleryImagesArray.map((i) => {
+						return i.id;
+					});
+					const restIds = ids.filter((id) => id !== primaryContainerArray[0]);
+					restIds.forEach((id) => {
+						const imageElement = document.getElementById(id);
+						imageElement.classList.remove("active-gallery-image");
+					});
+				};
+			});
 		</script>
 	</body>
 </html>
