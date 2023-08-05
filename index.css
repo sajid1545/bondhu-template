@@ -191,7 +191,7 @@
 
 .large-gallery-pic-1::before {
     content: "";
-    background-image: url('./assets/gallery-banner-small-1.png');
+    background-image: url('./assets/gallery-banner-small-2.png');
     width: 100%;
     background-size: cover;
     position: absolute;
@@ -217,7 +217,7 @@
 
 .large-gallery-pic-2::before {
     content: "";
-    background-image: url('./assets/gallery-banner-small-2.png');
+    background-image: url('./assets/gallery-banner-small-3.png');
     width: 100%;
     background-size: cover;
     position: absolute;
