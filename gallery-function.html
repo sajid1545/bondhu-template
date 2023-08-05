@@ -15,7 +15,7 @@
 		<script src="https://kit.fontawesome.com/5458f6155f.js" crossorigin="anonymous"></script>
 		<!-- Link Swiper's CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-		<title>Test Page</title>
+		<title>Gallery Function</title>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 	</head>
 	<body>
@@ -179,10 +179,13 @@
 
 		<script>
 			const images = [
-				{ image: "./assets/videos/mess-1-img.jpeg" },
-				{ image: "./assets/videos/messi-2-image.jpeg" },
-				{ image: "./assets/videos/peaky-image.jpeg" },
-				{ image: "./assets/videos/wagon-img.jpeg" },
+				{ image: "./assets/gallery-images/g-1.svg" },
+				{ image: "./assets/gallery-images/g-2.svg" },
+				{ image: "./assets/gallery-images/g-3.svg" },
+				{ image: "./assets/gallery-images/g-4.svg" },
+				{ image: "./assets/gallery-images/g-5.svg" },
+				{ image: "./assets/gallery-images/g-6.svg" },
+				{ image: "./assets/gallery-images/g-7.svg" },
 			];
 			const primaryGalleryContainer = document.getElementById("primary-gallery-container");
 			const primaryGalleryImage = document.getElementById("primary-gallery-image");
@@ -214,6 +217,8 @@
 					primaryGalleryImageArray.map((i) => {
 						const newElement = document.createElement("img");
 						newElement.src = i;
+						newElement.style.height = "474px";
+						newElement.style.width = "100%";
 						primaryGalleryContainer.appendChild(newElement);
 						imageElement.classList.add("active-gallery-image");
 					});
