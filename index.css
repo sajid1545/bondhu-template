@@ -166,6 +166,7 @@
 .large-gallery-pic::before {
     content: "";
     background-image: url('./assets/gallery-1.svg');
+    width: 100%;
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -191,6 +192,7 @@
 .large-gallery-pic-1::before {
     content: "";
     background-image: url('./assets/gallery-banner-small-1.png');
+    width: 100%;
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -216,6 +218,7 @@
 .large-gallery-pic-2::before {
     content: "";
     background-image: url('./assets/gallery-banner-small-2.png');
+    width: 100%;
     background-size: cover;
     position: absolute;
     top: 0px;
@@ -241,6 +244,7 @@
 .large-gallery-pic-3::before {
     content: "";
     background-image: url('./assets/gallery-banner-small-3.png');
+    width: 100%;
     background-size: cover;
     position: absolute;
     top: 0px;
