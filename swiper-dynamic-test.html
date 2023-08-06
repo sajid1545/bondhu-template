@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link href="/dist/output.css" rel="stylesheet" />
+
+		<link rel="stylesheet" href="index.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+			integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<script src="https://kit.fontawesome.com/5458f6155f.js" crossorigin="anonymous"></script>
+		<!-- Link Swiper's CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+		<title>Swiper Dynamic Test</title>
+		<style></style>
+	</head>
+	<body>
+		<div class="px-16">
+			<!-- Swiper -->
+
+			<div class="flex gap-10 mt-10">
+				<div
+					style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+					class="swiper mySwiper2 banner-swiper lg:w-[70%]">
+					<div id="main-gallery-container" class="swiper-wrapper">
+						<!-- <div class="swiper-slide">
+							<img src="./assets/gallery-1.svg" class="w-full" />
+						</div>
+						<div class="swiper-slide">
+							<img src="./assets/gallery-banner-small-2.png" class="w-full h-[492px]" />
+						</div>
+						<div class="swiper-slide">
+							<img src="./assets/gallery-banner-small-3.png" class="w-full h-[492px]" />
+						</div> -->
+					</div>
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+				</div>
+				<div thumbsSlider="" class="swiper mySwiper1 lg:w-[30%] h-full gallery-thumbs">
+					<div
+						id="gallery-thumbs-container"
+						class="swiper-wrapper flex flex-col justify-between gap-3">
+						<!-- <div class="swiper-slide h-full w-full">
+							<img src="./assets/thumbnail-1.jpg" class="w-full h-full" />
+						</div>
+						<div class="swiper-slide h-full w-full">
+							<img src="./assets/thumbnail-2.jpg" class="w-full h-full" />
+						</div>
+						<div class="swiper-slide h-full w-full">
+							<img src="./assets/thumbnail-3.jpg" class="w-full h-full" />
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Swiper JS -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+		<!-- Initialize Swiper -->
+		<script>
+			const mainGalleryContainer = document.getElementById("main-gallery-container");
+			const galleryThumbsContainer = document.getElementById("gallery-thumbs-container");
+			const mainGalleryImages = [
+				{ image: "./assets/gallery-banner-small-1.png" },
+				{ image: "./assets/gallery-banner-small-2.png" },
+				{ image: "./assets/gallery-banner-small-3.png" },
+			];
+
+			mainGalleryImages.forEach((image, index) => {
+				const imageElement = document.createElement("img");
+				imageElement.id = `main-gallery-image-${index}`;
+				imageElement.src = image.image;
+				imageElement.classList.add("w-full");
+				imageElement.classList.add("h-[531px]");
+				imageElement.style.cursor = "pointer";
+				const swiperSlideDiv = document.createElement("div");
+				swiperSlideDiv.classList.add("swiper-slide");
+				swiperSlideDiv.appendChild(imageElement);
+				mainGalleryContainer.append(swiperSlideDiv);
+			});
+
+			const thumbnailImages = [
+				{ image: "./assets/gallery-banner-small-1.png" },
+				{ image: "./assets/gallery-banner-small-2.png" },
+				{ image: "./assets/gallery-banner-small-3.png" },
+			];
+			thumbnailImages.forEach((image, index) => {
+				const imageElement = document.createElement("img");
+				imageElement.id = `thumbnail-gallery-image-${index}`;
+				imageElement.src = image.image;
+				imageElement.classList.add("w-full");
+				imageElement.classList.add("h-full");
+				imageElement.style.cursor = "pointer";
+				const swiperSlideDiv = document.createElement("div");
+				swiperSlideDiv.classList.add("swiper-slide");
+				swiperSlideDiv.classList.add("h-full");
+				swiperSlideDiv.classList.add("w-full");
+				swiperSlideDiv.appendChild(imageElement);
+				galleryThumbsContainer.append(swiperSlideDiv);
+			});
+
+			var swiper = new Swiper(".mySwiper1", {
+				freeMode: true,
+				loop: true,
+
+				watchSlidesVisibility: true,
+				watchSlidesProgress: true,
+			});
+			var swiper2 = new Swiper(".mySwiper2", {
+				spaceBetween: 10,
+				centeredSlides: true,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+				thumbs: {
+					swiper: swiper,
+				},
+				slideToClickedSlide: true,
+				loop: true,
+			});
+		</script>
+	</body>
+</html>
