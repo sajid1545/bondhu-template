@@ -154,7 +154,7 @@
 
 .large-gallery-pic {
     position: relative;
-
+    height: 531px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -179,7 +179,7 @@
 /* Gallery pic 1 */
 .large-gallery-pic-1 {
     position: relative;
-
+    height: 531px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -205,7 +205,7 @@
 /* Gallery pic 2 */
 .large-gallery-pic-2 {
     position: relative;
-
+    height: 531px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -230,7 +230,7 @@
 /* Gallery pic 3 */
 .large-gallery-pic-3 {
     position: relative;
-
+    height: 531px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -290,11 +290,6 @@
     transition: all 0.5s;
 
 }
-
-.show-dropdown {
-    display: block;
-}
-
 
 .mySwiper {
     position: relative;
