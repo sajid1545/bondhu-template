@@ -15,7 +15,9 @@
 		<script src="https://kit.fontawesome.com/5458f6155f.js" crossorigin="anonymous"></script>
 		<!-- Link Swiper's CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
 		<title>Press Release Details</title>
+		<style></style>
 	</head>
 	<body>
 		<!-- Top Navbar -->
@@ -297,29 +299,28 @@
 				<!-- Banner -->
 				<div class="mb-[100px]">
 					<div class="flex flex-col lg:flex-row justify-between items-center mb-[89px] lg:gap-20">
-						<div class="swiper press-release-swiper w-full lg:w-[40%] relative">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide lg:pb-10">
-									<div class="">
-										<img src="./assets/press-release-image.svg" alt="" class="w-full" />
-									</div>
-								</div>
-								<div class="swiper-slide lg:pb-10">
-									<div class="">
-										<img src="./assets/press-release-image.svg" alt="" class="w-full" />
-									</div>
-								</div>
-								<div class="swiper-slide lg:pb-10">
-									<div class="">
-										<img src="./assets/press-release-image.svg" alt="" class="w-full" />
-									</div>
-								</div>
-							</div>
-							<div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div>
-							<div class="swiper-pagination"></div>
+						<div class="slider-wrapper w-full lg:w-[40%] relative" id="slider">
+							<ul class="slider-img">
+								<li>
+									<img src="https://picsum.photos/960/720?random=5" alt="" />
+								</li>
+								<li>
+									<img src="https://picsum.photos/960/720?random=6" alt="" />
+								</li>
+								<li>
+									<img src="https://picsum.photos/960/720?random=4" alt="" />
+								</li>
+								<li>
+									<img src="https://picsum.photos/960/720?random=1" alt="" />
+								</li>
+								<li>
+									<img src="https://picsum.photos/960/720?random=2" alt="" />
+								</li>
+								<li>
+									<img src="https://picsum.photos/960/720?random=3" alt="" />
+								</li>
+							</ul>
 						</div>
-
 						<div class="lg:w-[60%]">
 							<div class="text-base lg:text-[20px] font-bold mb-[32px] md:mt-0 ml-10">
 								<h1 class="text-[#6F16EF] mt-10 lg:mt-0 custom-drop-shadow font-bold underline">
@@ -451,6 +452,7 @@
 		</footer>
 
 		<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<!-- Footer ends here -->
 		<script>
 			// Grab HTML Elements
@@ -462,23 +464,84 @@
 				menu.classList.toggle("menu-inactive");
 			});
 
-			var swiper = new Swiper(".press-release-swiper", {
-				slidesPerView: 1,
-				spaceBetween: 30,
-				loop: true,
-				pagination: {
-					el: ".swiper-pagination",
-					clickable: true,
+			// Determine the total amount of images in the carousel.
+			let sliderCount = $("#slider").find(".slider-img li img").length;
+			// Load images into the carousel
+			let sliderImg = $("#slider").find(".slider-img");
+			// Define the navigation arrows and pagination bullets.
+			let sliderArrow = `<ul class="slider-arrow"><li class="arrow-left" role="button"><i class="fas fa-chevron-left"></i></li><li class="arrow-right" role="button"><i class="fas fa-chevron-right"></i></li></ul>`;
+			let sliderDotLi = "";
+			for (let i = 0; i < sliderCount; i++) {
+				sliderDotLi += `<li><i class="fas fa-circle"></i></li>`;
+			}
+			let sliderDot = `<ul class="slider-dot">${sliderDotLi}</ul>`;
+			$("#slider").append(sliderArrow + sliderDot);
+
+			let activeDefaultCount = $(".slider-dot li.active").length;
+			if (activeDefaultCount != 1) {
+				$(".slider-dot li").removeClass().eq(0).addClass("active");
+			}
+			let sliderIndex = $(".slider-dot li.active").index();
+			sliderImg.css("left", -sliderIndex * 100 + "%");
+
+			// switch between images
+			function sliderPos() {
+				sliderImg.css("left", -sliderIndex * 100 + "%");
+				$(".slider-dot li").removeClass().eq(sliderIndex).addClass("active");
+			}
+
+			$(".arrow-right").click(function () {
+				sliderIndex >= sliderCount - 1 ? (sliderIndex = 0) : sliderIndex++;
+				sliderPos();
+			});
+
+			$(".arrow-left").click(function () {
+				sliderIndex <= 0 ? (sliderIndex = sliderCount - 1) : sliderIndex--;
+				sliderPos();
+			});
+
+			$(".slider-dot li").click(function () {
+				sliderIndex = $(this).index();
+				sliderPos();
+			});
+
+			let goSlider = setInterval(() => {
+				$(".arrow-right").click();
+			}, 5000);
+
+			$("#slider").on({
+				mouseenter: () => {
+					clearInterval(goSlider);
 				},
-				navigation: {
-					nextEl: ".swiper-button-next",
-					prevEl: ".swiper-button-prev",
-				},
-				autoplay: {
-					delay: 2500,
-					disableOnInteraction: false,
+				mouseleave: () => {
+					goSlider = setInterval(() => {
+						$(".arrow-right").click();
+					}, 5000);
 				},
 			});
 		</script>
 	</body>
 </html>
+
+<!-- <div class="swiper press-release-swiper w-full lg:w-[40%] relative">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide lg:pb-10">
+									<div class="">
+										<img src="./assets/press-release-image.svg" alt="" class="w-full" />
+									</div>
+								</div>
+								<div class="swiper-slide lg:pb-10">
+									<div class="">
+										<img src="./assets/press-release-image.svg" alt="" class="w-full" />
+									</div>
+								</div>
+								<div class="swiper-slide lg:pb-10">
+									<div class="">
+										<img src="./assets/press-release-image.svg" alt="" class="w-full" />
+									</div>
+								</div>
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-pagination"></div>
+						</div> -->
