@@ -158,7 +158,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 531px;
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 0.01%, #000000 87.5%);
 
 }
@@ -184,7 +183,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 531px;
+
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 0.01%, #000000 87.5%);
 
 }
@@ -210,7 +209,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 531px;
     background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 0.01%, #000000 87.5%);
 
 }
@@ -292,6 +290,11 @@
     transition: all 0.5s;
 
 }
+
+.show-dropdown {
+    display: block;
+}
+
 
 .mySwiper {
     position: relative;
