@@ -712,3 +712,10 @@ button.donation-tab-active {
 .gallery-thumbs .swiper-slide-thumb-active {
     border: 4px solid #fe5c01;
 }
+
+
+
+
+.box {
+    cursor: pointer;
+}
