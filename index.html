@@ -748,7 +748,7 @@
 			<div class="flex gap-5 flex-col lg:flex-row h-full lg:min-h-[1023px]">
 				<!-- Recent event and publications -->
 				<div class="lg:w-[25%] flex flex-col justify-between">
-					<div class="bg-[#E9E9E9] blog-event-card-shadow p-4 py-10 mb-10 rounded-md min-h-[400px]">
+					<div class="bg-[#E9E9E9] blog-event-card-shadow p-4 mb-10 rounded-md min-h-[400px]">
 						<h1 class="font-bold text-[#00019C] text-lg mb-2">Recent Event</h1>
 						<div class="w-full h-[2px] bg-[#E2E2E2] mb-2"></div>
 
@@ -1059,9 +1059,8 @@
 						</button>
 					</div>
 
-					<div
-						class="bg-[#E9E9E9] blog-event-card-shadow p-7 rounded-md mb-[15px] donation-wrapper">
-						<div class="flex gap-10 text-[#666] mb-5">
+					<div class="bg-[#E9E9E9] blog-event-card-shadow p-7 rounded-md donation-wrapper">
+						<div class="flex gap-10 text-[#666]">
 							<button data-id="Donation Blogs" class="donation-tab-button donation-tab-active">
 								Blogs
 							</button>
@@ -1404,17 +1403,17 @@
 						imageElement.classList.add("active-slider-image");
 					});
 
-					// For active class
-					const allSliderImages = document.querySelectorAll(".slider-image");
-					const allSliderImagesArray = [...allSliderImages];
-					const ids = allSliderImagesArray.map((i) => {
-						return i.id;
-					});
-					const restIds = ids.filter((id) => id !== primarySliderContainerArray[0]);
-					restIds.forEach((id) => {
-						const imageElement = document.getElementById(id);
-						imageElement.classList.remove("active-slider-image");
-					});
+					// // For active class
+					// const allSliderImages = document.querySelectorAll(".slider-image");
+					// const allSliderImagesArray = [...allSliderImages];
+					// const ids = allSliderImagesArray.map((i) => {
+					// 	return i.id;
+					// });
+					// const restIds = ids.filter((id) => id !== primarySliderContainerArray[0]);
+					// restIds.forEach((id) => {
+					// 	const imageElement = document.getElementById(id);
+					// 	imageElement.classList.remove("active-slider-image");
+					// });
 				};
 			});
 

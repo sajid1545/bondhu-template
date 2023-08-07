@@ -435,13 +435,14 @@
 
 
 .press-release-swiper .swiper-button-next {
-    color: #FF5C00;
+    color: #FF5C00 !important;
     cursor: pointer;
     font-weight: bolder;
 }
 
+
 .press-release-swiper .swiper-button-prev {
-    color: #FF5C00;
+    color: #FF5C00 !important;
     cursor: pointer;
     font-weight: bolder;
 }
@@ -449,6 +450,8 @@
 
 
 .press-release-swiper .swiper-button-next::after {
+    color: #FF5C00 !important;
+    font-weight: bolder;
 
     position: relative;
     bottom: -197px;
