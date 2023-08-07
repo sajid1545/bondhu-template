@@ -281,6 +281,8 @@
     display: block;
 }
 
+
+
 .dropdown-content a:hover {
     background-color: #903732;
 }
@@ -291,14 +293,21 @@
 
 }
 
-.mySwiper {
-    position: relative;
+.show {
+    display: block;
 }
 
 
 
-/*         --------------------------------------home page gallery swiper custom styles--------------------------------------             */
 
+
+
+
+
+/*         --------------------------------------home page gallery swiper custom styles--------------------------------------             */
+.mySwiper {
+    position: relative;
+}
 
 .banner-swiper .swiper-button-next {
     color: white;
