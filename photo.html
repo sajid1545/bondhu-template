@@ -1,4 +1,15 @@
 <!DOCTYPE html>
+<!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[52px] mb-[78px]">
+				<img src="./assets/photo-gallery/photo-1.svg" alt="" class="w-full" />
+				<img src="./assets/photo-gallery/photo-2.svg" alt="" class="w-full" />
+				<img src="./assets/photo-gallery/photo-3.svg" alt="" class="w-full" />
+				<img src="./assets/photo-gallery/photo-4.svg" alt="" class="w-full" />
+				<img src="./assets/photo-gallery/photo-5.svg" alt="" class="w-full" />
+				<img src="./assets/photo-gallery/photo-6.svg" alt="" class="w-full" />
+				<img src="./assets/photo-gallery/photo-7.svg" alt="" class="w-full" />
+				<img src="./assets/photo-gallery/photo-8.svg" alt="" class="w-full" />
+				<img src="./assets/photo-gallery/photo-9.svg" alt="" class="w-full" />
+			</div> -->
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -267,49 +278,15 @@
 		<!-- Photo section starts here -->
 
 		<div class="w-full px-5 lg:px-[60px]">
-			<div class="mb-16">
-				<img src="./assets/photo-gallery/photo-banner.svg" alt="" class="w-full" />
-			</div>
-
-			<!-- Bar -->
-			<div class="md:h-9 bg-[#E9E9E9] my-20 flex items-center">
-				<div class="min-w-[60px] flex items-center justify-center border-[#727272] border-r h-9">
-					<img src="./assets/Information.svg" alt="" />
-				</div>
-
-				<div class="w-full h-full flex items-center justify-between">
-					<div class="px-2 md:px-10 flex flex-wrap text-center md:text-start">
-						<h1 class="mb-0">Bringing Change. Improving Life. Keeping Promises.</h1>
-					</div>
-
-					<div class="min-w-[60px] h-9 flex items-center justify-center border-[#727272] border-l">
-						<img src="./assets/arrow.svg" alt="" class="" />
-					</div>
-				</div>
-			</div>
-			<!-- Bar Ends here -->
-
 			<h1
 				class="text-2xl lg:text-4xl font-bold leading-10 text-[#000] mb-10 lg:mb-[72px] text-center">
 				Photo
 			</h1>
 
-			<!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[52px] mb-[78px]">
-				<img src="./assets/photo-gallery/photo-1.svg" alt="" class="w-full" />
-				<img src="./assets/photo-gallery/photo-2.svg" alt="" class="w-full" />
-				<img src="./assets/photo-gallery/photo-3.svg" alt="" class="w-full" />
-				<img src="./assets/photo-gallery/photo-4.svg" alt="" class="w-full" />
-				<img src="./assets/photo-gallery/photo-5.svg" alt="" class="w-full" />
-				<img src="./assets/photo-gallery/photo-6.svg" alt="" class="w-full" />
-				<img src="./assets/photo-gallery/photo-7.svg" alt="" class="w-full" />
-				<img src="./assets/photo-gallery/photo-8.svg" alt="" class="w-full" />
-				<img src="./assets/photo-gallery/photo-9.svg" alt="" class="w-full" />
-			</div> -->
-
 			<div
 				id="images-container"
 				class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-5">
-				<!-- <div class="column">
+				<div class="column">
 					<img
 						src="./assets/photo-gallery/photo-1.svg"
 						style="width: 100%"
@@ -350,14 +327,13 @@
 						style="width: 100%"
 						onclick="openModal();currentSlide(6)"
 						class="hover-shadow cursor" />
-				</div> -->
+				</div>
 			</div>
 
-			<div id="myModal" class="modal">
+			<div id="myModal" class="modal z-50">
 				<span class="close cursor" onclick="closeModal()">&times;</span>
 				<div id="" class="modal-content">
-					<div id="modal-content"></div>
-					<!-- <div class="mySlides">
+					<div class="mySlides">
 						<img src="./assets/photo-gallery/photo-1.svg" style="width: 100%" />
 					</div>
 
@@ -377,11 +353,54 @@
 					</div>
 					<div class="mySlides">
 						<img src="./assets/photo-gallery/photo-6.svg" style="width: 100%" />
-					</div> -->
+					</div>
 					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 					<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-					<div id="preview-image" class="grid grid-cols-3 gap-10 my-10"></div>
+					<div id="preview-image" class="grid grid-cols-3 gap-10 my-10">
+						<div class="column">
+							<img
+								src="./assets/photo-gallery/photo-1.svg"
+								style="width: 100%"
+								onclick="currentSlide(1)"
+								class="hover-shadow cursor" />
+						</div>
+						<div class="column">
+							<img
+								src="./assets/photo-gallery/photo-2.svg"
+								style="width: 100%"
+								onclick="currentSlide(2)"
+								class="hover-shadow cursor" />
+						</div>
+						<div class="column">
+							<img
+								src="./assets/photo-gallery/photo-3.svg"
+								style="width: 100%"
+								onclick="currentSlide(3)"
+								class="hover-shadow cursor" />
+						</div>
+						<div class="column">
+							<img
+								src="./assets/photo-gallery/photo-4.svg"
+								style="width: 100%"
+								onclick="currentSlide(4)"
+								class="hover-shadow cursor" />
+						</div>
+						<div class="column">
+							<img
+								src="./assets/photo-gallery/photo-5.svg"
+								style="width: 100%"
+								onclick="currentSlide(5)"
+								class="hover-shadow cursor" />
+						</div>
+						<div class="column">
+							<img
+								src="./assets/photo-gallery/photo-6.svg"
+								style="width: 100%"
+								onclick="currentSlide(6)"
+								class="hover-shadow cursor" />
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -518,63 +537,64 @@
 				menu.classList.toggle("menu-inactive");
 			});
 
-			const imagesContainer = document.getElementById("images-container");
+			// const imagesContainer = document.getElementById("images-container");
+
+			// const previewImageContainer = document.getElementById("preview-image");
+
+			// const images = [
+			// 	{ image: "./assets/photo-gallery/photo-1.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-2.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-3.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-4.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-5.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-6.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-7.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-8.svg" },
+			// 	{ image: "./assets/photo-gallery/photo-9.svg" },
+			// ];
+
+			// images.forEach((image, index) => {
+			// 	// Images for image container
+			// 	const imageElement = document.createElement("img");
+			// 	imageElement.id = `dynamic-gallery-image-${index}`;
+			// 	imageElement.src = image.image;
+			// 	imageElement.style.width = "100%";
+			// 	imageElement.style.cursor = "pointer";
+			// 	const divElement = document.createElement("div");
+			// 	divElement.appendChild(imageElement);
+			// 	imagesContainer.appendChild(divElement);
+
+			// 	// MOdal Content
+			// 	const mySlidesDiv = document.createElement("div");
+			// 	mySlidesDiv.classList.add("mySlides");
+			// 	const imageElementModal = document.createElement("img");
+			// 	imageElementModal.src = image.image;
+			// 	imageElementModal.style.width = "100%";
+			// 	imageElementModal.style.cursor = "pointer";
+			// 	mySlidesDiv.appendChild(imageElementModal);
+			// 	modalContent.appendChild(mySlidesDiv);
+
+			// 	// Preview Image
+			// 	const previewDiv = document.createElement("div");
+			// 	const previewImage = document.createElement("img");
+			// 	previewImage.src = image.image;
+			// 	previewImage.classList.add("preview-image");
+			// 	previewImage.style.width = "100%";
+			// 	previewImage.style.cursor = "pointer";
+			// 	previewDiv.appendChild(previewImage);
+			// 	previewImageContainer.append(previewDiv);
+
+			// 	previewImage.addEventListener("click", function () {
+			// 		modalContent.scrollIntoView();
+			// 		currentSlide(index + 1);
+			// 	});
+
+			// 	imageElement.addEventListener("click", function () {
+			//
+			// 		currentSlide(index + 1);
+			// 	});
+			// });
 			const modalContent = document.getElementById("modal-content");
-			const previewImageContainer = document.getElementById("preview-image");
-
-			const images = [
-				{ image: "./assets/photo-gallery/photo-1.svg" },
-				{ image: "./assets/photo-gallery/photo-2.svg" },
-				{ image: "./assets/photo-gallery/photo-3.svg" },
-				{ image: "./assets/photo-gallery/photo-4.svg" },
-				{ image: "./assets/photo-gallery/photo-5.svg" },
-				{ image: "./assets/photo-gallery/photo-6.svg" },
-				{ image: "./assets/photo-gallery/photo-7.svg" },
-				{ image: "./assets/photo-gallery/photo-8.svg" },
-				{ image: "./assets/photo-gallery/photo-9.svg" },
-			];
-
-			images.forEach((image, index) => {
-				// Images for image container
-				const imageElement = document.createElement("img");
-				imageElement.id = `dynamic-gallery-image-${index}`;
-				imageElement.src = image.image;
-				imageElement.style.width = "100%";
-				imageElement.style.cursor = "pointer";
-				const divElement = document.createElement("div");
-				divElement.appendChild(imageElement);
-				imagesContainer.appendChild(divElement);
-
-				// MOdal Content
-				const mySlidesDiv = document.createElement("div");
-				mySlidesDiv.classList.add("mySlides");
-				const imageElementModal = document.createElement("img");
-				imageElementModal.src = image.image;
-				imageElementModal.style.width = "100%";
-				imageElementModal.style.cursor = "pointer";
-				mySlidesDiv.appendChild(imageElementModal);
-				modalContent.appendChild(mySlidesDiv);
-
-				// Preview Image
-				const previewDiv = document.createElement("div");
-				const previewImage = document.createElement("img");
-				previewImage.src = image.image;
-				previewImage.classList.add("preview-image");
-				previewImage.style.width = "100%";
-				previewImage.style.cursor = "pointer";
-				previewDiv.appendChild(previewImage);
-				previewImageContainer.append(previewDiv);
-
-				previewImage.addEventListener("click", function () {
-					modalContent.scrollIntoView();
-					currentSlide(index + 1);
-				});
-
-				imageElement.addEventListener("click", function () {
-					openModal();
-					currentSlide(index + 1);
-				});
-			});
 
 			function openModal() {
 				document.getElementById("myModal").style.display = "block";
@@ -593,6 +613,7 @@
 
 			function currentSlide(n) {
 				showSlides((slideIndex = n));
+				modalContent.scrollIntoView();
 			}
 
 			function showSlides(n) {
@@ -613,6 +634,8 @@
 					dots[i].className = dots[i].className.replace(" active-photo", "");
 				}
 				slides[slideIndex - 1].style.display = "block";
+				modalContent.scrollIntoView();
+
 				// dots[slideIndex - 1].className += " active-photo";
 				// captionText.innerHTML = dots[slideIndex - 1].alt;
 			}

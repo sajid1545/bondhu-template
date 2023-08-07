@@ -98,7 +98,6 @@
 }
 
 #lbt-lightbox-media>* {
-    max-height: calc(100% - 225px);
     top: calc(50% - 50px);
     transform: translate(-50%, -50%);
     position: fixed;
