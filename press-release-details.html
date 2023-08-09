@@ -299,7 +299,7 @@
 				<!-- Banner -->
 				<div class="mb-[100px]">
 					<div class="flex flex-col lg:flex-row justify-between items-center mb-[89px] lg:gap-20">
-						<div class="slider-wrapper w-full lg:w-[40%] relative" id="slider">
+						<div class="slider-wrapper w-full lg:w-[40%] relative" id="slider-for-details-page">
 							<ul class="slider-img">
 								<li>
 									<img src="https://picsum.photos/960/720?random=5" alt="" />
@@ -350,7 +350,6 @@
 						</div>
 					</div>
 				</div>
-
 				<!-- Banner ends -->
 			</div>
 		</div>
@@ -465,9 +464,9 @@
 			});
 
 			// Determine the total amount of images in the carousel.
-			let sliderCount = $("#slider").find(".slider-img li img").length;
+			let sliderCount = $("#slider-for-details-page").find(".slider-img li img").length;
 			// Load images into the carousel
-			let sliderImg = $("#slider").find(".slider-img");
+			let sliderImg = $("#slider-for-details-page").find(".slider-img");
 			// Define the navigation arrows and pagination bullets.
 			let sliderArrow = `<ul class="slider-arrow"><li class="arrow-left" role="button"><i class="fas fa-chevron-left"></i></li><li class="arrow-right" role="button"><i class="fas fa-chevron-right"></i></li></ul>`;
 			let sliderDotLi = "";
@@ -475,7 +474,7 @@
 				sliderDotLi += `<li><i class="fas fa-circle"></i></li>`;
 			}
 			let sliderDot = `<ul class="slider-dot">${sliderDotLi}</ul>`;
-			$("#slider").append(sliderArrow + sliderDot);
+			$("#slider-for-details-page").append(sliderArrow + sliderDot);
 
 			let activeDefaultCount = $(".slider-dot li.active").length;
 			if (activeDefaultCount != 1) {
@@ -509,7 +508,7 @@
 				$(".arrow-right").click();
 			}, 5000);
 
-			$("#slider").on({
+			$("#slider-for-details-page").on({
 				mouseenter: () => {
 					clearInterval(goSlider);
 				},

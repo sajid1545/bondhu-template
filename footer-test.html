@@ -1,0 +1,291 @@
+@include('frontend.components.footer.content')
+@include('frontend.components.footer.copyright')
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+{{-- <script src="{{ asset('public/frontend') }}/assets/js/jquery.lbt-lightbox.js"></script> --}}
+
+<script>
+
+
+ //Press release single page slider. Determine the total amount of images in the carousel.
+
+
+			// Determine the total amount of images in the carousel.
+			let sliderCount = $("#slider-for-details-page").find(".slider-img li img").length;
+			// Load images into the carousel
+			let sliderImg = $("#slider-for-details-page").find(".slider-img");
+			// Define the navigation arrows and pagination bullets.
+			let sliderArrow = `<ul class="slider-arrow"><li class="arrow-left" role="button"><i class="fas fa-chevron-left"></i></li><li class="arrow-right" role="button"><i class="fas fa-chevron-right"></i></li></ul>`;
+			let sliderDotLi = "";
+			for (let i = 0; i < sliderCount; i++) {
+				sliderDotLi += `<li><i class="fas fa-circle"></i></li>`;
+			}
+			let sliderDot = `<ul class="slider-dot">${sliderDotLi}</ul>`;
+			$("#slider-for-details-page").append(sliderArrow + sliderDot);
+
+			let activeDefaultCount = $(".slider-dot li.active").length;
+			if (activeDefaultCount != 1) {
+				$(".slider-dot li").removeClass().eq(0).addClass("active");
+			}
+			let sliderIndex = $(".slider-dot li.active").index();
+			sliderImg.css("left", -sliderIndex * 100 + "%");
+
+			// switch between images
+			function sliderPos() {
+				sliderImg.css("left", -sliderIndex * 100 + "%");
+				$(".slider-dot li").removeClass().eq(sliderIndex).addClass("active");
+			}
+
+			$(".arrow-right").click(function () {
+				sliderIndex >= sliderCount - 1 ? (sliderIndex = 0) : sliderIndex++;
+				sliderPos();
+			});
+
+			$(".arrow-left").click(function () {
+				sliderIndex <= 0 ? (sliderIndex = sliderCount - 1) : sliderIndex--;
+				sliderPos();
+			});
+
+			$(".slider-dot li").click(function () {
+				sliderIndex = $(this).index();
+				sliderPos();
+			});
+
+			let goSlider = setInterval(() => {
+				$(".arrow-right").click();
+			}, 5000);
+
+			$("#slider-for-details-page").on({
+				mouseenter: () => {
+					clearInterval(goSlider);
+				},
+				mouseleave: () => {
+					goSlider = setInterval(() => {
+						$(".arrow-right").click();
+					}, 5000);
+				},
+			});
+
+    //video player
+    $(function () {
+        $("#playlist li").on("click", function () {
+            $("#videoarea").attr({
+                src: $(this).attr("movieurl"),
+                poster: "",
+                autoplay: "autoplay",
+            });
+        });
+        $("#videoarea").attr({
+            src: $("#playlist li").eq(0).attr("movieurl"),
+            poster: $("#playlist li").eq(0).attr("moviesposter"),
+        });
+    });
+
+    // Grab HTML Elements
+    const bars = document.querySelector(".bars");
+    const menu = document.querySelector(".mobile-menu");
+
+    // Add Event Listeners
+    bars.addEventListener("click", () => {
+        menu.classList.toggle("menu-inactive");
+    });
+
+
+    // slider
+     var swiper = new Swiper(".mySwiper1", {
+            freeMode: true,
+            loop: true,
+
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+            slideToClickedSlide: true,
+            loop: true,
+        });
+
+
+    var swiper = new Swiper(".customers-swiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            // when window width is >= 480px
+            480: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            // when window width is >= 640px
+            640: {
+                slidesPerView: 6,
+                spaceBetween: 10,
+            },
+        },
+    });
+
+    const tabs = document.querySelector(".wrapper");
+    const tabButton = document.querySelectorAll(".tab-button");
+    const contents = document.querySelectorAll(".content");
+
+    tabs.onclick = (e) => {
+        const id = e.target.dataset.id;
+        if (id) {
+            tabButton.forEach((btn) => {
+                btn.classList.remove("tab-active");
+            });
+            e.target.classList.add("tab-active");
+
+            contents.forEach((content) => {
+                content.classList.remove("tab-active");
+            });
+            const element = document.getElementById(id);
+            element.classList.add("tab-active");
+        }
+    };
+
+    const donationTabs = document.querySelector(".donation-wrapper");
+    const donationTabButton = document.querySelectorAll(".donation-tab-button");
+    const donationContents = document.querySelectorAll(".donation-content");
+
+    donationTabs.onclick = (e) => {
+        const id = e.target.dataset.id;
+        if (id) {
+            donationTabButton.forEach((btn) => {
+                btn.classList.remove("donation-tab-active");
+            });
+            e.target.classList.add("donation-tab-active");
+
+            donationContents.forEach((content) => {
+                content.classList.remove("donation-tab-active");
+            });
+            const element = document.getElementById(id);
+            element.classList.add("donation-tab-active");
+        }
+    };
+
+    const gallery2 = document.getElementById("gallery-2");
+    const gallery3 = document.getElementById("gallery-3");
+    const gallery4 = document.getElementById("gallery-4");
+
+    const handleActiveGallery2 = () => {
+        gallery2.classList.add("gallery-image-active");
+        gallery3.classList.remove("gallery-image-active");
+        gallery4.classList.remove("gallery-image-active");
+    };
+
+    const handleActiveGallery3 = () => {
+        gallery2.classList.remove("gallery-image-active");
+        gallery3.classList.add("gallery-image-active");
+        gallery4.classList.remove("gallery-image-active");
+    };
+
+    const handleActiveGallery4 = () => {
+        gallery2.classList.remove("gallery-image-active");
+        gallery3.classList.remove("gallery-image-active");
+        gallery4.classList.add("gallery-image-active");
+    };
+
+
+    var swiper = new Swiper(".press-release-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+
+
+
+
+ 
+// galllery single page
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides((slideIndex += n));
+    }
+
+    function currentSlide(n) {
+        showSlides((slideIndex = n));
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        // var captionText = document.getElementById("caption");
+        if (n > slides.length) {
+            slideIndex = 1;
+        }
+        if (n < 1) {
+            slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active-photo", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        // dots[slideIndex - 1].className += " active-photo";
+        // captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+
+
+
+</script>
+
+
+
+{{--
+@stack('scrpits') --}}
+
+
+</body>
+</html>
