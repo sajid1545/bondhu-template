@@ -783,8 +783,8 @@ ul.slider-arrow li:hover {
 
 
 /*-----------------------------
-      News Ticker
-  ------------------------------*/
+      News Ticker CSS
+------------------------------*/
 .acme-news-ticker {
     background: #E9E9E9;
     position: relative;
@@ -919,5 +919,3 @@ ul.slider-arrow li:hover {
     -ms-transform: translate(-50%, -50%) rotate(405deg);
     transform: translate(-50%, -50%) rotate(405deg);
 }
-
-/*# sourceMappingURL=style.css.map */
