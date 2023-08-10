@@ -354,21 +354,6 @@
 			<!-- Gallery end here -->
 
 			<!-- Bar -->
-			<!-- <div class="md:h-9 bg-[#E9E9E9] mt-[30px] flex items-center">
-				<div class="min-w-[60px] flex items-center justify-center border-[#727272] border-r h-9">
-					<img src="./assets/Information.svg" alt="" />
-				</div>
-
-				<div class="w-full h-full flex items-center justify-between">
-					<div class="px-2 md:px-10 flex flex-wrap text-center md:text-start">
-						<h1 class="mb-0">Bringing Change. Improving Life. Keeping Promises.</h1>
-					</div>
-
-					<div class="min-w-[60px] h-9 flex items-center justify-center border-[#727272] border-l">
-						<img src="./assets/arrow.svg" alt="" class="" />
-					</div>
-				</div>
-			</div> -->
 
 			<div class="acme-news-ticker bg-[#E9E9E9] mt-[30px] flex items-center h-20 md:h-10">
 				<div
@@ -1622,26 +1607,19 @@
 			(function ($) {
 				"use strict";
 				$.fn.AcmeTicker = function (options) {
-					/*Merge options and default options*/
 					let opts = $.extend({}, $.fn.AcmeTicker.defaults, options);
-
-					/*Functions Scope*/
 					let thisTicker = $(this),
 						intervalID,
 						timeoutID,
 						isPause = false;
 
-					/*Always wrap, used in many place*/
 					thisTicker.wrap("<div class='acmeticker-wrap'></div>");
 
-					/*Wrap is always relative*/
 					thisTicker.parent().css({
 						position: "relative",
 					});
-					/*Hide expect first*/
 					thisTicker.children("li").not(":first").hide();
 
-					/*Lets init*/
 					init();
 					function init() {
 						switch (opts.type) {
@@ -1663,8 +1641,6 @@
 						}
 					}
 
-					/*Vertical - horizontal
-					 * **Do not change code lines*/
 					function vertiZontal(prevNext = false) {
 						let speed = opts.speed,
 							autoplay = opts.autoplay,
@@ -1726,8 +1702,6 @@
 						intervalID = setInterval(play, autoplay);
 					}
 
-					/*Type-Writer
-					 * **Do not change code lines*/
 					function typeWriter(prevNext = false) {
 						if (isPause) {
 							return false;
@@ -1796,10 +1770,7 @@
 						}
 					}
 
-					/*marQuee
-					 * **Do not change code lines*/
 					function marQuee() {
-						/*Marquee Special*/
 						let speed = opts.speed,
 							direction = opts.direction,
 							wrapWidth,
@@ -1825,12 +1796,9 @@
 								dir = "right";
 							}
 
-							/*Calculating ticker width*/
-							thisTicker.width(
-								10000
-							); /*temporary width to prevent inline elements wrapping to initial width of ticker*/
+							thisTicker.width(10000);
 							tickerList.each(function () {
-								listWidth += $(this).outerWidth(true) + 5; /*+5 for some missing px*/
+								listWidth += $(this).outerWidth(true) + 5;
 							});
 							thisTicker.width(listWidth);
 
@@ -1890,9 +1858,7 @@
 								});
 						}
 					}
-					/*marQuee End*/
 
-					/*Actions/Controls*/
 					if (opts.type !== "marquee") {
 						opts.controls.prev &&
 							opts.controls.prev.on("click", function (e) {
@@ -1957,39 +1923,29 @@
 					}
 				};
 
-				// plugin defaults - added as a property on our plugin function
 				$.fn.AcmeTicker.defaults = {
-					/*Note: Marquee only take speed not autoplay*/
-					type: "horizontal" /*vertical/horizontal/marquee/typewriter*/,
-					autoplay: 2000 /*true/false/number*/ /*For vertical/horizontal 4000*/ /*For typewriter 2000*/,
-					speed: 50 /*true/false/number*/ /*For vertical/horizontal 600*/ /*For marquee 0.05*/ /*For typewriter 50*/,
-					direction:
-						"up" /*up/down/left/right*/ /*For vertical up/down*/ /*For horizontal/marquee right/left*/ /*For typewriter direction doesnot work*/,
+					type: "horizontal",
+					autoplay: 2000,
+					speed: 50,
+					direction: "up",
 					pauseOnFocus: true,
 					pauseOnHover: true,
 					controls: {
-						prev: "" /*Can be used for vertical/horizontal/typewriter*/ /*not work for marquee*/,
-						next: "" /*Can be used for vertical/horizontal/typewriter*/ /*not work for marquee*/,
-						toggle: "" /*Can be used for vertical/horizontal/marquee/typewriter*/,
+						prev: "",
+						next: "",
+						toggle: "",
 					},
 				};
 			})(jQuery);
 			jQuery(document).ready(function ($) {
 				$(".my-news-ticker").AcmeTicker({
-					type: "vertical" /*vertical/horizontal/Marquee/type*/,
-					direction: "right" /*up/down/left/right*/,
-					speed: 600 /*true/false/number*/ /*For vertical/horizontal 600*/ /*For marquee 0.05*/ /*For typewriter 50*/,
+					type: "vertical",
+					direction: "right",
+					speed: 600,
 					controls: {
-						prev: $(
-							".acme-news-ticker-prev"
-						) /*Can be used for vertical/horizontal/typewriter*/ /*not work for marquee*/,
-						next: $(
-							".acme-news-ticker-next"
-						) /*Can be used for vertical/horizontal/typewriter*/ /*not work for marquee*/,
-						toggle:
-							$(
-								".acme-news-ticker-pause"
-							) /*Can be used for vertical/horizontal/marquee/typewriter*/,
+						prev: $(".acme-news-ticker-prev"),
+						next: $(".acme-news-ticker-next"),
+						toggle: $(".acme-news-ticker-pause"),
 					},
 				});
 			});
