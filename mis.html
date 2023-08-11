@@ -298,13 +298,137 @@
 					Training
 				</h1>
 			</div>
+
+			<div
+				class="flex justify-center gap-20 items-center flex-col lg:flex-row mb-10 mx-auto lg:mx-0">
+				<!-- Pie chart -->
+				<div class="w-full lg:w-[500px]">
+					<canvas id="myChart"></canvas>
+				</div>
+				<!-- lINE chart -->
+				<div class="w-full lg:w-[50%]">
+					<canvas id="myChartLine"></canvas>
+				</div>
+			</div>
 		</div>
 
 		<!-- mis section ends here -->
 
-		<!-- Footer  -->
+		<!-- <script
+			src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.3/chart.min.js"
+			integrity="sha512-fMPPLjF/Xr7Ga0679WgtqoSyfUoQgdt8IIxJymStR5zV3Fyb6B3u/8DcaZ6R6sXexk5Z64bCgo2TYyn760EdcQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script> -->
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script>
+			// Grab HTML Elements
+			const bars = document.querySelector(".bars");
+			const menu = document.querySelector(".mobile-menu");
 
-		<footer class="w-full text-slate-500">
+			// Add Event Listeners
+			bars.addEventListener("click", () => {
+				menu.classList.toggle("menu-inactive");
+			});
+
+			// -----------------  PIE CHART   ----------------//
+
+			var xValues = ["Bringing Change.", "Improving Life.", "Keeping Promises."];
+			var yValues = [55.6, 23.4, 21];
+			var barColors = ["#FF5C00", "#6F16EF", "#AF0101"];
+
+			new Chart("myChart", {
+				type: "pie",
+				data: {
+					labels: xValues,
+					datasets: [
+						{
+							backgroundColor: barColors,
+							data: yValues,
+							hoverOffset: 4,
+						},
+					],
+				},
+				options: {
+					title: {
+						display: true,
+						text: "World Wide Wine Production 2018",
+					},
+					plugins: {
+						legend: {
+							display: true,
+							position: "bottom",
+
+							align: "center",
+							labels: {
+								color: "black",
+								font: {
+									weight: "bold",
+									size: 12,
+								},
+								boxWidth: 40,
+								boxHeight: 40,
+								padding: 10,
+							},
+						},
+					},
+				},
+			});
+
+			// -----------------  LINE CHART   ----------------//
+
+			new Chart("myChartLine", {
+				type: "line",
+				data: {
+					labels: xValues,
+					datasets: [
+						{
+							backgroundColor: barColors,
+							data: yValues,
+							hoverOffset: 4,
+						},
+					],
+				},
+				options: {
+					responsive: true,
+					plugins: {
+						legend: {
+							display: false,
+							position: "bottom",
+
+							align: "center",
+							labels: {
+								color: "black",
+								font: {
+									weight: "bold",
+									size: 12,
+								},
+								boxWidth: 40,
+								boxHeight: 40,
+								padding: 10,
+							},
+						},
+					},
+					scales: {
+						x: {
+							grid: {
+								display: false,
+							},
+						},
+						y: {
+							grid: {
+								display: false,
+							},
+						},
+					},
+				},
+			});
+		</script>
+	</body>
+</html>
+
+<!-- Footer  -->
+
+<!-- <footer class="w-full text-slate-500">
 			<div class="border-t border-slate-200 bg-[#570500] text-white pt-16 pb-12 text-sm">
 				<div class="container mx-auto px-6">
 					<div class="grid grid-cols-4 gap-10 md:grid-cols-8 lg:grid-cols-12">
@@ -396,19 +520,6 @@
 					Bandhu Social Welfare Society Website - © 2023 by Ekopii ltd.
 				</h1>
 			</div>
-		</footer>
+		</footer> -->
 
-		<!-- Footer ends here -->
-
-		<script>
-			// Grab HTML Elements
-			const bars = document.querySelector(".bars");
-			const menu = document.querySelector(".mobile-menu");
-
-			// Add Event Listeners
-			bars.addEventListener("click", () => {
-				menu.classList.toggle("menu-inactive");
-			});
-		</script>
-	</body>
-</html>
+<!-- Footer ends here -->
