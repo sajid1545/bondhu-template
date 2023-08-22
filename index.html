@@ -336,7 +336,9 @@
 					<div class="swiper-button-next"></div>
 					<div class="swiper-button-prev"></div>
 				</div>
-				<div thumbsSlider="" class="swiper mySwiper1 lg:w-[30%] h-full gallery-thumbs">
+				<div
+					thumbsSlider=""
+					class="swiper mySwiper1 hidden lg:block lg:w-[30%] h-full gallery-thumbs">
 					<div class="swiper-wrapper hidden lg:flex flex-col justify-between gap-3">
 						<div class="swiper-slide h-full w-full">
 							<img src="./assets/thumbnail-1.jpg" class="w-full h-full" />
@@ -1027,49 +1029,7 @@
 					</div>
 					<!-- videos ends here -->
 
-					<!-- Gallery -->
-
-					<!-- <div id="Gallery" class="content">
-						<div class="grid grid-cols-3 gap-5 bg-white p-4 rounded-md" id="gallery">
-							<div class="box">
-								<img src="./assets/gallery-images/g-1.svg" alt="image1" class="w-full" />
-							</div>
-							<div class="box">
-								<img src="./assets/gallery-images/g-2.svg" alt="image1" class="w-full" />
-							</div>
-							<div class="box">
-								<img src="./assets/gallery-images/g-3.svg" alt="image1" class="w-full" />
-							</div>
-							<div class="box">
-								<img src="./assets/gallery-images/g-4.svg" alt="image1" class="w-full" />
-							</div>
-							<div class="box">
-								<img src="./assets/gallery-images/g-5.svg" alt="image1" class="w-full" />
-							</div>
-							<div class="box">
-								<img src="./assets/gallery-images/g-6.svg" alt="image1" class="w-full" />
-							</div>
-							<div class="box">
-								<img src="./assets/gallery-images/g-7.svg" alt="image1" class="w-full" />
-							</div>
-							<div class="box">
-								<img src="./assets/gallery-images/g-1.svg" alt="image1" class="w-full" />
-							</div>
-							<div class="box">
-								<img src="./assets/gallery-images/g-2.svg" alt="image1" class="w-full" />
-							</div>
-							<div class="box">
-								<img src="./assets/gallery-images/g-5.svg" alt="image1" class="w-full" />
-							</div>
-							<div class="box">
-								<img src="./assets/gallery-images/g-6.svg" alt="image1" class="w-full" />
-							</div>
-							<div class="box">
-								<img src="./assets/gallery-images/g-7.svg" alt="image1" class="w-full" />
-							</div>
-						</div>
-					</div> -->
-
+					<!-- Photo section -->
 					<div id="Gallery" class="content" class="">
 						<div
 							id="images-container"
@@ -1152,7 +1112,7 @@
 
 				<!-- Donation section -->
 				<div class="lg:w-[25%] flex flex-col justify-between gap-10 lg:gap-0">
-					<div class="bg-[#E9E9E9] blog-event-card-shadow p-5 rounded-md">
+					<!-- <div class="bg-[#E9E9E9] blog-event-card-shadow p-5 rounded-md">
 						<h1 class="text-[#AF0101] font-bold mb-2">
 							Let’s stand beside Transgender and Hijra Community in Bangladesh.
 						</h1>
@@ -1230,8 +1190,9 @@
 						<div id="Donation Tweets" class="donation-content">
 							<h1 class="text-center text-5xl">Under construction</h1>
 						</div>
-					</div>
+					</div> -->
 
+					<!-- QR CODE -->
 					<div class="bg-[#E9E9E9] blog-event-card-shadow rounded-[4px] p-4 py-8">
 						<img src="./assets/qr-code.svg" alt="" class="mx-auto" />
 						<h1 class="#000 text-center font-bold">Qr-code</h1>
@@ -1240,6 +1201,56 @@
 							Download Now
 						</button>
 					</div>
+
+					<!-- Recognition -->
+					<div class="bg-[#E9E9E9] blog-event-card-shadow p-5 rounded-md">
+						<h1 class="text-[#AF0101] text-xs font-bold leading-[14.5px] mb-2">Recognition</h1>
+						<div class="w-full h-[2px] bg-[#E2E2E2] mb-2"></div>
+						<!-- Recognition slider  -->
+						<div class="flex flex-col lg:flex-row gap-10 my-10">
+							<div
+								style="--swiper-navigation-color: #666"
+								class="swiper mySwiperRecognition w-full">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img
+											src="./assets/home-blog-pic-1.jpg"
+											class="lg:w-[201px] lg:h-[175px] mx-auto" />
+									</div>
+									<div class="swiper-slide">
+										<img src="./assets/blog-1.svg" class="lg:w-[201px] lg:h-[175px] mx-auto" />
+									</div>
+								</div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
+							</div>
+						</div>
+						<!-- Recognition slider -->
+					</div>
+					<!-- Recognition section ends here -->
+
+					<!-- Testimonial section -->
+					<div class="bg-[#E9E9E9] blog-event-card-shadow p-7 rounded-md donation-wrapper">
+						<div class="flex gap-10 text-[#666]">
+							<button data-id="Testimonials" class="donation-tab-button donation-tab-active">
+								Testimonial
+							</button>
+						</div>
+						<div class="w-full h-[2px] bg-[#E2E2E2] mb-5"></div>
+
+						<div class="bg-white rounded px-2 p-3">
+							<div class="mb-[9px]">
+								<img src="./assets/home-blog-pic-1.jpg" alt="" />
+							</div>
+							<div class="font-bold">
+								<h1 class="text-[#570000] text-xs mb-3 font-bold leading-[18px]">Name</h1>
+								<h1 class="text-[#444444] text-xs leading-4">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								</h1>
+							</div>
+						</div>
+					</div>
+					<!-- Testimonial section Ends -->
 				</div>
 			</div>
 
@@ -1432,6 +1443,7 @@
 				watchSlidesVisibility: true,
 				watchSlidesProgress: true,
 			});
+
 			var swiper2 = new Swiper(".mySwiper2", {
 				spaceBetween: 10,
 				navigation: {
@@ -1447,6 +1459,19 @@
 				},
 				slideToClickedSlide: true,
 				loop: true,
+			});
+
+			var swiper = new Swiper(".mySwiperRecognition", {
+				freeMode: true,
+				loop: true,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				autoplay: {
+					delay: 4000,
+					disableOnInteraction: false,
+				},
 			});
 
 			var swiper = new Swiper(".customers-swiper", {

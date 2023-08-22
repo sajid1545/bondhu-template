@@ -386,6 +386,14 @@
 }
 
 
+/* Recognition swiper css */
+.mySwiperRecognition .swiper-button-prev,
+.swiper-button-next {
+    color: #666666;
+    font-weight: bolder;
+}
+
+
 
 /*         --------------------------------------Press release and Event news swiper--------------------------------------                  */
 
@@ -512,9 +520,10 @@ button.donation-tab-active {
     padding: 12px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
-    border-bottom: solid 4px;
+    border-bottom: solid 4px #AF0101;
     font-weight: 700;
     color: #570000;
+
 }
 
 .donation-content.donation-tab-active {

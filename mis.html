@@ -321,15 +321,6 @@
 			referrerpolicy="no-referrer"></script> -->
 		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 		<script>
-			// Grab HTML Elements
-			const bars = document.querySelector(".bars");
-			const menu = document.querySelector(".mobile-menu");
-
-			// Add Event Listeners
-			bars.addEventListener("click", () => {
-				menu.classList.toggle("menu-inactive");
-			});
-
 			// -----------------  PIE CHART   ----------------//
 
 			var xValues = ["Bringing Change.", "Improving Life.", "Keeping Promises."];
@@ -376,14 +367,17 @@
 
 			// -----------------  LINE CHART   ----------------//
 
+			var xValuesLine = ["Bringing Change.", "Improving Life.", "Keeping Promises."];
+			var yValuesLine = [10, 5, 15];
+
 			new Chart("myChartLine", {
 				type: "line",
 				data: {
-					labels: xValues,
+					labels: xValuesLine,
 					datasets: [
 						{
 							backgroundColor: barColors,
-							data: yValues,
+							data: yValuesLine,
 							hoverOffset: 4,
 						},
 					],
@@ -411,12 +405,12 @@
 					scales: {
 						x: {
 							grid: {
-								display: false,
+								display: true,
 							},
 						},
 						y: {
 							grid: {
-								display: false,
+								display: true,
 							},
 						},
 					},
