@@ -1243,20 +1243,7 @@
 								style="--swiper-navigation-color: #666"
 								class="swiper mySwiperTestimonial w-full">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<div class="bg-white rounded px-2 p-3 h-full">
-											<!-- <div class="mb-[9px]">
-												<img src="./assets/home-blog-pic-1.jpg" alt="" />
-											</div> -->
-											<div class="font-bold px-10">
-												<h1 class="text-[#570000] text-xs mb-3 font-bold leading-[18px]">Name</h1>
-												<h1 class="text-[#444444] text-xs leading-4">
-													Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-												</h1>
-											</div>
-										</div>
-									</div>
-									<div class="swiper-slide">
+									<div id="" class="swiper-slide modal-btn">
 										<div class="bg-white rounded px-2 p-3">
 											<div class="mb-[9px]">
 												<img src="./assets/home-blog-pic-1.jpg" alt="" />
@@ -1276,6 +1263,42 @@
 						</div>
 					</div>
 					<!-- Testimonial section Ends -->
+				</div>
+			</div>
+
+			<!-- Modal Content -->
+			<div id="my-modal" class="modal">
+				<div class="modal-content">
+					<div class="modal-header bg-[#787878] mb-5">
+						<span onclick="closeModal()" class="close">&times;</span>
+					</div>
+					<div class="modal-body text-white">
+						<div>
+							<div class="my-5">
+								<img src="./assets/testimonial-logo-1.png" alt="" class="mx-auto" />
+							</div>
+
+							<div class="text-center text-xs font-medium mb-5">
+								Jonas Tillberg, MPH <br />
+								Coordinator of International Programmes <br />
+								RFSU-The Swedish Association for Sexuality Education <br />
+								Stockholm, Sweden
+							</div>
+							<div>
+								<p class="text-[10px] text-justify mb-5">
+									RFSU has always valued having BANDHU as a partner for sexual and reproductive
+									health and rights in Bangladesh. Over the years, we have appreciated not only the
+									strengths in analysis and methodology that BANDHU shows, but also the rights-based
+									approach that is guiding the work. Together, these strengths and approaches have
+									paved the way for the impressive results that the organization has achieved, and
+									that are contributing to better lives for groups that traditionally have been
+									marginalized and discriminated against. RFSU congratulates BANDHU on an
+									ever-developing & successful work, and the rights-holders on having a voice-giver
+									in BANDHU
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -1995,6 +2018,34 @@
 					},
 				});
 			});
+
+			// Modal JavaScript
+			// Get DOM Elements
+			const modal = document.querySelector("#my-modal");
+			const modalBtn = document.querySelector(".modal-btn");
+			const closeBtn = document.querySelector(".close");
+
+			// Events
+			modalBtn.addEventListener("click", openModal);
+			closeBtn.addEventListener("click", closeModal);
+			window.addEventListener("click", outsideClick);
+
+			// Open
+			function openModal() {
+				modal.style.display = "block";
+			}
+
+			// Close
+			function closeModal() {
+				modal.style.display = "none";
+			}
+
+			// Close If Outside Click
+			function outsideClick(e) {
+				if (e.target == modal) {
+					modal.style.display = "none";
+				}
+			}
 		</script>
 	</body>
 </html>
