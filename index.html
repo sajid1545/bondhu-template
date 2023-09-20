@@ -1238,15 +1238,40 @@
 						</div>
 						<div class="w-full h-[2px] bg-[#E2E2E2] mb-5"></div>
 
-						<div class="bg-white rounded px-2 p-3">
-							<div class="mb-[9px]">
-								<img src="./assets/home-blog-pic-1.jpg" alt="" />
-							</div>
-							<div class="font-bold">
-								<h1 class="text-[#570000] text-xs mb-3 font-bold leading-[18px]">Name</h1>
-								<h1 class="text-[#444444] text-xs leading-4">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								</h1>
+						<div class="flex flex-col lg:flex-row">
+							<div
+								style="--swiper-navigation-color: #666"
+								class="swiper mySwiperTestimonial w-full">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="bg-white rounded px-2 p-3 h-full">
+											<!-- <div class="mb-[9px]">
+												<img src="./assets/home-blog-pic-1.jpg" alt="" />
+											</div> -->
+											<div class="font-bold px-10">
+												<h1 class="text-[#570000] text-xs mb-3 font-bold leading-[18px]">Name</h1>
+												<h1 class="text-[#444444] text-xs leading-4">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+												</h1>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="bg-white rounded px-2 p-3">
+											<div class="mb-[9px]">
+												<img src="./assets/home-blog-pic-1.jpg" alt="" />
+											</div>
+											<div class="font-bold">
+												<h1 class="text-[#570000] text-xs mb-3 font-bold leading-[18px]">Name 1</h1>
+												<h1 class="text-[#444444] text-xs leading-4">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+												</h1>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
 							</div>
 						</div>
 					</div>
@@ -1462,6 +1487,19 @@
 			});
 
 			var swiper = new Swiper(".mySwiperRecognition", {
+				freeMode: true,
+				loop: true,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				autoplay: {
+					delay: 4000,
+					disableOnInteraction: false,
+				},
+			});
+
+			var swiper = new Swiper(".mySwiperTestimonial", {
 				freeMode: true,
 				loop: true,
 				navigation: {
