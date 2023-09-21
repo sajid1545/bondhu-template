@@ -968,7 +968,7 @@ ul.slider-arrow li:hover {
 /* The Modal  */
 
 
-.modal {
+.modal-testimonial {
     display: none;
     position: fixed;
     z-index: 50;
@@ -980,28 +980,31 @@ ul.slider-arrow li:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
+.modal-testimonial-content {
     width: 30%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     animation-name: modalopen;
     animation-duration: var(--modal-duration);
     background-color: #787878;
+    margin: 20vh auto;
+
+
 }
 
 
 
-.modal-header {
+.modal-testimonial-header {
 
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     background-color: #787878;
 }
 
-.modal-body {
+.modal-testimonial-body {
     padding: 10px 20px;
 }
 
-.modal-footer {
+.modal-testimonial-footer {
     background: var(--modal-color);
     padding: 10px;
     color: #fff;
@@ -1010,15 +1013,15 @@ ul.slider-arrow li:hover {
     border-bottom-right-radius: 5px;
 }
 
-.close {
+.close-testimonial {
     color: #ccc;
     float: right;
     font-size: 30px;
     color: #fff;
 }
 
-.close:hover,
-.close:focus {
+.close-testimonial:hover,
+.close-testimonial:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;

@@ -1112,86 +1112,6 @@
 
 				<!-- Donation section -->
 				<div class="lg:w-[25%] flex flex-col justify-between gap-10 lg:gap-0">
-					<!-- <div class="bg-[#E9E9E9] blog-event-card-shadow p-5 rounded-md">
-						<h1 class="text-[#AF0101] font-bold mb-2">
-							Let’s stand beside Transgender and Hijra Community in Bangladesh.
-						</h1>
-
-						<div class="w-full h-[2px] bg-[#E2E2E2] mb-2"></div>
-
-						<p class="text-xs mb-2 text-[#000]">
-							The COVID-19 outbreak has been quickly escalating around the world in the past weeks
-							and things are rapidly changing and governments around the world have been placing
-							various measures to curb the hike in infection.
-						</p>
-
-						<div class="h-[14px] w-full mb-2 bg-red-100 rounded-tl-md rounded-bl-md">
-							<div class="h-[14px] bg-red-500 w-[45%] rounded-tl-md rounded-bl-md"></div>
-						</div>
-
-						<div class="mb-2">
-							<h1 class="text-[#666666] font-bold">
-								Now : <span class="text-[#570000]">7500৳</span>
-							</h1>
-							<h1 class="text-[#666666] font-bold">
-								Target : <span class="text-[#570000]">25000৳</span>
-							</h1>
-						</div>
-						<button
-							class="w-full bg-[#AF0101] rounded-[4px] text-white font-bold text-center h-[42px]">
-							Donate Now
-						</button>
-					</div>
-
-					<div class="bg-[#E9E9E9] blog-event-card-shadow p-7 rounded-md donation-wrapper">
-						<div class="flex gap-10 text-[#666]">
-							<button data-id="Donation Blogs" class="donation-tab-button donation-tab-active">
-								Blogs
-							</button>
-							<button data-id="Donation Tweets" class="donation-tab-button">Tweets</button>
-						</div>
-
-						<div id="Donation Blogs" class="space-y-5 donation-content donation-tab-active">
-							<div>
-								<div class="bg-white rounded px-2 flex gap-2 p-3">
-									<div>
-										<img src="./assets/blog-small-1.svg" alt="" />
-									</div>
-									<div class="font-bold">
-										<h1 class="text-[#570000] text-xs mb-3">Give your love to</h1>
-										<h1 class="text-[#444444] text-xs">April 3, 2020, 0 Comments</h1>
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="bg-white rounded px-2 flex gap-2 p-3">
-									<div>
-										<img src="./assets/blog-small-2.svg" alt="" />
-									</div>
-									<div class="font-bold">
-										<h1 class="text-[#570000] text-xs mb-3">No one has ever</h1>
-										<h1 class="text-[#444444] text-xs">April 3, 2020, 0 Comments</h1>
-									</div>
-								</div>
-							</div>
-							<div>
-								<div class="bg-white rounded px-2 flex gap-2 p-3">
-									<div>
-										<img src="./assets/blog-small-3.svg" alt="" />
-									</div>
-									<div class="font-bold">
-										<h1 class="text-[#570000] text-xs mb-3">Disability is not the</h1>
-										<h1 class="text-[#444444] text-xs">April 3, 2020, 0 Comments</h1>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div id="Donation Tweets" class="donation-content">
-							<h1 class="text-center text-5xl">Under construction</h1>
-						</div>
-					</div> -->
-
 					<!-- QR CODE -->
 					<div class="bg-[#E9E9E9] blog-event-card-shadow rounded-[4px] p-4 py-8">
 						<img src="./assets/qr-code.svg" alt="" class="mx-auto" />
@@ -1256,6 +1176,19 @@
 											</div>
 										</div>
 									</div>
+									<div id="modal-btn" class="swiper-slide modal-btn">
+										<div class="bg-white rounded px-2 p-3">
+											<div class="mb-[9px]">
+												<img src="./assets/home-blog-pic-1.jpg" alt="" />
+											</div>
+											<div class="font-bold">
+												<h1 class="text-[#570000] text-xs mb-3 font-bold leading-[18px]">Name 2</h1>
+												<h1 class="text-[#444444] text-xs leading-4">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+												</h1>
+											</div>
+										</div>
+									</div>
 								</div>
 								<div class="swiper-button-next"></div>
 								<div class="swiper-button-prev"></div>
@@ -1267,12 +1200,12 @@
 			</div>
 
 			<!-- Modal Content -->
-			<div id="my-modal" class="modal">
-				<div class="modal-content">
-					<div class="modal-header bg-[#787878] mb-5">
-						<span onclick="closeModal()" class="close">&times;</span>
+			<div id="my-modal-testimonial" class="modal-testimonial">
+				<div class="modal-testimonial-content">
+					<div class="modal-testimonial-header bg-[#787878] mb-5">
+						<span onclick="closeModalTestimonial()" class="close-testimonial">&times;</span>
 					</div>
-					<div class="modal-body text-white">
+					<div class="modal-testimonial-body text-white">
 						<div>
 							<div class="my-5">
 								<img src="./assets/testimonial-logo-1.png" alt="" class="mx-auto" />
@@ -1301,6 +1234,7 @@
 					</div>
 				</div>
 			</div>
+			<!-- Modal Content Ends -->
 
 			<!-- Blogs section ends here -->
 
@@ -2019,24 +1953,26 @@
 				});
 			});
 
-			// Modal JavaScript
+			// Testimonial Modal JavaScript
 			// Get DOM Elements
-			const modal = document.querySelector("#my-modal");
+			const modal = document.querySelector("#my-modal-testimonial");
 			const modalBtn = document.querySelector(".modal-btn");
-			const closeBtn = document.querySelector(".close");
+			const modalBtn2 = document.querySelector("#modal-btn");
+			const closeBtn = document.querySelector(".close-testimonial");
 
 			// Events
-			modalBtn.addEventListener("click", openModal);
-			closeBtn.addEventListener("click", closeModal);
+			modalBtn.addEventListener("click", openModalTestimonial);
+			modalBtn2.addEventListener("click", openModalTestimonial);
+			closeBtn.addEventListener("click", closeModalTestimonial);
 			window.addEventListener("click", outsideClick);
 
 			// Open
-			function openModal() {
+			function openModalTestimonial() {
 				modal.style.display = "block";
 			}
 
 			// Close
-			function closeModal() {
+			function closeModalTestimonial() {
 				modal.style.display = "none";
 			}
 
