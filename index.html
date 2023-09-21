@@ -1176,13 +1176,13 @@
 											</div>
 										</div>
 									</div>
-									<div id="modal-btn" class="swiper-slide modal-btn">
+									<div id="" class="swiper-slide modal-btn">
 										<div class="bg-white rounded px-2 p-3">
 											<div class="mb-[9px]">
-												<img src="./assets/home-blog-pic-1.jpg" alt="" />
+												<img src="./assets/testimonial-logo-1.png" alt="" />
 											</div>
 											<div class="font-bold">
-												<h1 class="text-[#570000] text-xs mb-3 font-bold leading-[18px]">Name 2</h1>
+												<h1 class="text-[#570000] text-xs mb-3 font-bold leading-[18px]">Name 1</h1>
 												<h1 class="text-[#444444] text-xs leading-4">
 													Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 												</h1>
@@ -1457,6 +1457,7 @@
 			});
 
 			var swiper = new Swiper(".mySwiperTestimonial", {
+				spaceBetween: 10,
 				freeMode: true,
 				loop: true,
 				navigation: {
@@ -1957,12 +1958,10 @@
 			// Get DOM Elements
 			const modal = document.querySelector("#my-modal-testimonial");
 			const modalBtn = document.querySelector(".modal-btn");
-			const modalBtn2 = document.querySelector("#modal-btn");
 			const closeBtn = document.querySelector(".close-testimonial");
 
 			// Events
 			modalBtn.addEventListener("click", openModalTestimonial);
-			modalBtn2.addEventListener("click", openModalTestimonial);
 			closeBtn.addEventListener("click", closeModalTestimonial);
 			window.addEventListener("click", outsideClick);
 
