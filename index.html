@@ -1957,13 +1957,16 @@
 			// Testimonial Modal JavaScript
 			// Get DOM Elements
 			const modal = document.querySelector("#my-modal-testimonial");
-			const modalBtn = document.querySelector(".modal-btn");
+			const modalBtn = document.querySelectorAll(".modal-btn");
 			const closeBtn = document.querySelector(".close-testimonial");
 
+			modalBtn.forEach((modal) => {
+				modal.addEventListener("click", openModalTestimonial);
+				closeBtn.addEventListener("click", closeModalTestimonial);
+				window.addEventListener("click", outsideClick);
+			});
+
 			// Events
-			modalBtn.addEventListener("click", openModalTestimonial);
-			closeBtn.addEventListener("click", closeModalTestimonial);
-			window.addEventListener("click", outsideClick);
 
 			// Open
 			function openModalTestimonial() {
