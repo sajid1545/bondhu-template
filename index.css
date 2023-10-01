@@ -980,6 +980,8 @@ ul.slider-arrow li:hover {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+
+
 .modal-testimonial-content {
     width: 30%;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
@@ -991,8 +993,6 @@ ul.slider-arrow li:hover {
 
 }
 
-
-
 .modal-testimonial-header {
 
     border-top-left-radius: 5px;
@@ -1003,6 +1003,10 @@ ul.slider-arrow li:hover {
 .modal-testimonial-body {
     padding: 10px 20px;
 }
+
+
+
+
 
 .modal-testimonial-footer {
     background: var(--modal-color);

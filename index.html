@@ -1122,7 +1122,7 @@
 						</button>
 					</div>
 
-					<!-- Recognition -->
+					<!-- Recognition section -->
 					<div class="bg-[#E9E9E9] blog-event-card-shadow p-5 rounded-md">
 						<h1 class="text-[#AF0101] text-xs font-bold leading-[14.5px] mb-2">Recognition</h1>
 						<div class="w-full h-[2px] bg-[#E2E2E2] mb-2"></div>
@@ -1132,12 +1132,12 @@
 								style="--swiper-navigation-color: #666"
 								class="swiper mySwiperRecognition w-full">
 								<div class="swiper-wrapper">
-									<div class="swiper-slide">
+									<div class="swiper-slide modal-btn-recognition">
 										<img
 											src="./assets/home-blog-pic-1.jpg"
 											class="lg:w-[201px] lg:h-[175px] mx-auto" />
 									</div>
-									<div class="swiper-slide">
+									<div class="swiper-slide modal-btn-recognition">
 										<img src="./assets/blog-1.svg" class="lg:w-[201px] lg:h-[175px] mx-auto" />
 									</div>
 								</div>
@@ -1176,19 +1176,6 @@
 											</div>
 										</div>
 									</div>
-									<div id="" class="swiper-slide modal-btn">
-										<div class="bg-white rounded px-2 p-3">
-											<div class="mb-[9px]">
-												<img src="./assets/testimonial-logo-1.png" alt="" />
-											</div>
-											<div class="font-bold">
-												<h1 class="text-[#570000] text-xs mb-3 font-bold leading-[18px]">Name 1</h1>
-												<h1 class="text-[#444444] text-xs leading-4">
-													Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-												</h1>
-											</div>
-										</div>
-									</div>
 								</div>
 								<div class="swiper-button-next"></div>
 								<div class="swiper-button-prev"></div>
@@ -1199,7 +1186,45 @@
 				</div>
 			</div>
 
-			<!-- Modal Content -->
+			<!-- Recognition Modal Content -->
+			<div id="my-modal-recognition" class="modal-testimonial">
+				<div class="modal-testimonial-content">
+					<div class="modal-testimonial-header bg-[#787878] mb-5">
+						<span onclick="closeModalRecognition()" class="close-testimonial">&times;</span>
+					</div>
+					<div class="modal-testimonial-body text-white">
+						<div>
+							<div class="my-5">
+								<img src="./assets/testimonial-logo-1.png" alt="" class="mx-auto" />
+							</div>
+
+							<div class="text-center text-xs font-medium mb-5">
+								<span class="text-2xl font-bold">Modal Recognition</span> <br />
+								Jonas Tillberg, MPH <br />
+								Coordinator of International Programmes <br />
+								RFSU-The Swedish Association for Sexuality Education <br />
+								Stockholm, Sweden
+							</div>
+							<div>
+								<p class="text-[10px] text-justify mb-5">
+									RFSU has always valued having BANDHU as a partner for sexual and reproductive
+									health and rights in Bangladesh. Over the years, we have appreciated not only the
+									strengths in analysis and methodology that BANDHU shows, but also the rights-based
+									approach that is guiding the work. Together, these strengths and approaches have
+									paved the way for the impressive results that the organization has achieved, and
+									that are contributing to better lives for groups that traditionally have been
+									marginalized and discriminated against. RFSU congratulates BANDHU on an
+									ever-developing & successful work, and the rights-holders on having a voice-giver
+									in BANDHU
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Recognition Modal Content Ends -->
+
+			<!-- Testimonial Modal Content -->
 			<div id="my-modal-testimonial" class="modal-testimonial">
 				<div class="modal-testimonial-content">
 					<div class="modal-testimonial-header bg-[#787878] mb-5">
@@ -1234,7 +1259,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- Modal Content Ends -->
+			<!-- Testimonial Modal Content Ends -->
 
 			<!-- Blogs section ends here -->
 
@@ -1955,7 +1980,7 @@
 			});
 
 			// Testimonial Modal JavaScript
-			// Get DOM Elements
+
 			const modal = document.querySelector("#my-modal-testimonial");
 			const modalBtn = document.querySelectorAll(".modal-btn");
 			const closeBtn = document.querySelector(".close-testimonial");
@@ -1982,6 +2007,35 @@
 			function outsideClick(e) {
 				if (e.target == modal) {
 					modal.style.display = "none";
+				}
+			}
+
+			// Recognition Modal JavaScript
+
+			const recognitionModal = document.querySelector("#my-modal-recognition");
+			const recognitionModalBtn = document.querySelector(".modal-btn-recognition");
+			const recognitionCloseBtn = document.querySelector(".close-testimonial");
+
+			recognitionModalBtn.addEventListener("click", openModalRecognition);
+			recognitionCloseBtn.addEventListener("click", closeModalRecognition);
+			window.addEventListener("click", outsideClickRecognition);
+
+			// Events
+
+			// Open
+			function openModalRecognition() {
+				recognitionModal.style.display = "block";
+			}
+
+			// Close
+			function closeModalRecognition() {
+				recognitionModal.style.display = "none";
+			}
+
+			// Close If Outside Click
+			function outsideClickRecognition(e) {
+				if (e.target == recognitionModal) {
+					recognitionModal.style.display = "none";
 				}
 			}
 		</script>
